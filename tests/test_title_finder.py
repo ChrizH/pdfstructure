@@ -30,54 +30,69 @@ class TestStyleMapping(TestCase):
             self.assertTrue("style" in data)
     
     def test_header_selector(self):
+        distribution = count_sizes(file_path=self.test_doc_path)
+        elements = element_generator(file_path=self.test_doc_path)
+        
         extractor = DocumentTitleExtractor()
-        title = extractor.process(self.test_doc_path)
+        title = extractor.process(distribution, elements)
         self.assertEqual('Outdoorpädagogik__„Fange_den_Stock“__„Schwebeast“__„Schlange“', title)
     
     def test_header_selector_same_size(self):
         extractor = DocumentTitleExtractor()
-        title = extractor.process(self.test_doc_path_same_size)
+        distribution = count_sizes(file_path=self.test_doc_path_same_size)
+        elements = element_generator(file_path=self.test_doc_path_same_size)
+        title = extractor.process(distribution, elements)
         self.assertEqual("Sportunterricht_2._Jhg_18.3.2020__Meine_Lieben!__Ihr_wisst,_dass_Ausdauertraining"
                          "_und_Bewegung_überhaupt_einen_wesentlichen__Beitrag_zur_Schönheit,_Fitness_und_Gesundheit_(Stärkung_des_Immunsystems,",
                          title)
     
     def test_header_selector_two_size(self):
         extractor = DocumentTitleExtractor()
-        title = extractor.process(self.test_doc_path_two_size)
+        distribution = count_sizes(file_path=self.test_doc_path_two_size)
+        elements = element_generator(file_path=self.test_doc_path_two_size)
+        title = extractor.process(distribution, elements)
         self.assertEqual("Aktuelle_Fragen_zur_Landwirtschaft", title)
     
     def test_header_selector_body_biggest(self):
         extractor = DocumentTitleExtractor()
-        title = extractor.process(self.test_doc_path_body_biggest)
+        distribution = count_sizes(file_path=self.test_doc_path_body_biggest)
+        elements = element_generator(file_path=self.test_doc_path_body_biggest)
+        title = extractor.process(distribution, elements)
         self.assertEqual('Test_Name___1._Erkenne_folgende_Bäume_an_ihren_Früchten:_4_P__a)_B)_c)_d)'
                          '__2._A)Zeichne_ein_Birkenblatt,_Eichenblatt_auf,_2P', title)
     
     def test_header_selector_body_biggest_2(self):
         extractor = DocumentTitleExtractor()
-        title = extractor.process(self.test_doc_path_body_biggest_2)
+        distribution = count_sizes(file_path=self.test_doc_path_body_biggest_2)
+        elements = element_generator(file_path=self.test_doc_path_body_biggest_2)
+        title = extractor.process(distribution, elements)
         self.assertEqual("„Liebenswerte_Heimat“__Sensibilisierung_über_die_Herkunft_der_Österr._Grundprodukte", title)
     
     def test_header_selector_body_biggest_3(self):
         extractor = DocumentTitleExtractor()
-        title = extractor.process(self.test_doc_path_body_biggest_3)
+        distribution = count_sizes(file_path=self.test_doc_path_body_biggest_3)
+        elements = element_generator(file_path=self.test_doc_path_body_biggest_3)
+        
+        title = extractor.process(distribution, elements)
         self.assertEqual('Verdammt_lang_her_Andreas_Gabalier', title)
     
     def test_with_images(self):
         # todo, 13100
         extractor = DocumentTitleExtractor()
-        title = extractor.process(self.base_path + "13100.pdf")
+        distribution = count_sizes(file_path=self.base_path + "13100.pdf")
+        elements = element_generator(file_path=self.base_path + "13100.pdf")
+        
+        title = extractor.process(distribution, elements)
         self.assertEqual('Frage_10_Nenne_und_beschreibe_3_heimische_Nadel_und_3_heimische_Laubbäume.', title)
     
     def test_excel(self):
         # todo, 13100
         extractor = DocumentTitleExtractor()
-        title = extractor.process(self.base_path + "20542.pdf")
-        self.assertEqual('Schneidtechniken__Der_Wiegeschnitt__Konservieren_von_Obst:__Einfrieren', title)
-    
-    def test_hierarchy(self):
-        processor = HierarchyProcessor()
+        distribution = count_sizes(file_path=self.base_path + "20542.pdf")
+        elements = element_generator(file_path=self.base_path + "20542.pdf")
         
-        processor.process(self.test_doc_path)
+        title = extractor.process(distribution, elements)
+        self.assertEqual('Schneidtechniken__Der_Wiegeschnitt__Konservieren_von_Obst:__Einfrieren', title)
 
 
 class TestUtils(TestCase):

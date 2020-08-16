@@ -1,7 +1,7 @@
 from unittest import TestCase
 
 from pdfstructure.hierarchy import HierarchyLineParser
-from test.test_style_mapper import TestUtils
+from tests.test_style_mapper import TestUtils
 
 
 class TestHierarchy(TestCase):

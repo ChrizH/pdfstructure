@@ -1,6 +1,7 @@
 # class SizeDistro:
 import itertools
 from collections import Counter
+from typing import Type
 
 from pdfminer.high_level import extract_pages
 from pdfminer.layout import LTTextContainer, LTTextLine, LTChar
@@ -17,8 +18,6 @@ class StyleDistribution:
         if data:
             self._data = data
             self._body_size = data.most_common(1)[0][0]
-            self._title_size = max(self._data.keys())
-            self._title_min_size = self.get_min_size(data, self._body_size, self._title_size)
             self._min_found_size, self._max_found_size = min(data.keys()), max(data.keys())
     
     def norm_data(self):
@@ -26,7 +25,7 @@ class StyleDistribution:
         # normalise each key value against max found key value (size)
         # normalise X & Y
         normalised = {}
-        amount_items =  self.amount_values
+        amount_items = self.amount_values
         amount_sizes = self.amount_sizes
         
         for size in self.data:
@@ -53,14 +52,6 @@ class StyleDistribution:
     @property
     def body_size(self):
         return self._body_size
-    
-    @property
-    def title_min_size(self):
-        return self._title_min_size
-    
-    @property
-    def title_size(self):
-        return self._title_size
     
     @property
     def is_empty(self):
@@ -110,23 +101,31 @@ class TextSize(IntEnum):
 
 class SizeMapper:
     
-    def translate(self, target_enum: Enum, style_info: StyleDistribution, value) -> Enum:
-        pivot = style_info.data.most_common(1)
+    def __init__(self):
+        self._borders = None
+    
+    @property
+    def borders(self):
+        return self._borders
+    
+    def translate(self, target_enum: Type[TextSize], value) -> Enum:
+        return TextSize.from_range(self.borders, value)
 
 
 class PivotLogMapper(SizeMapper):
     def __init__(self, style_info: StyleDistribution, bins=5):
+        super().__init__()
         self.bins = bins
-        self.borders = []
+        borders = []
         # find pivot
         # diff pivot to max & min
-        pivot = style_info.data.most_common()[0][0]
+        pivot = style_info.body_size
         # if style_info.min_found_size <= pivot <= style_info.max_found_size:
         right_span = style_info.max_found_size - pivot
         left_span = pivot - style_info.min_found_size
         
-        if right_span > pivot:
-            right_span = pivot
+        if right_span > pivot * 2:
+            right_span /= 2
         if right_span == 0:
             right_span = 5
         if left_span == 0:
@@ -140,21 +139,20 @@ class PivotLogMapper(SizeMapper):
             scaledStep = left_span / targetSteps * self.weight(i) + mem * alpha
             thRunner -= scaledStep
             mem = scaledStep
-            self.borders.insert(0, thRunner)
+            borders.insert(0, thRunner)
         thRunner = pivot
         mem = 0
         for i in range(1, int((bins / 2) + 1)):
             scaledStep = right_span / targetSteps * self.weight(i) + mem * alpha
             thRunner += scaledStep
             mem = scaledStep
-            self.borders.append(thRunner)
+            borders.append(thRunner)
+        
+        self._borders = tuple(borders)
     
     @staticmethod
     def weight(n):
         return 1.0 - 1. / math.exp(n - 0.5)
-    
-    def translate(self, target_enum: TextSize, style_info: StyleDistribution, value) -> Enum:
-        return TextSize.from_range(self.borders, value)
 
 
 class PivotLinearMapper(SizeMapper):
@@ -162,7 +160,8 @@ class PivotLinearMapper(SizeMapper):
     def __init__(self, style_info: StyleDistribution):
         # find pivot
         # diff pivot to max & min
-        pivot = style_info.data.most_common()[0][0]
+        super().__init__()
+        pivot = style_info.body_size
         # if style_info.min_found_size <= pivot <= style_info.max_found_size:
         right_span = style_info.max_found_size - pivot
         left_span = pivot - style_info.min_found_size
@@ -174,23 +173,22 @@ class PivotLinearMapper(SizeMapper):
         
         b0, b1 = style_info.min_found_size + left_step, style_info.min_found_size + left_step * 2
         b2, b3 = pivot + right_step, pivot + right_step * 2
-        self.borders = (b0, b1, b2, b3)
-    
-    def translate(self, target_enum: TextSize, style_info: StyleDistribution, value) -> Enum:
-        return TextSize.from_range(self.borders, value)
-        
-        # divide left & right span to bins, map
+        self._borders = (b0, b1, b2, b3)
 
 
 class LinearSizeMapper(SizeMapper):
     
-    def translate(self, target_enum: Enum, style_info: StyleDistribution, value) -> Enum:
+    def __init__(self, style_info: StyleDistribution):
+        super().__init__()
+        self.style_info = style_info
+    
+    def translate(self, target_enum, value) -> Enum:
         # Figure out how 'wide' each range is
-        leftSpan = style_info.max_found_size - style_info.min_found_size
+        leftSpan = self.style_info.max_found_size - self.style_info.min_found_size
         rightSpan = target_enum.xlarge.value - target_enum.xsmall.value
         
         # Convert the left range into a 0-1 range (float)
-        scaled = float(value - style_info.min_found_size) / float(leftSpan)
+        scaled = float(value - self.style_info.min_found_size) / float(leftSpan)
         if scaled > 1.0:
             return target_enum.xlarge
         elif scaled < 0:

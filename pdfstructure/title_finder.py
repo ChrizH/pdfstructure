@@ -1,9 +1,10 @@
 import itertools
 import re
+from collections import Generator, Iterator
 from enum import IntEnum, auto
 
 from pdfminer.high_level import extract_pages
-from pdfminer.layout import LTChar, LTTextBoxHorizontal
+from pdfminer.layout import LTChar, LTTextBoxHorizontal, LTTextContainer
 
 from pdfstructure.style_analyser import StyleDistribution, TextSize, SizeMapper, PivotLinearMapper, count_sizes, \
     PivotLogMapper
@@ -52,7 +53,7 @@ class HeaderSelector(ProcessUnit):
     
     def __init__(self, style_info: StyleDistribution):
         self.style_info = style_info
-        if style_info.amount == 1:
+        if style_info.amount_sizes == 1:
             self.mode = StyleDistributionMode.only_one_size
         elif style_info.body_size == style_info.max_found_size:
             self.mode = StyleDistributionMode.body_text_biggest
@@ -115,7 +116,7 @@ class StyleAnnotator(ProcessUnit):
                              if hasattr(sub_char, "size")]
                     # mostCommonSize = statistics.mean(sizes)
                     fontName = head_char(element).fontname
-                    mapped_size = self._sizeMapper.translate(target_enum=TextSize, style_info=self._styleInfo,
+                    mapped_size = self._sizeMapper.translate(target_enum=TextSize,
                                                              value=max(sizes))
                     s = Style(bold="bold" in str(fontName.lower()),
                               italic="italic" in fontName.lower(),
@@ -125,14 +126,12 @@ class StyleAnnotator(ProcessUnit):
 
 
 class DocumentTitleExtractor(ProcessUnit):
-    def process(self, file_path):
-        distribution = count_sizes(file_path)
-        
+    
+    def process(self, distribution: StyleDistribution, elements):
         sizeMapper = PivotLogMapper(distribution)
         header_selector = HeaderSelector(distribution)
         style_annotator = StyleAnnotator(sizemapper=sizeMapper, style_info=distribution)
         
-        elements = element_generator(file_path)
         with_style = style_annotator.process(elements)
         grep_header = header_selector.process(with_style)
         return header_selector.merge_headers(grep_header, n=4)
@@ -181,7 +180,7 @@ class HierarchyProcessor(ProcessUnit):
         print(page)
 
 
-def element_generator(file_path):
+def element_generator(file_path: str):
     pNumber = 0
     for page_layout in extract_pages(file_path):
         pNumber += 1
