@@ -1,13 +1,10 @@
 import itertools
 import re
-from collections import Generator, Iterator
 from enum import IntEnum, auto
 
-from pdfminer.high_level import extract_pages
-from pdfminer.layout import LTChar, LTTextBoxHorizontal, LTTextContainer
+from pdfminer.layout import LTChar, LTTextBoxHorizontal
 
-from pdfstructure.style_analyser import StyleDistribution, TextSize, SizeMapper, PivotLinearMapper, count_sizes, \
-    PivotLogMapper
+from pdfstructure.style_analyser import StyleDistribution, TextSize, SizeMapper, PivotLogMapper
 
 
 def head_char(container: LTTextBoxHorizontal) -> LTChar:
@@ -135,55 +132,3 @@ class DocumentTitleExtractor(ProcessUnit):
         with_style = style_annotator.process(elements)
         grep_header = header_selector.process(with_style)
         return header_selector.merge_headers(grep_header, n=4)
-
-
-class HierarchyProcessor(ProcessUnit):
-    def __init__(self):
-        pass
-    
-    def process(self, doc_path):
-        root = []
-        
-        level = []
-        
-        def find_level(element):
-            while level and level[-1].style.font_size >= element.style.font_size:
-                level.pop()
-            return level[-1]
-        
-        # count styles
-        distribution = count_sizes(doc_path)
-        page_processor = StyleAnnotator(sizemapper=PivotLinearMapper(distribution))
-        last = None
-        for page in extract_pages(doc_path):
-            for element in page_processor.process(page, distribution):
-                element.children = []
-                # todo!!!!!
-                if not root:
-                    root.append(element)
-                
-                if not last:
-                    level.append(element)
-                    last = element
-                else:
-                    
-                    higher = find_level(element)
-                    
-                    if element.style.font_size == higher.style.font_size:
-                        level.pop()
-                        level.append(element)
-                    elif element.style.font_size < higher.style.font_size:
-                        # add element as children
-                        higher.children.append(element)
-                        level.append(element)
-        
-        print(page)
-
-
-def element_generator(file_path: str):
-    pNumber = 0
-    for page_layout in extract_pages(file_path):
-        pNumber += 1
-        for element in page_layout:
-            element.meta = {"page": pNumber}
-            yield element

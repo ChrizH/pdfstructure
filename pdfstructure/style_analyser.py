@@ -1,10 +1,12 @@
-# class SizeDistro:
 import itertools
+import math
 from collections import Counter
+from enum import auto, IntEnum, Enum
 from typing import Type
 
-from pdfminer.high_level import extract_pages
 from pdfminer.layout import LTTextContainer, LTTextLine, LTChar
+
+from utils import truncate
 
 
 class StyleDistribution:
@@ -72,10 +74,6 @@ class StyleDistribution:
     @property
     def data(self) -> Counter:
         return self._data.copy()
-
-
-import math
-from enum import auto, IntEnum, Enum
 
 
 class TextSize(IntEnum):
@@ -199,40 +197,30 @@ class LinearSizeMapper(SizeMapper):
             return TextSize(int(target_enum.xsmall.value + (scaled * rightSpan)))
 
 
-def truncate(number, decimals=0):
+def count_sizes(element_gen) -> StyleDistribution:
     """
-    Returns a value truncated to a specific number of decimal places.
+    count all character sizes within observed element stream.
+    :param element_gen:
+    :return:
     """
-    if not isinstance(decimals, int):
-        raise TypeError("decimal places must be an integer.")
-    elif decimals < 0:
-        raise ValueError("decimal places has to be 0 or more.")
-    elif decimals == 0:
-        return math.trunc(number)
-    
-    factor = 10.0 ** decimals
-    return math.trunc(number * factor) / factor
-
-
-def count_sizes(file_path: str) -> StyleDistribution:
     distribution = Counter()
-    for page_layout in extract_pages(file_path):
-        # checkout each character within
-        for element in page_layout:
-            if isinstance(element, LTTextContainer):
-                for node in element:
-                    # grep first character and take size
-                    if not isinstance(node, LTTextLine) or node.is_empty() \
-                            or not node.get_text():
-                        continue
-                    
-                    sizes = list(itertools.islice(
-                        [c.size for c in node if isinstance(c, LTChar)], 10))
-                    # get max size, check that it occurred at least twice
-                    maxSize = max(sizes)
-                    if sizes.count(maxSize) > 2:
-                        distribution.update([truncate(maxSize, 2)])
+    
+    # checkout each character within
+    for element in element_gen:
+        if isinstance(element, LTTextContainer):
+            for node in element:
+                # grep first character and take size
+                if not isinstance(node, LTTextLine) or node.is_empty() \
+                        or not node.get_text():
+                    continue
+                
+                sizes = list(itertools.islice(
+                    [c.size for c in node if isinstance(c, LTChar)], 10))
+                # get max size, check that it occurred at least twice
+                maxSize = max(sizes)
+                if sizes.count(maxSize) > 2:
+                    distribution.update([truncate(maxSize, 2)])
     
     if not distribution:
-        raise TypeError("{} document does not contain text".format(file_path))
+        raise TypeError("document does not contain text")
     return StyleDistribution(distribution)

@@ -1,7 +1,7 @@
 from unittest import TestCase
 
 from pdfstructure.hierarchy import HierarchyLineParser
-from tests.test_style_mapper import TestUtils
+from tests.test_title_finder import TestUtils
 
 
 class TestHierarchy(TestCase):
@@ -13,5 +13,3 @@ class TestHierarchy(TestCase):
         lines_gen = TestUtils.generate_annotated_lines(test_doc)
         structured = parser.process(lines_gen)
         self.assertEqual(13, structured[0].children.__len__())
-        
-        

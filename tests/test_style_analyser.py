@@ -4,7 +4,8 @@ from unittest import TestCase
 
 from pdfstructure.style_analyser import TextSize, PivotLinearMapper, PivotLogMapper
 from pdfstructure.style_analyser import count_sizes, StyleDistribution
-from pdfstructure.title_finder import DocumentTitleExtractor, element_generator
+from pdfstructure.title_finder import DocumentTitleExtractor
+from utils import element_generator
 
 
 class TestSizeMapper(TestCase):
@@ -63,7 +64,8 @@ class TestStyleAnalyser(TestCase):
     test_ppt = str(Path("resources/samplepptx.pdf").absolute())
     
     def test_title_extraction_sample_ppt(self):
-        distribution = count_sizes(self.test_ppt)
+        element_gen = element_generator(self.test_ppt)
+        distribution = count_sizes(element_gen)
         self.assertFalse(distribution.is_empty)
         self.assertAlmostEqual(32, distribution.body_size, delta=0.1)
         self.assertAlmostEqual(32, distribution.min_found_size, delta=0.1)
@@ -74,7 +76,8 @@ class TestStyleAnalyser(TestCase):
         self.assertEqual('Sample_PowerPoint_File__This_is_a_Sample_Slide', title)
     
     def test_title_extraction_tech_cheatsheet(self):
-        distribution = count_sizes(self.test_path_1)
+        element_gen = element_generator(self.test_path_1)
+        distribution = count_sizes(element_gen)
         self.assertFalse(distribution.is_empty)
         self.assertAlmostEqual(6.4, distribution.min_found_size, delta=0.1)
         self.assertAlmostEqual(8.5, distribution.body_size, delta=0.1)
@@ -86,7 +89,8 @@ class TestStyleAnalyser(TestCase):
                          "Studying_for_a_Tech_Interview_Sucks,_so_Here's_a_Cheat_Sheet_to_Help__Array", title)
     
     def test_title_extraction_msci_world(self):
-        distribution = count_sizes(self.test_path_2)
+        element_gen = element_generator(self.test_path_2)
+        distribution = count_sizes(element_gen)
         self.assertFalse(distribution.is_empty)
         self.assertAlmostEqual(6, distribution.body_size, delta=0.1)
         self.assertEqual(7, distribution.amount_sizes)

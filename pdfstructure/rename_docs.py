@@ -5,7 +5,7 @@ from shutil import copyfile
 
 import pandas as pd
 
-from pdfstructure.pdfconverter import find_file, DocTypeFilter
+from utils import find_file, DocTypeFilter
 from pdfstructure.title_finder import DocumentTitleExtractor
 
 
@@ -69,11 +69,6 @@ def load_mapping(path):
 
 
 if __name__ == "__main__":
-    # todo, read python-docx documentation
-    #  search for TITLE or Heading --> choose filename
-    #  parse all text within document / paragraphs
-    #  pyxl, automate the boring stuff with python
-    #
     mapping_path = "/home/christian/Documents/data_recovery_katharina/pdf/names.tsv"
     raw = "/home/christian/Documents/data_recovery_katharina/raw/"
     pdf_base = "/home/christian/Documents/data_recovery_katharina/pdf/"
