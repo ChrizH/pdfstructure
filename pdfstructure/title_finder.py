@@ -4,6 +4,7 @@ from enum import IntEnum, auto
 
 from pdfminer.layout import LTChar, LTTextBoxHorizontal
 
+from pdfstructure.model import Element
 from pdfstructure.style_analyser import StyleDistribution, TextSize, SizeMapper, PivotLogMapper
 
 
@@ -61,28 +62,26 @@ class HeaderSelector(ProcessUnit):
         return "__".join(itertools.islice(headers, n))
     
     def yield_forward_text_as_title(self, element_gen):
-        for data in element_gen:
-            if "obj" in data and len(data["obj"]._objs) > 2:
-                element = data["obj"]
-                header = element.get_text().strip()
+        for element in element_gen:
+            if isinstance(element, Element) and len(element.data._objs) > 2:
+                header = element.data.get_text().strip()
                 header = clean_title(header)
                 
                 yield header
     
     def yield_title_from_size(self, element_gen, threshold=TextSize.large):
-        for data in element_gen:
-            if "obj" in data and "style" in data:
-                element = data["obj"]
-                
-                if not len(data["obj"]._objs) > 2:
-                    continue
-                
-                if data["style"].font_size >= threshold:
-                    header = element.get_text().strip()
-                    header = clean_title(header)
-                    yield header
-            else:
-                print("unpredicted element {}".format(data))
+        for element in element_gen:
+            if not isinstance(element, Element):
+                print("unpredicted element {}".format(element))
+                continue
+            
+            if not len(element.data._objs) > 2:
+                continue
+            
+            if element.style.font_size >= threshold:
+                header = element.data.get_text().strip()
+                header = clean_title(header)
+                yield header
     
     def process(self, element_gen):
         if self.mode == StyleDistributionMode.title_from_size:
@@ -119,7 +118,7 @@ class StyleAnnotator(ProcessUnit):
                               italic="italic" in fontName.lower(),
                               fontname=fontName, fontsize=mapped_size)
                     
-                    yield {"obj": line, "style": s}
+                    yield Element(data=line, style=s)
 
 
 class DocumentTitleExtractor(ProcessUnit):

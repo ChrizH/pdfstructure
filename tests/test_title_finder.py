@@ -1,10 +1,11 @@
 import itertools
 from unittest import TestCase
 
+from pdfstructure.model import Element
 from pdfstructure.style_analyser import count_sizes, PivotLogMapper
 from pdfstructure.title_finder import StyleAnnotator, DocumentTitleExtractor, \
     clean_title
-from utils import element_generator, find_file, DocTypeFilter
+from pdfstructure.utils import element_generator, find_file, DocTypeFilter
 
 import pandas as pd
 
@@ -28,7 +29,7 @@ class TestStyleMapping(TestCase):
         with_style = style_annotator.process(get_elements)
         for data in with_style:
             # for element in style_annotator.process(page, self.distribution):
-            self.assertTrue("style" in data)
+            self.assertIsInstance(data, Element)
     
     def test_header_selector(self):
         distribution = count_sizes(element_generator(file_path=self.test_doc_path))
@@ -108,6 +109,9 @@ class TestUtils(TestCase):
     
     @staticmethod
     def generate_annotated_lines(file_path):
+        """
+        yields paragraph detected by pdfminer annotated with detected & mapped style information
+        """
         element_gen = element_generator(file_path)
         distribution = count_sizes(element_gen)
         sizeMapper = PivotLogMapper(distribution)

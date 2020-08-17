@@ -5,7 +5,7 @@ from shutil import copyfile
 
 import pandas as pd
 
-from utils import find_file, DocTypeFilter
+from pdfstructure.utils import find_file, DocTypeFilter
 from pdfstructure.title_finder import DocumentTitleExtractor
 
 

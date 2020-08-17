@@ -1,43 +1,30 @@
 from collections import Counter
 
+from pdfstructure.model import Element, NestedElement
 from pdfstructure.style_analyser import TextSize
 from pdfstructure.title_finder import ProcessUnit
 
 
-def header_detector(data):
+def bold_distinction(h1, h2):
+    return h1.style.bold and not h2.style.bold
+
+
+def is_sub_header(h1, h2):
+    # todo, test it !!
+    conditions = [bold_distinction]
+    return any(condition(h1, h2) for condition in conditions)
+
+
+def header_detector(element):
     stats = Counter()
-    terms = data["obj"]
-    style = data["style"]
+    terms = element.data
+    style = element.style
     # data tuple per line, element from pdfminer, annotated style info for whole line
     # todo, compute ratios over whole line // or paragraph :O
     if style.bold or style.italic or style.font_size > TextSize.middle:
         return True
     else:
         return False
-
-
-class Element():
-    def __init__(self, element, style):
-        self.data = element
-        self.style = style
-
-
-class NestedElement(Element):
-    def __init__(self, element, style):
-        super().__init__(element, style)
-        self.content = []
-        self.children = []
-    
-    def get_content(self):
-        return "\n".join(e.data.get_text() for e in self.content)
-    
-    def get_title(self):
-        return self.data.get_text()
-    
-    # todo, implement flatten to get whole structure
-    def traverse(self):
-        # traverse through tree to extract structure as json // or find all titles etc
-        pass
 
 
 class HierarchyLineParser(ProcessUnit):
@@ -49,35 +36,42 @@ class HierarchyLineParser(ProcessUnit):
             output.append(child)
         stack.append(child)
     
+    def __should_pop_higher_level(self, stack, header_to_test):
+        """
+        @type header_to_test: object
+        
+        """
+        if not stack:
+            return False
+        return stack[-1].style.font_size <= header_to_test.style.font_size
+    
     def __pop_stack_until_match(self, stack, headerSize, header):
         # if top level is smaller than current header to test, pop it
         # repeat until top level is bigger or same
         
-        topIsLower = lambda s: s[-1].style.font_size <= header.style.font_size
-        
-        while (topIsLower(stack)):
+        while self.__should_pop_higher_level(stack, header):
             poped = stack.pop()
             
             if poped.style.font_size == headerSize:
                 print("do additional analysis!!")
     
-    def process(self, line_gen):
+    def process(self, element_gen):
         
         structured = []
         levelStack = []
-        first_tuple = next(line_gen)
-        first = NestedElement(first_tuple["obj"], first_tuple["style"])
+        element = next(element_gen)
+        first = NestedElement(element.data, element.style)
         
         levelStack.append(first)
         structured.append(first)
         
-        for data in line_gen:
+        for element in element_gen:
             # if line is header
-            line = data["obj"]
-            style = data["style"]
-            if header_detector(data):
-                print("found header: {}".format(data["obj"]))
-                child = NestedElement(line, style)
+            data = element.data
+            style = element.style
+            if header_detector(element):
+                print("found header: {}".format(data))
+                child = NestedElement(data, style)
                 headerSize = style.font_size
                 stackPeekSize = levelStack[-1].style.font_size
                 
@@ -92,5 +86,5 @@ class HierarchyLineParser(ProcessUnit):
             
             else:
                 # merge content to last paragraph
-                levelStack[-1].content.append(Element(line, style))
+                levelStack[-1].content.append(Element(data, style))
         return structured

@@ -1,15 +1,19 @@
 import itertools
 import math
-from collections import Counter
+from collections import Counter, defaultdict, OrderedDict
 from enum import auto, IntEnum, Enum
 from typing import Type
 
 from pdfminer.layout import LTTextContainer, LTTextLine, LTChar
 
-from utils import truncate
+from pdfstructure.utils import truncate, closest_key
+from sortedcontainers import SortedDict
 
 
 class StyleDistribution:
+    """
+    Represents style information for one analysed element stream (typically one stream per document).
+    """
     
     def __init__(self, data=None):
         """
@@ -21,17 +25,33 @@ class StyleDistribution:
             self._data = data
             self._body_size = data.most_common(1)[0][0]
             self._min_found_size, self._max_found_size = min(data.keys()), max(data.keys())
+            if self._min_found_size == self._max_found_size:
+                self._min_found_size /= 2
+                self._max_found_size *= 2
     
+    def norm_data_binned(self, bins=50):
+        amount_items = self.amount_values
+        step = 1.0 / bins
+        keys = [step * i for i in range(bins)]
+        normalised = SortedDict({key: 0.0 for key in keys})
+        for size in self.data:
+            norm_key = truncate(size / self.max_found_size, 2)
+            k = closest_key(normalised, norm_key)
+            normalised[k] += float(self.data[size]) / amount_items
+        
+        return normalised
+    
+    @property
     def norm_data(self):
         # normalise counts with total amount of collected values
         # normalise each key value against max found key value (size)
         # normalise X & Y
-        normalised = {}
-        amount_items = self.amount_values
-        amount_sizes = self.amount_sizes
         
+        # todo, bin distribution to 50 bins
+        normalised = defaultdict(int)
+        amount_items = self.amount_values
         for size in self.data:
-            normalised[size / amount_sizes] = self.data[size] / amount_items
+            normalised[truncate(size / self.max_found_size, 2)] += float(self.data[size]) / amount_items
         
         return normalised
     

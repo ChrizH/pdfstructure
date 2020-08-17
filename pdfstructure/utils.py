@@ -1,3 +1,4 @@
+import itertools
 import math
 import os
 from pathlib import Path
@@ -41,6 +42,14 @@ class DocTypeFilter:
     
     def test(self, name):
         return name.split(".")[-1].lower() in self.endings
+
+
+def closest_key(sorted_dict, key):
+    "Return closest key in `sorted_dict` to given `key`."
+    assert len(sorted_dict) > 0
+    keys = list(itertools.islice(sorted_dict.irange(minimum=key), 1))
+    keys.extend(itertools.islice(sorted_dict.irange(maximum=key, reverse=True), 1))
+    return min(keys, key=lambda k: abs(key - k))
 
 
 def find_file(root_dir: str, type_filter: DocTypeFilter, print_mod=10) -> iter([Path]):

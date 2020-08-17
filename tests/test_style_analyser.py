@@ -1,3 +1,4 @@
+import itertools
 from collections import Counter
 from pathlib import Path
 from unittest import TestCase
@@ -5,7 +6,8 @@ from unittest import TestCase
 from pdfstructure.style_analyser import TextSize, PivotLinearMapper, PivotLogMapper
 from pdfstructure.style_analyser import count_sizes, StyleDistribution
 from pdfstructure.title_finder import DocumentTitleExtractor
-from utils import element_generator
+from pdfstructure.utils import element_generator, find_file, DocTypeFilter
+import pandas as pd
 
 
 class TestSizeMapper(TestCase):
@@ -62,6 +64,49 @@ class TestStyleAnalyser(TestCase):
     test_path_1 = str(Path("resources/interview_cheatsheet.pdf").absolute())
     test_path_2 = str(Path("resources/IE00BM67HT60-ATB-FS-DE-2020-2-28.pdf").absolute())
     test_ppt = str(Path("resources/samplepptx.pdf").absolute())
+    
+    def test_norm_data_across_files(self):
+        styles = []
+        dists = []
+        for pdf_file in itertools.islice(
+                find_file(str(Path("/home/christian/Documents/data_recovery_katharina/pdf/").absolute()),
+                          DocTypeFilter("pdf")), 200):
+            
+            try:
+                distribution = count_sizes(element_generator(str(pdf_file)))
+            except TypeError:
+                continue
+            
+            norm = distribution.norm_data_binned(bins=50)
+            self.assertAlmostEqual(sum(norm.values()), 1.0, 1)
+            styles.append(norm)
+            dists.append(distribution)
+        
+        from sklearn import preprocessing
+        import pickle
+        df = pd.DataFrame.from_records(styles)
+        pickle.dump(dists, open("doc_sizes.p", "wb"))
+        df.to_csv("styles.csv", index=False)
+        df.to_csv("styles2.csv", index=True)
+        # max_score = df.to_numpy().max(axis=0)
+        # df_norm = df.apply(lambda x: x / max_score, axis=0)
+        
+        series = df.sum().ewm(span=3).mean()
+        
+        import matplotlib.pyplot as plt
+        
+        plt.figure()
+        ax = series.plot()
+        ax.set_yscale('log')
+        plt.savefig("Style Distrubtion.png")
+        plt.close()
+    
+    def test_norm_data(self):
+        distribution = count_sizes(element_generator(self.test_path_1))
+        
+        normalised = distribution.norm_data
+        norm_binned = distribution.norm_data_binned()
+        self.assertAlmostEqual(sum(normalised.values()), 1.0, 1)
     
     def test_title_extraction_sample_ppt(self):
         element_gen = element_generator(self.test_ppt)
