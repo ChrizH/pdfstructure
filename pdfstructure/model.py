@@ -10,28 +10,43 @@ class Style:
 
 
 class Element:
-    def __init__(self, data: LTTextContainer, style: Style):
+    def __init__(self, data: LTTextContainer, style: Style, level=0):
         self.data = data
         self.style = style
-    
+        self.level = None
+        self.prefix = None
+        self.set_level(level)
+
+    def set_level(self, level):
+        self.level = level
+        self.prefix = "".join(["\t" for i in range(self.level)])
+
     def __str__(self):
-        return self.data.get_text()
+        return self.prefix + self.data.get_text().strip()
 
 
-class NestedElement(Element):
-    def __init__(self, element, style):
-        super().__init__(element, style)
+class ParentElement:
+    def __init__(self, element: Element, level=0):
+        self.heading = element
         self.content = []
         self.children = []
+        self.prefix = None
+        self.level = None
+        self.set_level(level)
+    
+    def set_level(self, level):
+        self.level = level
+        self.prefix = "".join(["\t" for i in range(self.level)])
     
     def get_children_content(self):
-        return " ".join(e.data.get_text() for e in self.children)
+        return " ".join(str(e) for e in self.children)
     
     def get_content(self):
-        return " ".join(e.data.get_text() for e in self.content)
+        return "\n".join(str(e) for e in self.content)
     
     def get_title(self):
-        return self.data.get_text()
+        return "{}[{}]".format(self.prefix,
+                               self.heading.data.get_text().strip().replace("\n", "{}\n".format(self.prefix)))
     
     # todo, implement flatten to get whole structure
     def traverse(self):
@@ -39,4 +54,7 @@ class NestedElement(Element):
         pass
     
     def __str__(self):
-        return "{}\n{}\n{}".format(self.get_title(), self.get_content(), self.get_children_content())
+        """ todo, define printer interface, pretty string // json"""
+        return "{}\n{}\n{}".format(self.get_title(),
+                                   self.get_content(),
+                                   self.get_children_content())

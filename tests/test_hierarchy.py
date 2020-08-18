@@ -24,6 +24,7 @@ class TestHierarchy(TestCase):
         parser = HierarchyLineParser()
         elements_gen = TestUtils.generate_annotated_lines(test_doc)
         structured, flat = parser.process(elements_gen)
+        t = "\n".join([str(e) for e in structured])
         self.assertEqual(len(structured), 9)
 
 
