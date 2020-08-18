@@ -1,13 +1,13 @@
 import itertools
 import math
-from collections import Counter, defaultdict, OrderedDict
+from collections import Counter, defaultdict
 from enum import auto, IntEnum, Enum
 from typing import Type
 
 from pdfminer.layout import LTTextContainer, LTTextLine, LTChar
+from sortedcontainers import SortedDict
 
 from pdfstructure.utils import truncate, closest_key
-from sortedcontainers import SortedDict
 
 
 class StyleDistribution:
@@ -148,9 +148,9 @@ class PivotLogMapper(SizeMapper):
             right_span = 5
         if left_span == 0:
             left_span = 5
-        
+
         targetSteps = bins / 2.
-        alpha = 0.2
+        alpha = 0.5
         thRunner = pivot
         mem = 0
         for i in range(1, int((bins / 2) + 1)):
@@ -167,10 +167,16 @@ class PivotLogMapper(SizeMapper):
             borders.append(thRunner)
         
         self._borders = tuple(borders)
-    
+
     @staticmethod
     def weight(n):
-        return 1.0 - 1. / math.exp(n - 0.5)
+        """
+        used in sizemapper, walking in N steps from pivot point towards max & min found size.
+        first step is weighted more (to have a more narrow pivot), the further towards edge values, the further the step.
+        @param n:
+        @return:
+        """
+        return 1.0 - 1. / math.exp(n - 0.2)
 
 
 class PivotLinearMapper(SizeMapper):

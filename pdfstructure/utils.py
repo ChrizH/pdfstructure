@@ -4,20 +4,52 @@ import os
 from pathlib import Path
 
 from pdfminer.high_level import extract_pages
+from pdfminer.layout import LTTextContainer, LTChar, LTTextLine, LAParams
 
 
-def element_generator(file_path: str):
+def char_generator(text_container: LTTextContainer):
+    for container in text_container:
+        if isinstance(container, LTChar):
+            yield container
+        elif isinstance(container, LTTextLine):
+            for obj in container:
+                if isinstance(obj, LTChar):
+                    yield obj
+
+
+def word_generator(text_container: LTTextContainer):
+    """
+    iterates through container's characters and yields a word as soon as found (trailing whitespace).
+    @param text_container:
+    @return:
+    """
+    characters = []
+    
+    for obj in char_generator(text_container):
+        character = obj.get_text()
+        if character is not " ":
+            characters.append(character)
+        else:
+            yield "".join(characters)
+            characters.clear()
+    if characters:
+        yield "".join(characters)
+
+
+def element_generator(file_path: str, page_numbers=None):
     """
     yields flat list of paragraphs within a document.
     :param file_path:
     :return:
     """
     pNumber = 0
-    for page_layout in extract_pages(file_path):
-        pNumber += 1
+    # disable boxes_flow, style based hierarchy detection is based on purely flat list of paragraphs
+    params = LAParams(boxes_flow=None, detect_vertical=False)
+    for page_layout in extract_pages(file_path, laparams=params, page_numbers=page_numbers):
         for element in page_layout:
             element.meta = {"page": pNumber}
             yield element
+        pNumber += 1
 
 
 def truncate(number, decimals=0):

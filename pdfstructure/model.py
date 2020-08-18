@@ -1,7 +1,21 @@
-class Element():
-    def __init__(self, data, style):
+from pdfminer.layout import LTTextContainer
+
+
+class Style:
+    def __init__(self, bold, italic, fontname, fontsize):
+        self.bold = bold
+        self.italic = italic
+        self.font_name = fontname
+        self.font_size = fontsize
+
+
+class Element:
+    def __init__(self, data: LTTextContainer, style: Style):
         self.data = data
         self.style = style
+    
+    def __str__(self):
+        return self.data.get_text()
 
 
 class NestedElement(Element):
@@ -9,6 +23,9 @@ class NestedElement(Element):
         super().__init__(element, style)
         self.content = []
         self.children = []
+    
+    def get_children_content(self):
+        return " ".join(e.data.get_text() for e in self.children)
     
     def get_content(self):
         return " ".join(e.data.get_text() for e in self.content)
@@ -22,4 +39,4 @@ class NestedElement(Element):
         pass
     
     def __str__(self):
-        return "{}\n{}".format(self.get_title(), self.get_content())
+        return "{}\n{}\n{}".format(self.get_title(), self.get_content(), self.get_children_content())

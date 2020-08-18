@@ -4,7 +4,7 @@ from enum import IntEnum, auto
 
 from pdfminer.layout import LTChar, LTTextBoxHorizontal
 
-from pdfstructure.model import Element
+from pdfstructure.model import Element, Style
 from pdfstructure.style_analyser import StyleDistribution, TextSize, SizeMapper, PivotLogMapper
 
 
@@ -26,14 +26,6 @@ def clean_title(text: str, amount: int = 100) -> str:
     text = re.sub("\\s+|/", "_", text)
     text = re.sub("_+", "_", text)
     return text[:amount]
-
-
-class Style:
-    def __init__(self, bold, italic, fontname, fontsize):
-        self.bold = bold
-        self.italic = italic
-        self.font_name = fontname
-        self.font_size = fontsize
 
 
 class ProcessUnit:

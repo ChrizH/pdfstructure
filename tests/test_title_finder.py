@@ -1,13 +1,13 @@
 import itertools
 from unittest import TestCase
 
+import pandas as pd
+
 from pdfstructure.model import Element
 from pdfstructure.style_analyser import count_sizes, PivotLogMapper
 from pdfstructure.title_finder import StyleAnnotator, DocumentTitleExtractor, \
     clean_title
 from pdfstructure.utils import element_generator, find_file, DocTypeFilter
-
-import pandas as pd
 
 
 class TestStyleMapping(TestCase):
