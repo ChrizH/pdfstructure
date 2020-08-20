@@ -65,12 +65,36 @@ def header_detector(element):
     stats = Counter()
     terms = element.data
     style = element.style
+
+    if len(terms._objs) <= 2:
+        return False
+
     # data tuple per line, element from pdfminer, annotated style info for whole line
     # todo, compute ratios over whole line // or paragraph :O
     if style.bold or style.italic or style.font_size > TextSize.middle:
-        return True
+        return check_valid_header_tokens(terms)
     else:
         return False
+
+
+def check_valid_header_tokens(element):
+    """
+    fr a paragraph to be treated as a header, it has to contain at least 2 letters.
+    @param element:
+    @return:
+    """
+    alpha_count = 0
+    numeric_count = 0
+    for word in word_generator(element):
+        for c in word:
+            if c.isalpha():
+                alpha_count += 1
+            if c.isnumeric():
+                numeric_count += 1
+            
+            if alpha_count >= 2:
+                return True
+    return False
 
 
 class HierarchyLineParser(ProcessUnit):
@@ -89,7 +113,7 @@ class HierarchyLineParser(ProcessUnit):
             # append as highest order element
             output.append(child)
         stack.append(child)
-
+    
     def __should_pop_higher_level(self, stack: [ParentElement], header_to_test: ParentElement):
         """
         @type header_to_test: object
@@ -98,7 +122,7 @@ class HierarchyLineParser(ProcessUnit):
         if not stack:
             return False
         return stack[-1].heading.style.font_size <= header_to_test.heading.style.font_size
-
+    
     def __top_has_no_header(self, stack: [ParentElement]):
         if not stack:
             return False
@@ -110,13 +134,14 @@ class HierarchyLineParser(ProcessUnit):
         
         while self.__top_has_no_header(stack) or self.__should_pop_higher_level(stack, header):
             poped = stack.pop()
-            
+            # todo, add break condition, pops and adds same element all the time!!
             # header on higher level in stack has sime FontSize
             # -> check additional sub-header conditions like regexes, enumeration etc.
             if poped.heading.style.font_size == headerSize:
                 # check if header_to_check is sub-header of poped element within stack
                 if self._isSubHeader.test(poped, header):
                     stack.append(poped)
+                    return
     
     def process(self, element_gen):
         flat = []
@@ -130,6 +155,7 @@ class HierarchyLineParser(ProcessUnit):
         
         for element in element_gen:
             # if line is header
+
             flat.append(element)
             data = element.data
             style = element.style

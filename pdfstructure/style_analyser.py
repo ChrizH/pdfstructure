@@ -230,14 +230,14 @@ def count_sizes(element_gen) -> StyleDistribution:
     :return:
     """
     distribution = Counter()
-    
     # checkout each character within
     for element in element_gen:
+    
         if isinstance(element, LTTextContainer):
             for node in element:
                 # grep first character and take size
                 if not isinstance(node, LTTextLine) or node.is_empty() \
-                        or not node.get_text():
+                        or len(node._objs) == 0:
                     continue
                 
                 sizes = list(itertools.islice(

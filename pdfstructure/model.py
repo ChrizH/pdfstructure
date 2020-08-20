@@ -37,22 +37,23 @@ class ParentElement:
     def set_level(self, level):
         self.level = level
         self.prefix = "".join(["\t" for i in range(self.level)])
-    
+
     def get_children_content(self):
         return " ".join(str(e) for e in self.children)
-    
+
     def get_content(self):
         return "\n".join(str(e) for e in self.content)
-    
+
     def get_title(self):
         return "{}[{}]".format(self.prefix,
                                self.heading.data.get_text().strip().replace("\n", "{}\n".format(self.prefix)))
-    
+
+    # todo, implement tree.search(title)
     # todo, implement flatten to get whole structure
     def traverse(self):
         # traverse through tree to extract structure as json // or find all titles etc
         pass
-    
+
     def __str__(self):
         """ todo, define printer interface, pretty string // json"""
         return "{}\n{}\n{}".format(self.get_title(),

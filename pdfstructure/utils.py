@@ -44,11 +44,16 @@ def element_generator(file_path: str, page_numbers=None):
     """
     pNumber = 0
     # disable boxes_flow, style based hierarchy detection is based on purely flat list of paragraphs
-    params = LAParams(boxes_flow=None, detect_vertical=False)
+    params = LAParams(boxes_flow=0.5, detect_vertical=True)
+    # todo, understand LAParams, for columns, NONE works better, for vertical only layout LAParams(boxes_flow=None, detect_vertical=False) works better!! :O
+    #   do some sort of layout analyis, if there are many boxes vertically next to each other, use layout analysis
+    #   - column type
+    #   - straight forward document
     for page_layout in extract_pages(file_path, laparams=params, page_numbers=page_numbers):
         for element in page_layout:
-            element.meta = {"page": pNumber}
-            yield element
+            if isinstance(element, LTTextContainer):
+                element.meta = {"page": pNumber}
+                yield element
         pNumber += 1
 
 

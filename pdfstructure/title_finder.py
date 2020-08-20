@@ -2,19 +2,28 @@ import itertools
 import re
 from enum import IntEnum, auto
 
-from pdfminer.layout import LTChar, LTTextBoxHorizontal
+from pdfminer.layout import LTChar, LTTextBoxHorizontal, LTTextLineHorizontal
 
 from pdfstructure.model import Element, Style
 from pdfstructure.style_analyser import StyleDistribution, TextSize, SizeMapper, PivotLogMapper
 
 
-def head_char(container: LTTextBoxHorizontal) -> LTChar:
+def head_char_box(container: LTTextBoxHorizontal) -> LTChar:
     """
     :rtype LTChar
     :param container:
     :return:
     """
     return container._objs[0]._objs[0]
+
+
+def head_char_line(container: LTTextLineHorizontal) -> LTChar:
+    """
+    :rtype LTChar
+    :param container:
+    :return:
+    """
+    return container._objs[0]
 
 
 def clean_title(text: str, amount: int = 100) -> str:
@@ -103,7 +112,7 @@ class StyleAnnotator(ProcessUnit):
                     sizes = [sub_char.size for sub_char in line
                              if hasattr(sub_char, "size")]
                     # mostCommonSize = statistics.mean(sizes)
-                    fontName = head_char(element).fontname
+                    fontName = head_char_line(line).fontname
                     mapped_size = self._sizeMapper.translate(target_enum=TextSize,
                                                              value=max(sizes))
                     s = Style(bold="bold" in str(fontName.lower()),
