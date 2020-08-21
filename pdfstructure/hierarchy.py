@@ -115,7 +115,7 @@ class HierarchyLineParser(ProcessUnit):
         self._isSubHeader.add_condition(condition_boldness)
         self._isSubHeader.add_condition(condition_h1_enum_h2_not)
         self._isSubHeader.add_condition(condition_h2_extends_h1)
-        self._isSubHeader.add_condition(condition_h1_slightly_bigger_h2)
+        # self._isSubHeader.add_condition(condition_h1_slightly_bigger_h2)
     
     def __push_to_stack(self, child, stack, output):
         if stack:
@@ -161,13 +161,12 @@ class HierarchyLineParser(ProcessUnit):
         levelStack = []
         element = next(element_gen)
         first = ParentElement(element)
-    
+
         levelStack.append(first)
         structured.append(first)
-    
+
         for element in element_gen:
             # if line is header
-
             flat.append(element)
             data = element.data
             style = element.style
@@ -177,16 +176,16 @@ class HierarchyLineParser(ProcessUnit):
                 stackPeekSize = levelStack[-1].heading.style.font_size
                 
                 if stackPeekSize > headerSize:
-                    # append child
+                    # append element as children
                     self.__push_to_stack(child, levelStack, structured)
 
                 else:
-                    # go up in hierarchy
+                    # go up in hierarchy and insert element (as children) on its level
                     self.__pop_stack_until_match(levelStack, headerSize, child)
                     self.__push_to_stack(child, levelStack, structured)
 
             else:
-                # merge content to last paragraph
+                # no header found, add paragraph as a content element to previous node
                 levelStack[-1].content.append(Element(data, style, level=len(levelStack)))
-    
-        return StructuredPdfDocument(elements=structured), flat
+
+        return StructuredPdfDocument(elements=structured)

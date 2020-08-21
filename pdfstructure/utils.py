@@ -30,7 +30,10 @@ def word_generator(text_container: LTTextContainer):
         if character is not " ":
             characters.append(character)
         else:
-            yield "".join(characters)
+            word = "".join(characters).strip()
+            # skip if word is just a whitespace on its own
+            if len(word) > 0:
+                yield word
             characters.clear()
     if characters:
         yield "".join(characters)

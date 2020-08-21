@@ -18,33 +18,20 @@ class TestHierarchy(TestCase):
         test_doc = self.base_path + "5648.pdf"
         parser = HierarchyLineParser()
         lines_gen = TestUtils.generate_annotated_lines(test_doc)
-        structured, flat = parser.process(lines_gen)
-        self.assertEqual(13, structured[0].children.__len__())
+        structured = parser.process(lines_gen)
+        self.assertEqual(13, structured.elements[0].children.__len__())
 
     def test_grouping_bold_key_and_size(self):
         parser = HierarchyLineParser()
         elements_gen = TestUtils.generate_annotated_lines(self.straight_forward_doc)
-        document, _ = parser.process(elements_gen)
+        document = parser.process(elements_gen)
         self.assertEqual(len(document.elements), 9)
-
-    def test_pdf_plumber(self):
-        test_doc = str(Path("resources/IE00BM67HT60-ATB-FS-DE-2020-2-28.pdf").absolute())
-    
-        import pdfplumber
-    
-        with pdfplumber.open(test_doc) as pdf:
-            lines = pdf.lines
-            for page in pdf.pages:
-                text = page.extract_text()
-                words = page.extract_words(horizontal_ltr=True)
-                print(words)
 
     def test_grouping_bold_columns(self):
         parser = HierarchyLineParser()
         elements_gen = TestUtils.generate_annotated_lines(self.doc_with_columns)
-        structured, flat = parser.process(elements_gen)
-        t = "\n".join([str(e) for e in structured])
-        self.assertTrue(structured)
+        document = parser.process(elements_gen)
+        self.assertTrue(document)
 
 
 class TestSubHeaderConditions(TestCase):
