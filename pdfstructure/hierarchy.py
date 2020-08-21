@@ -1,7 +1,7 @@
 import re
 from collections import Counter
 
-from pdfstructure.model import Element, ParentElement
+from pdfstructure.model import Element, ParentElement, StructuredPdfDocument
 from pdfstructure.style_analyser import TextSize
 from pdfstructure.title_finder import ProcessUnit
 from pdfstructure.utils import word_generator
@@ -48,6 +48,17 @@ def condition_h1_enum_h2_not(h1: ParentElement, h2: ParentElement):
     h1start = next(word_generator(h1.heading.data))
     h2start = next(word_generator(h2.heading.data))
     return numeration_pattern.match(h1start) and not numeration_pattern.match(h2start)
+
+
+def condition_h1_slightly_bigger_h2(h1: ParentElement, h2: ParentElement):
+    """
+    Style analysis maps found sizes to a predefined enum (xsmall, small, large, xlarge).
+    but sometimes it makes sense to look deeper.
+    @param h1:
+    @param h2:
+    @return:
+    """
+    return h2.heading.style.mean_size < h1.heading.style.mean_size
 
 
 class SubHeaderPredicate:
@@ -104,6 +115,7 @@ class HierarchyLineParser(ProcessUnit):
         self._isSubHeader.add_condition(condition_boldness)
         self._isSubHeader.add_condition(condition_h1_enum_h2_not)
         self._isSubHeader.add_condition(condition_h2_extends_h1)
+        self._isSubHeader.add_condition(condition_h1_slightly_bigger_h2)
     
     def __push_to_stack(self, child, stack, output):
         if stack:
@@ -142,17 +154,17 @@ class HierarchyLineParser(ProcessUnit):
                 if self._isSubHeader.test(poped, header):
                     stack.append(poped)
                     return
-    
-    def process(self, element_gen):
+
+    def process(self, element_gen) -> StructuredPdfDocument:
         flat = []
         structured = []
         levelStack = []
         element = next(element_gen)
         first = ParentElement(element)
-        
+    
         levelStack.append(first)
         structured.append(first)
-        
+    
         for element in element_gen:
             # if line is header
 
@@ -167,13 +179,14 @@ class HierarchyLineParser(ProcessUnit):
                 if stackPeekSize > headerSize:
                     # append child
                     self.__push_to_stack(child, levelStack, structured)
-                
+
                 else:
                     # go up in hierarchy
                     self.__pop_stack_until_match(levelStack, headerSize, child)
                     self.__push_to_stack(child, levelStack, structured)
-            
+
             else:
                 # merge content to last paragraph
                 levelStack[-1].content.append(Element(data, style, level=len(levelStack)))
-        return structured, flat
+    
+        return StructuredPdfDocument(elements=structured), flat

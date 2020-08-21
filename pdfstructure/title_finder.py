@@ -1,11 +1,13 @@
 import itertools
 import re
+import statistics
 from enum import IntEnum, auto
 
 from pdfminer.layout import LTChar, LTTextBoxHorizontal, LTTextLineHorizontal
 
 from pdfstructure.model import Element, Style
 from pdfstructure.style_analyser import StyleDistribution, TextSize, SizeMapper, PivotLogMapper
+from pdfstructure.utils import truncate
 
 
 def head_char_box(container: LTTextBoxHorizontal) -> LTChar:
@@ -115,9 +117,11 @@ class StyleAnnotator(ProcessUnit):
                     fontName = head_char_line(line).fontname
                     mapped_size = self._sizeMapper.translate(target_enum=TextSize,
                                                              value=max(sizes))
+                    mean_size = truncate(statistics.mean(sizes), 1)
                     s = Style(bold="bold" in str(fontName.lower()),
                               italic="italic" in fontName.lower(),
-                              fontname=fontName, fontsize=mapped_size)
+                              fontname=fontName, fontsize=mapped_size,
+                              mean_size=mean_size)
                     
                     yield Element(data=line, style=s)
 
