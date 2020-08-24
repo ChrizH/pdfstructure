@@ -3,11 +3,12 @@ from collections import Counter
 from pathlib import Path
 from unittest import TestCase
 
+import pandas as pd
+
 from pdfstructure.style_analyser import TextSize, PivotLinearMapper, PivotLogMapper
 from pdfstructure.style_analyser import count_sizes, StyleDistribution
-from pdfstructure.title_finder import DocumentTitleExtractor
+from pdfstructure.title_finder import DocumentTitleExtractor, StyleAnnotator
 from pdfstructure.utils import element_generator, find_file, DocTypeFilter
-import pandas as pd
 
 
 class TestSizeMapper(TestCase):
@@ -60,17 +61,42 @@ class TestSizeMapper(TestCase):
         self.assertEqual(TextSize.xlarge, scaler.translate(TextSize, 120))
 
 
+class TestFonts(TestCase):
+    def test_fontnames(self):
+        fonts = []
+        for file in itertools.islice(find_file(str(Path("resources/").absolute()), DocTypeFilter(endings=("pdf"))), 3):
+            if not file.is_file():
+                continue
+            file_path = str(file.absolute())
+            distribution = count_sizes(element_generator(file_path))
+            
+            sizeMapper = PivotLogMapper(distribution)
+            style_annotator = StyleAnnotator(sizemapper=sizeMapper, style_info=distribution)
+            
+            elements = element_generator(file_path)
+            with_style = style_annotator.process(elements)
+            
+            for data in with_style:
+                fonts.append(data.style.font_name)
+        
+        ds = pd.Series(fonts, name="fonts", dtype=str)
+        boldmasked = ds.loc[ds.apply(lambda x: "bold" in x.lower())]
+        italic = ds.loc[ds.apply(lambda x: "italic" in x.lower())]
+        
+        # todo, define test scenario for sample files
+
+
 class TestStyleAnalyser(TestCase):
     test_path_1 = str(Path("resources/interview_cheatsheet.pdf").absolute())
     test_path_2 = str(Path("resources/IE00BM67HT60-ATB-FS-DE-2020-2-28.pdf").absolute())
     test_ppt = str(Path("resources/samplepptx.pdf").absolute())
     
-    def test_norm_data_across_files(self):
+    def skipped_test_norm_data_across_files(self):
         styles = []
         dists = []
         for pdf_file in itertools.islice(
                 find_file(str(Path("/home/christian/Documents/data_recovery_katharina/pdf/").absolute()),
-                          DocTypeFilter("pdf")), 200):
+                          DocTypeFilter("pdf")), 20):
             
             try:
                 distribution = count_sizes(element_generator(str(pdf_file)))
@@ -82,7 +108,6 @@ class TestStyleAnalyser(TestCase):
             styles.append(norm)
             dists.append(distribution)
         
-        from sklearn import preprocessing
         import pickle
         df = pd.DataFrame.from_records(styles)
         pickle.dump(dists, open("doc_sizes.p", "wb"))

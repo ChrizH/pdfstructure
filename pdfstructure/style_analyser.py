@@ -46,8 +46,6 @@ class StyleDistribution:
         # normalise counts with total amount of collected values
         # normalise each key value against max found key value (size)
         # normalise X & Y
-        
-        # todo, bin distribution to 50 bins
         normalised = defaultdict(int)
         amount_items = self.amount_values
         for size in self.data:

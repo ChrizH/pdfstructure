@@ -5,7 +5,7 @@ from enum import IntEnum, auto
 
 from pdfminer.layout import LTChar, LTTextBoxHorizontal, LTTextLineHorizontal
 
-from pdfstructure.model import Element, Style
+from pdfstructure.model import PdfElement, Style
 from pdfstructure.style_analyser import StyleDistribution, TextSize, SizeMapper, PivotLogMapper
 from pdfstructure.utils import truncate
 
@@ -66,23 +66,23 @@ class HeaderSelector(ProcessUnit):
     
     def yield_forward_text_as_title(self, element_gen):
         for element in element_gen:
-            if isinstance(element, Element) and len(element.data._objs) > 2:
-                header = element.data.get_text().strip()
+            if isinstance(element, PdfElement) and len(element._data._objs) > 2:
+                header = element._data.get_text().strip()
                 header = clean_title(header)
-                
+            
                 yield header
     
     def yield_title_from_size(self, element_gen, threshold=TextSize.large):
         for element in element_gen:
-            if not isinstance(element, Element):
+            if not isinstance(element, PdfElement):
                 print("unpredicted element {}".format(element))
                 continue
-            
-            if not len(element.data._objs) > 2:
+    
+            if not len(element._data._objs) > 2:
                 continue
-            
-            if element.style.font_size >= threshold:
-                header = element.data.get_text().strip()
+    
+            if element.style.mapped_font_size >= threshold:
+                header = element._data.get_text().strip()
                 header = clean_title(header)
                 yield header
     
@@ -120,10 +120,11 @@ class StyleAnnotator(ProcessUnit):
                     mean_size = truncate(statistics.mean(sizes), 1)
                     s = Style(bold="bold" in str(fontName.lower()),
                               italic="italic" in fontName.lower(),
-                              fontname=fontName, fontsize=mapped_size,
+                              font_name=fontName,
+                              mapped_font_size=mapped_size,
                               mean_size=mean_size)
-                    
-                    yield Element(data=line, style=s)
+
+                    yield PdfElement(data=line, style=s)
 
 
 class DocumentTitleExtractor(ProcessUnit):

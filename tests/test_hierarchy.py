@@ -4,7 +4,7 @@ from unittest import TestCase
 from pdfminer.layout import LTTextLineHorizontal, LTChar, LTTextBoxHorizontal
 
 from pdfstructure.hierarchy import HierarchyLineParser, condition_h2_extends_h1
-from pdfstructure.model import Element, Style
+from pdfstructure.model import PdfElement, Style, ParentPdfElement
 from pdfstructure.style_analyser import TextSize
 from tests.test_title_finder import TestUtils
 
@@ -51,12 +51,16 @@ class TestSubHeaderConditions(TestCase):
             line.add(self.create_char(c))
         box.add(line)
         return box
-    
+
     def test_condition_h2_extends_h1(self):
-        h1 = Element(data=self.create_container("1.1 This is a test header"),
-                     style=Style(bold=True, italic=True, fontname="test-font", fontsize=TextSize.middle))
-        
-        h2 = Element(data=self.create_container("1.1.2 This is a subheader of 1.1"),
-                     style=Style(bold=True, italic=True, fontname="test-font", fontsize=TextSize.middle))
-        
-        self.assertTrue(condition_h2_extends_h1(h1, h2))
+        element1 = PdfElement(data=self.create_container("1.1 This is a test header"),
+                              style=Style(bold=True, italic=True, font_name="test-font",
+                                          mapped_font_size=TextSize.middle,
+                                          mean_size=10))
+    
+        element2 = PdfElement(data=self.create_container("1.1.2 This is a subheader of 1.1"),
+                              style=Style(bold=True, italic=True, font_name="test-font",
+                                          mapped_font_size=TextSize.middle,
+                                          mean_size=10))
+    
+        self.assertTrue(condition_h2_extends_h1(ParentPdfElement(element1), ParentPdfElement(element2)))

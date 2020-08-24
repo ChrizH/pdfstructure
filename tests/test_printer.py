@@ -1,30 +1,33 @@
+import json
 import tempfile
 from pathlib import Path
 from unittest import TestCase
 
 from pdfstructure.hierarchy import HierarchyLineParser
-from pdfstructure.printer import PrettyStringFilePrinter, PrettyStringPrinter, JsonPrinter
+from pdfstructure.model import StructuredPdfDocument
+from pdfstructure.printer import PrettyStringFilePrinter, PrettyStringPrinter, JsonFilePrinter, JsonStringPrinter
 from tests.test_title_finder import TestUtils
 
 
 class TestPrettyStringPrinter(TestCase):
     straight_forward_doc = str(Path("resources/interview_cheatsheet.pdf").absolute())
-    correctFormattedText = "[Data Structure Basics]\n\n\t[Array]\n\n\t\t[Definition:]\n\t\t\tStores data elements" \
+    correctFormattedText = "[Data Structure Basics]\n\n\t[Array]\n\n\t\t[Definition:]\n\t\t Stores data elements" \
                            " based on an sequential, most commonly 0 based, index."
+    
     testDocument = None
     
     @classmethod
     def setUpClass(cls) -> None:
         parser = HierarchyLineParser()
         elements_gen = TestUtils.generate_annotated_lines(cls.straight_forward_doc)
-        cls.testDocument, _ = parser.process(elements_gen)
+        cls.testDocument = parser.process(elements_gen)
     
-    def test_print_string(self):
+    def test_print_pretty_string(self):
         printer = PrettyStringPrinter()
         printed = printer.print(self.testDocument)
         self.assertTrue(self.correctFormattedText in printed)
     
-    def test_print_to_file(self):
+    def test_print_pretty_file(self):
         printer = PrettyStringFilePrinter()
         
         with tempfile.TemporaryDirectory() as tmp:
@@ -37,16 +40,33 @@ class TestPrettyStringPrinter(TestCase):
                 printed = "".join(file.readlines())
                 self.assertTrue(self.correctFormattedText in printed)
     
-    def skipped_print_to_json(self):
-        printer = JsonPrinter()
-        # todo, abstract hierarchy extraction step to text only models!!
+    def test_print_json_string(self):
+        printer = JsonStringPrinter()
+        
+        jsonString = printer.print(self.testDocument)
+        
+        decoded_document = StructuredPdfDocument.from_json(json.loads(jsonString))
+        
+        self.assertEqual(self.testDocument.elements[0].heading.text,
+                         decoded_document.elements[0].heading.text)
+        self.assertEqual(self.testDocument.elements[-1].heading.text,
+                         decoded_document.elements[-1].heading.text)
+    
+    def test_print_json_file(self):
+        printer = JsonFilePrinter()
         
         with tempfile.TemporaryDirectory() as tmp:
             print('created temporary directory', tmp)
             
             file_path = Path(tmp, "document-pretty.json")
-            printed_file = printer.print(self.testDocument, file_path=str(file_path.absolute()))
+            printer.print(self.testDocument, file_path=str(file_path.absolute()))
             
-            with open(printed_file, "r") as file:
-                printed = "".join(file.readlines())
-                self.assertTrue(self.correctFormattedText in printed)
+            with open(file_path, "r") as file:
+                jsonData = json.load(file)
+                
+                decoded_document = StructuredPdfDocument.from_json(jsonData)
+                
+                self.assertEqual(self.testDocument.elements[0].heading.text,
+                                 decoded_document.elements[0].heading.text)
+                self.assertEqual(self.testDocument.elements[-1].heading.text,
+                                 decoded_document.elements[-1].heading.text)

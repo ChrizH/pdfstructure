@@ -17,6 +17,10 @@ def char_generator(text_container: LTTextContainer):
                     yield obj
 
 
+def dict_subset(d, exclude_keys):
+    return {k: v for k, v in d.items() if k not in exclude_keys}
+
+
 def word_generator(text_container: LTTextContainer):
     """
     iterates through container's characters and yields a word as soon as found (trailing whitespace).

@@ -1,7 +1,7 @@
 import re
 from collections import Counter
 
-from pdfstructure.model import Element, ParentElement, StructuredPdfDocument
+from pdfstructure.model import PdfElement, ParentPdfElement, StructuredPdfDocument
 from pdfstructure.style_analyser import TextSize
 from pdfstructure.title_finder import ProcessUnit
 from pdfstructure.utils import word_generator
@@ -10,7 +10,7 @@ numeration_pattern = re.compile("[\\d+.?]+")
 white_space_pattern = re.compile("\\s+")
 
 
-def condition_boldness(h1: ParentElement, h2: ParentElement):
+def condition_boldness(h1: ParentPdfElement, h2: ParentPdfElement):
     """
     h2 is subheader if:if h1 is bold
     - h1 is bold & h2 is not bold
@@ -19,15 +19,15 @@ def condition_boldness(h1: ParentElement, h2: ParentElement):
     @param h2:
     @return:
     """
-    h1start = next(word_generator(h1.heading.data))
-    h2start = next(word_generator(h2.heading.data))
+    h1start = next(word_generator(h1.heading._data))
+    h2start = next(word_generator(h2.heading._data))
     if numeration_pattern.match(h2start) and not numeration_pattern.match(h1start):
         return False
     
     return h1.heading.style.bold and not h2.heading.style.bold
 
 
-def condition_h2_extends_h1(h1: ParentElement, h2: ParentElement):
+def condition_h2_extends_h1(h1: ParentPdfElement, h2: ParentPdfElement):
     """
     e.g.:   h1  ->  1.1 some header
             h2  ->  1.1.2   some sub header
@@ -35,22 +35,22 @@ def condition_h2_extends_h1(h1: ParentElement, h2: ParentElement):
     @param h2:
     @return:
     """
-    h1start = next(word_generator(h1.heading.data))
-    h2start = next(word_generator(h2.heading.data))
+    h1start = next(word_generator(h1.heading._data))
+    h2start = next(word_generator(h2.heading._data))
     return len(h2start) > len(h1start) and h1start in h2start
 
 
-def condition_h1_enum_h2_not(h1: ParentElement, h2: ParentElement):
+def condition_h1_enum_h2_not(h1: ParentPdfElement, h2: ParentPdfElement):
     """
     e.g.    h1  -> 1.1 some header title
             h2  -> some other header title
     """
-    h1start = next(word_generator(h1.heading.data))
-    h2start = next(word_generator(h2.heading.data))
+    h1start = next(word_generator(h1.heading._data))
+    h2start = next(word_generator(h2.heading._data))
     return numeration_pattern.match(h1start) and not numeration_pattern.match(h2start)
 
 
-def condition_h1_slightly_bigger_h2(h1: ParentElement, h2: ParentElement):
+def condition_h1_slightly_bigger_h2(h1: ParentPdfElement, h2: ParentPdfElement):
     """
     Style analysis maps found sizes to a predefined enum (xsmall, small, large, xlarge).
     but sometimes it makes sense to look deeper.
@@ -74,15 +74,15 @@ class SubHeaderPredicate:
 
 def header_detector(element):
     stats = Counter()
-    terms = element.data
+    terms = element._data
     style = element.style
-
+    
     if len(terms._objs) <= 2:
         return False
-
+    
     # data tuple per line, element from pdfminer, annotated style info for whole line
     # todo, compute ratios over whole line // or paragraph :O
-    if style.bold or style.italic or style.font_size > TextSize.middle:
+    if style.bold or style.italic or style.mapped_font_size > TextSize.middle:
         return check_valid_header_tokens(terms)
     else:
         return False
@@ -116,7 +116,7 @@ class HierarchyLineParser(ProcessUnit):
         self._isSubHeader.add_condition(condition_h1_enum_h2_not)
         self._isSubHeader.add_condition(condition_h2_extends_h1)
         # self._isSubHeader.add_condition(condition_h1_slightly_bigger_h2)
-    
+
     def __push_to_stack(self, child, stack, output):
         if stack:
             child.set_level(len(stack))
@@ -125,31 +125,30 @@ class HierarchyLineParser(ProcessUnit):
             # append as highest order element
             output.append(child)
         stack.append(child)
-    
-    def __should_pop_higher_level(self, stack: [ParentElement], header_to_test: ParentElement):
+
+    def __should_pop_higher_level(self, stack: [ParentPdfElement], header_to_test: ParentPdfElement):
         """
         @type header_to_test: object
         
         """
         if not stack:
             return False
-        return stack[-1].heading.style.font_size <= header_to_test.heading.style.font_size
-    
-    def __top_has_no_header(self, stack: [ParentElement]):
+        return stack[-1].heading.style.mapped_font_size <= header_to_test.heading.style.mapped_font_size
+
+    def __top_has_no_header(self, stack: [ParentPdfElement]):
         if not stack:
             return False
-        return len(stack[-1].heading.data) == 0
-    
+        return len(stack[-1].heading._data) == 0
+
     def __pop_stack_until_match(self, stack, headerSize, header):
         # if top level is smaller than current header to test, pop it
         # repeat until top level is bigger or same
-        
+    
         while self.__top_has_no_header(stack) or self.__should_pop_higher_level(stack, header):
             poped = stack.pop()
-            # todo, add break condition, pops and adds same element all the time!!
             # header on higher level in stack has sime FontSize
             # -> check additional sub-header conditions like regexes, enumeration etc.
-            if poped.heading.style.font_size == headerSize:
+            if poped.heading.style.mapped_font_size == headerSize:
                 # check if header_to_check is sub-header of poped element within stack
                 if self._isSubHeader.test(poped, header):
                     stack.append(poped)
@@ -160,32 +159,33 @@ class HierarchyLineParser(ProcessUnit):
         structured = []
         levelStack = []
         element = next(element_gen)
-        first = ParentElement(element)
-
+        first = ParentPdfElement(element)
+    
         levelStack.append(first)
         structured.append(first)
-
+    
         for element in element_gen:
             # if line is header
             flat.append(element)
-            data = element.data
+            data = element._data
             style = element.style
             if header_detector(element):
-                child = ParentElement(element)
-                headerSize = style.font_size
-                stackPeekSize = levelStack[-1].heading.style.font_size
-                
+                child = ParentPdfElement(element)
+                headerSize = style.mapped_font_size
+                stackPeekSize = levelStack[-1].heading.style.mapped_font_size
+            
                 if stackPeekSize > headerSize:
                     # append element as children
                     self.__push_to_stack(child, levelStack, structured)
-
+            
                 else:
                     # go up in hierarchy and insert element (as children) on its level
                     self.__pop_stack_until_match(levelStack, headerSize, child)
                     self.__push_to_stack(child, levelStack, structured)
-
+        
             else:
                 # no header found, add paragraph as a content element to previous node
-                levelStack[-1].content.append(Element(data, style, level=len(levelStack)))
-
+                # - content is on same level as its corresponding header
+                levelStack[-1].content.append(PdfElement(data, style, level=len(levelStack) - 1))
+    
         return StructuredPdfDocument(elements=structured)

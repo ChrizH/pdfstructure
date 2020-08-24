@@ -1,13 +1,10 @@
-import itertools
 from unittest import TestCase
 
-import pandas as pd
-
-from pdfstructure.model import Element
+from pdfstructure.model import PdfElement
 from pdfstructure.style_analyser import count_sizes, PivotLogMapper
 from pdfstructure.title_finder import StyleAnnotator, DocumentTitleExtractor, \
     clean_title
-from pdfstructure.utils import element_generator, find_file, DocTypeFilter
+from pdfstructure.utils import element_generator
 
 
 class TestStyleMapping(TestCase):
@@ -29,7 +26,7 @@ class TestStyleMapping(TestCase):
         with_style = style_annotator.process(get_elements)
         for data in with_style:
             # for element in style_annotator.process(page, self.distribution):
-            self.assertIsInstance(data, Element)
+            self.assertIsInstance(data, PdfElement)
     
     def test_header_selector(self):
         distribution = count_sizes(element_generator(file_path=self.test_doc_path))
@@ -79,7 +76,6 @@ class TestStyleMapping(TestCase):
         self.assertEqual('Verdammt_lang_her_Andreas_Gabalier', title)
     
     def test_with_images(self):
-        # todo, 13100
         extractor = DocumentTitleExtractor()
         distribution = count_sizes(element_generator(file_path=self.base_path + "13100.pdf"))
         elements = element_generator(file_path=self.base_path + "13100.pdf")
@@ -121,23 +117,3 @@ class TestUtils(TestCase):
         with_style = style_annotator.process(elements)
         
         yield from with_style
-    
-    def test_fontnames(self):
-        fonts = []
-        for file in itertools.islice(find_file(TestStyleMapping.base_path, DocTypeFilter(endings=("pdf"))), 30):
-            if not file.is_file():
-                continue
-            file_path = str(file.absolute())
-            distribution = count_sizes(element_generator(file_path))
-            
-            sizeMapper = PivotLogMapper(distribution)
-            style_annotator = StyleAnnotator(sizemapper=sizeMapper, style_info=distribution)
-            
-            elements = element_generator(file_path)
-            with_style = style_annotator.process(elements)
-            
-            for data in with_style:
-                fonts.append(data["style"].font_name)
-        ds = pd.Series(fonts, name="fonts", dtype=str)
-        boldmasked = ds.loc[ds.apply(lambda x: "bold" in x.lower())]
-        italic = ds.loc[ds.apply(lambda x: "italic" in x.lower())]
