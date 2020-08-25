@@ -1,23 +1,35 @@
 # PDF Structural Parser
-Most libraries extract text as it is from PDF documents, but ignore the given natural order like chapters, sections and subsections. 
-`pdfstructure` parses and stores the relations between paragraphs in a nested tree structure. 
+`pdfstructure` detects, splits and organises the documents text content into its natural structure as envisioned by the author.
+The document structure, or hierarchy, stores the relation between chapters, sections and their sub sections in a nested, recursive manner.   
 
+
+`pdfstructure` is in early development and built on top of [pdfminer.six](https://github.com/pdfminer/pdfminer.six). 
+
+## Document Model
 
 ```
-    Header: Chapter 1                   << H1 Header Font >>
-    Content:                            << Body Font >>
-        Header: Section 1.1             << H2 Header Font >>
-        Content:                        << Body Font >>
-        Header: Section 1.2             << H2 Header Font >>
-        Content:                        << Body Font >>
-            Header: Subsection 1.2.1    << H3 Header Font >>
-            Content:                    << Body Font >>
-    Header: Chapter 2                   << H1 Header Font >>
-    content:                            << Body Font >>
+# Document Representation with all sections
+class StructuredPdfDocument:
+    metadata: dict
+    elements: List[Section]
+
+# One Section
+class Section:
+    heading: TextElement
+    content: List[TextElement]
+    children: List[Section]
+    
+    # level denotes the nodes depth within tree structure 
+    level: int  
+
+# Group of words
+class TextElement:
+    text: str
+    style: Style
+    page: int
 ```
 
-
-## Parse PDF with natural order
+## Load and parse PDF
 
 ```
 # specify source (that implements source.read())
@@ -26,16 +38,16 @@ source = FileSource(path)
 pdf = parser.parse_pdf(source)
 ```
 
-### Get Pretty String Text
+### Serialize Document to String
 To export the parsed structure, use a printer implementation.
 ```
 stringExporter = PrettyStringPrinter()
 
 prettyString = stringExporter.print(pdf)
 ```
-```
-# excerpt of the example string looks like:
 
+**Excerpt of the parsed document (serialized to string)**
+```
 [Search Basics]
 	[Breadth First Search]
 		[Definition:]
@@ -52,7 +64,7 @@ prettyString = stringExporter.print(pdf)
 			The queue uses more memory because it needs to stores pointers
 ```
 
-### Serialize PDF to JSON
+### Serialize Document to JSON
 ```
     printer = JsonFilePrinter()
 
@@ -60,7 +72,7 @@ prettyString = stringExporter.print(pdf)
     printer.print(self.testDocument, file_path=str(file_path.absolute()))
 ```
 
-Excerpt of exported json:
+**Excerpt of exported json**
 ```
 {
     "metadata": {
@@ -82,7 +94,7 @@ Excerpt of exported json:
         "filename": "interview_cheatsheet.pdf"
     },
     "elements": [
-        {
+       {
             "heading": {
                 "style": {
                     "bold": true,
@@ -91,8 +103,8 @@ Excerpt of exported json:
                     "mapped_font_size": "xlarge",
                     "mean_size": 12.8
                 },
-                "level": 0,
-                "text": "Data Structure Basics"
+                "page": 2,
+                "text": "Search Basics"
             },
             "content": [],
             "children": [
@@ -105,11 +117,8 @@ Excerpt of exported json:
                             "mapped_font_size": "large",
                             "mean_size": 10.6
                         },
-                        "level": 0,
-                        "metadata": {
-                            "page": 0
-                        },
-                        "text": "Array"
+                        "page": 2,
+                        "text": "Breadth First Search"
                     },
                     "content": [],
                     "children": [
@@ -122,32 +131,8 @@ Excerpt of exported json:
                                     "mapped_font_size": "middle",
                                     "mean_size": 8.5
                                 },
-                                "level": 0,
+                                "page": 2,
                                 "text": "Definition:"
                             },
-                            "content": [
-                                {
-                                    "style": {
-                                        "bold": false,
-                                        "italic": false,
-                                        "font_name": ".SFNSText",
-                                        "mapped_font_size": "middle",
-                                        "mean_size": 8.5
-                                    },
-                                    "level": 2,
-                                    "text": "Stores data elements based on an sequential, most commonly 0 based, index."
-                                }
-                            ]}
-            ]
-}
-          
+         ....          
 ```
-
-
-
-## Applications
-* Search Engines: Index and make document searchable on a per paragraph basis. 
-  * Custom scoring functions
-    * match on title vs sub title, content on a lower nested level
-    
-* Extract a useful name for documents, when the original filename is not meaningful.

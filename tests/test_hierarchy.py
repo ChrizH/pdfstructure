@@ -2,10 +2,9 @@ from pathlib import Path
 from unittest import TestCase
 
 from pdfminer.layout import LTTextLineHorizontal, LTChar, LTTextBoxHorizontal
-
 from pdfstructure.hierarchy.headercompare import condition_h2_extends_h1
 from pdfstructure.hierarchy.parser import HierarchyParser
-from pdfstructure.model import PdfElement, Style, ParentPdfElement, TextSize
+from pdfstructure.model import TextElement, Style, Section, TextSize
 from pdfstructure.source import FileSource
 from tests import helper
 
@@ -68,14 +67,14 @@ class TestSubHeaderConditions(TestCase):
         return box
 
     def test_condition_h2_extends_h1(self):
-        element1 = PdfElement(text_container=self.create_container("1.1 This is a test header"),
-                              style=Style(bold=True, italic=True, font_name="test-font",
-                                          mapped_font_size=TextSize.middle,
-                                          mean_size=10))
+        element1 = TextElement(text_container=self.create_container("1.1 This is a test header"),
+                               style=Style(bold=True, italic=True, font_name="test-font",
+                                           mapped_font_size=TextSize.middle,
+                                           mean_size=10))
 
-        element2 = PdfElement(text_container=self.create_container("1.1.2 This is a subheader of 1.1"),
-                              style=Style(bold=True, italic=True, font_name="test-font",
-                                          mapped_font_size=TextSize.middle,
-                                          mean_size=10))
+        element2 = TextElement(text_container=self.create_container("1.1.2 This is a subheader of 1.1"),
+                               style=Style(bold=True, italic=True, font_name="test-font",
+                                           mapped_font_size=TextSize.middle,
+                                           mean_size=10))
 
-        self.assertTrue(condition_h2_extends_h1(ParentPdfElement(element1), ParentPdfElement(element2)))
+        self.assertTrue(condition_h2_extends_h1(Section(element1), Section(element2)))

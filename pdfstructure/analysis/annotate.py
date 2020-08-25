@@ -1,10 +1,9 @@
 import statistics
 
 from pdfminer.layout import LTTextBoxHorizontal
-
 from pdfstructure.analysis.sizemapper import SizeMapper
 from pdfstructure.analysis.styledistribution import StyleDistribution
-from pdfstructure.model import TextSize, Style, PdfElement
+from pdfstructure.model import TextSize, Style, TextElement
 from pdfstructure.utils import head_char_line, truncate
 
 
@@ -41,5 +40,5 @@ class StyleAnnotator:
                               font_name=fontName,
                               mapped_font_size=mapped_size,
                               mean_size=mean_size)
-                    metadata = {"page": element.page} if hasattr(element, "page") else None
-                    yield PdfElement(text_container=line, style=s, metadata=metadata)
+                    yield TextElement(text_container=line, style=s,
+                                      page=element.page if hasattr(element, "page") else None)

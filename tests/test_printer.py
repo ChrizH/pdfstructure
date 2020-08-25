@@ -10,6 +10,7 @@ from pdfstructure.source import FileSource
 
 class TestPrettyStringPrinter(TestCase):
     straight_forward_doc = str(Path("resources/interview_cheatsheet.pdf").absolute())
+    column_doc = str(Path("resources/IE00BM67HT60-ATB-FS-DE-2020-2-28.pdf").absolute())
     correctFormattedText = "[Data Structure Basics]\n\t[Array]\n\t\t[Definition:]\n\t\t\tStores data elements" \
                            " based on an sequential, most commonly 0 based, index."
 
@@ -35,31 +36,12 @@ class TestPrettyStringPrinter(TestCase):
             printed = "".join(file.readlines())
             self.assertTrue(self.correctFormattedText in printed)
 
+    def test_print_json_string(self):
+        printer = JsonStringPrinter()
 
-def test_print_json_string(self):
-    printer = JsonStringPrinter()
+        jsonString = printer.print(self.testDocument)
 
-    jsonString = printer.print(self.testDocument)
-
-    decoded_document = StructuredPdfDocument.from_json(json.loads(jsonString))
-
-    self.assertEqual(self.testDocument.elements[0].heading.text,
-                     decoded_document.elements[0].heading.text)
-    self.assertEqual(self.testDocument.elements[-1].heading.text,
-                     decoded_document.elements[-1].heading.text)
-
-    self.assertEqual("Array", decoded_document.elements[5].children[0].heading.text)
-    self.assertEqual("Time Complexity:", decoded_document.elements[5].children[0].children[5].heading.text)
-
-
-def test_print_json_file(self):
-    printer = JsonFilePrinter()
-
-    file_path = Path("resources/parsed/interview_cheatsheet.json")
-    printer.print(self.testDocument, file_path=str(file_path.absolute()))
-
-    with open(file_path, "r") as file:
-        decoded_document = StructuredPdfDocument.from_json(json.load(file))
+        decoded_document = StructuredPdfDocument.from_json(json.loads(jsonString))
 
         self.assertEqual(self.testDocument.elements[0].heading.text,
                          decoded_document.elements[0].heading.text)
@@ -68,3 +50,20 @@ def test_print_json_file(self):
 
         self.assertEqual("Array", decoded_document.elements[5].children[0].heading.text)
         self.assertEqual("Time Complexity:", decoded_document.elements[5].children[0].children[5].heading.text)
+
+    def test_print_json_file(self):
+        printer = JsonFilePrinter()
+
+        file_path = Path("resources/parsed/interview_cheatsheet.json")
+        printer.print(self.testDocument, file_path=str(file_path.absolute()))
+
+        with open(file_path, "r") as file:
+            decoded_document = StructuredPdfDocument.from_json(json.load(file))
+
+            self.assertEqual(self.testDocument.elements[0].heading.text,
+                             decoded_document.elements[0].heading.text)
+            self.assertEqual(self.testDocument.elements[-1].heading.text,
+                             decoded_document.elements[-1].heading.text)
+
+            self.assertEqual("Array", decoded_document.elements[5].children[0].heading.text)
+            self.assertEqual("Time Complexity:", decoded_document.elements[5].children[0].children[5].heading.text)

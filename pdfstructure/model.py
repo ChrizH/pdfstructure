@@ -20,20 +20,16 @@ class Style:
         return cls(**data)
 
 
-class PdfElement:
+class TextElement:
     """
+    Represents one single TextContainer like a line of words.
     """
 
-    def __init__(self, text_container: LTTextContainer, style: Style, level=0, text=None, metadata=None):
+    def __init__(self, text_container: LTTextContainer, style: Style, text=None, page=None):
         self._data = text_container
         self._text = text
         self.style = style
-        self.level = None
-        self.metadata = metadata
-        self.set_level(level)
-
-    def set_level(self, level):
-        self.level = level
+        self.page = page
 
     @property
     def text(self):
@@ -49,16 +45,19 @@ class PdfElement:
         @param data:
         @return:
         """
-        return PdfElement(text_container=None, style=Style.from_json(data["style"]), level=data["level"],
-                          text=data["text"])
+        return TextElement(text_container=None, style=Style.from_json(data["style"]),
+                           text=data["text"])
 
     def __str__(self):
         return self.text
 
 
-class ParentPdfElement:
+class Section:
+    """
+    Represents a section with title, contents and children
+    """
 
-    def __init__(self, element: PdfElement, level=0):
+    def __init__(self, element: TextElement, level=0):
         self.heading = element
         self.content = []  # PdfElements
         self.children = []  # ParentPdfElements
@@ -68,17 +67,11 @@ class ParentPdfElement:
     def set_level(self, level):
         self.level = level
 
-    # todo, implement tree.search(title)
-    # todo, implement flatten to get whole structure
-    def traverse(self):
-        # traverse through tree to extract structure as json // or find all titles etc
-        pass
-
     @classmethod
     def from_json(cls, data: dict):
-        content = list(map(PdfElement.from_json, data.get("content")))
-        children = list(map(ParentPdfElement.from_json, data.get("children")))
-        heading = PdfElement.from_json(data.get("heading"))
+        content = list(map(TextElement.from_json, data.get("content")))
+        children = list(map(Section.from_json, data.get("children")))
+        heading = TextElement.from_json(data.get("heading"))
         element = cls(heading, data["level"])
         element.children = children
         element.content = content
@@ -93,9 +86,9 @@ class StructuredPdfDocument:
     """
     PDF document containing its natural order hierarchy, as detected by the HierarchyParser.
     """
-    elements: List[ParentPdfElement]
+    elements: List[Section]
 
-    def __init__(self, elements: [ParentPdfElement], style_info=None):
+    def __init__(self, elements: [Section], style_info=None):
         self.metadata = defaultdict(str)
         self.elements = elements
         self.metadata["style_info"] = style_info
@@ -109,14 +102,14 @@ class StructuredPdfDocument:
 
     @classmethod
     def from_json(cls, data: dict):
-        elements = list(map(ParentPdfElement.from_json, data["elements"]))
+        elements = list(map(Section.from_json, data["elements"]))
         pdf = cls(elements)
         pdf.metadata.update(data.get("metadata"))
         return pdf
 
     @staticmethod
-    def __traverse__in_order__(element: ParentPdfElement):
-        child: ParentPdfElement
+    def __traverse__in_order__(element: Section):
+        child: Section
         for child in element.children:
             yield child
             yield from StructuredPdfDocument.__traverse__in_order__(child)

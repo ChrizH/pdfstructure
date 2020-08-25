@@ -1,10 +1,10 @@
 from collections import Counter
 
-from pdfstructure.model import TextSize, PdfElement
+from pdfstructure.model import TextSize, TextElement
 from pdfstructure.utils import word_generator
 
 
-def header_detector(element: PdfElement):
+def header_detector(element: TextElement):
     stats = Counter()
     terms = element._data
     style = element.style

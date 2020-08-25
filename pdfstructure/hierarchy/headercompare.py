@@ -1,6 +1,6 @@
 import re
 
-from pdfstructure.model import ParentPdfElement
+from pdfstructure.model import Section
 from pdfstructure.utils import word_generator
 
 numeration_pattern = re.compile("[\\d+.?]+")
@@ -32,7 +32,7 @@ def get_default_sub_header_conditions():
     return _isSubHeader
 
 
-def condition_boldness(h1: ParentPdfElement, h2: ParentPdfElement):
+def condition_boldness(h1: Section, h2: Section):
     """
     h2 is subheader if:if h1 is bold
     - h1 is bold & h2 is not bold
@@ -49,7 +49,7 @@ def condition_boldness(h1: ParentPdfElement, h2: ParentPdfElement):
     return h1.heading.style.bold and not h2.heading.style.bold
 
 
-def condition_h2_extends_h1(h1: ParentPdfElement, h2: ParentPdfElement):
+def condition_h2_extends_h1(h1: Section, h2: Section):
     """
     e.g.:   h1  ->  1.1 some header
             h2  ->  1.1.2   some sub header
@@ -62,7 +62,7 @@ def condition_h2_extends_h1(h1: ParentPdfElement, h2: ParentPdfElement):
     return len(h2start) > len(h1start) and h1start in h2start
 
 
-def condition_h1_enum_h2_not(h1: ParentPdfElement, h2: ParentPdfElement):
+def condition_h1_enum_h2_not(h1: Section, h2: Section):
     """
     e.g.    h1  -> 1.1 some header title
             h2  -> some other header title
@@ -72,7 +72,7 @@ def condition_h1_enum_h2_not(h1: ParentPdfElement, h2: ParentPdfElement):
     return numeration_pattern.match(h1start) and not numeration_pattern.match(h2start)
 
 
-def condition_h1_slightly_bigger_h2(h1: ParentPdfElement, h2: ParentPdfElement):
+def condition_h1_slightly_bigger_h2(h1: Section, h2: Section):
     """
     Style analysis maps found sizes to a predefined enum (xsmall, small, large, xlarge).
     but sometimes it makes sense to look deeper.

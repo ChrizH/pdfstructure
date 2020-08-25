@@ -1,7 +1,7 @@
 import json
 from typing import Iterator
 
-from pdfstructure.model import ParentPdfElement, StructuredPdfDocument, PdfElement, Style
+from pdfstructure.model import Section, StructuredPdfDocument, TextElement, Style
 from pdfstructure.utils import dict_subset
 
 
@@ -19,7 +19,7 @@ class PrettyStringPrinter(Printer):
     def get_title_prefix(level):
         return "".join(["\t" for i in range(level)])
 
-    def make_item_pretty(self, item_gen: Iterator[ParentPdfElement]):
+    def make_item_pretty(self, item_gen: Iterator[Section]):
         """
         yield pretty string representation of given element
         - add prefix for each paragraph, corresponding to its level
@@ -66,7 +66,7 @@ class PrettyStringFilePrinter(PrettyStringPrinter):
 
 class ElementTextEncoder(json.JSONEncoder):
     def default(self, e):
-        if isinstance(e, PdfElement):
+        if isinstance(e, TextElement):
             properties = e.__dict__.copy()
             properties["data"] = e._data.get_text()
             return properties
@@ -82,7 +82,7 @@ def encode_pdf_element(obj):
     @param obj:
     @return:
     """
-    if isinstance(obj, PdfElement):
+    if isinstance(obj, TextElement):
         properties = dict_subset(obj.__dict__.copy(), ("_data", "_text"))
         properties["text"] = obj.text
         properties["style"] = encode_pdf_element(obj.style)

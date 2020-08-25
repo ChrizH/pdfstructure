@@ -2,13 +2,12 @@ from pathlib import Path
 from typing import List, Generator
 
 from pdfminer.layout import LTTextContainer
-
 from pdfstructure.analysis.annotate import StyleAnnotator
 from pdfstructure.analysis.sizemapper import PivotLogMapper
 from pdfstructure.analysis.styledistribution import count_sizes
 from pdfstructure.hierarchy.detectheader import header_detector
 from pdfstructure.hierarchy.headercompare import get_default_sub_header_conditions
-from pdfstructure.model import PdfElement, ParentPdfElement, StructuredPdfDocument
+from pdfstructure.model import TextElement, Section, StructuredPdfDocument
 from pdfstructure.source import Source
 
 
@@ -40,7 +39,7 @@ class HierarchyParser:
         enrich_metadata(pdf_document, source)
         return pdf_document
 
-    def create_hierarchy(self, element_gen: Generator[PdfElement, LTTextContainer, None]) -> List[ParentPdfElement]:
+    def create_hierarchy(self, element_gen: Generator[TextElement, LTTextContainer, None]) -> List[Section]:
         """
         Takes incoming flat list of paragraphs and creates nested natural order hierarchy.
 
@@ -66,7 +65,7 @@ class HierarchyParser:
         structured = []
         levelStack = []
         element = next(element_gen)
-        first = ParentPdfElement(element)
+        first = Section(element)
 
         levelStack.append(first)
         structured.append(first)
@@ -76,7 +75,7 @@ class HierarchyParser:
             data = element._data
             style = element.style
             if header_detector(element):
-                child = ParentPdfElement(element)
+                child = Section(element)
                 headerSize = style.mapped_font_size
                 stackPeekSize = levelStack[-1].heading.style.mapped_font_size
 
@@ -92,8 +91,7 @@ class HierarchyParser:
             else:
                 # no header found, add paragraph as a content element to previous node
                 # - content is on same level as its corresponding header
-                levelStack[-1].content.append(PdfElement(text_container=data, style=style,
-                                                         level=len(levelStack) - 1, metadata=element.metadata))
+                levelStack[-1].content.append(element)
 
         return structured
 
@@ -129,7 +127,7 @@ class HierarchyParser:
         stack.append(child)
 
     @staticmethod
-    def __should_pop_higher_level(stack: [ParentPdfElement], header_to_test: ParentPdfElement):
+    def __should_pop_higher_level(stack: [Section], header_to_test: Section):
         """
         helper method for __pop_stack_until_match: check if last element in stack is smaller then new header-paragraph.
         @type header_to_test: object
@@ -140,7 +138,7 @@ class HierarchyParser:
         return stack[-1].heading.style.mapped_font_size <= header_to_test.heading.style.mapped_font_size
 
     @staticmethod
-    def __top_has_no_header(stack: [ParentPdfElement]):
+    def __top_has_no_header(stack: [Section]):
         """
         helper method for @__pop_stack_until_match
         @param stack:
