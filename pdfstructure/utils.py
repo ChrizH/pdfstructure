@@ -2,9 +2,10 @@ import itertools
 import math
 import os
 from pathlib import Path
+from typing import Generator
 
 from pdfminer.high_level import extract_pages
-from pdfminer.layout import LTTextContainer, LTChar, LTTextLine, LAParams
+from pdfminer.layout import LTTextContainer, LTChar, LTTextLine, LAParams, LTTextLineHorizontal
 
 
 def char_generator(text_container: LTTextContainer):
@@ -43,7 +44,7 @@ def word_generator(text_container: LTTextContainer):
         yield "".join(characters)
 
 
-def element_generator(file_path: str, page_numbers=None):
+def element_generator(file_path: str, page_numbers=None) -> Generator[LTTextContainer, None, None]:
     """
     yields flat list of paragraphs within a document.
     :param file_path:
@@ -108,3 +109,12 @@ def find_file(root_dir: str, type_filter: DocTypeFilter, print_mod=10) -> iter([
                 if print_mod and processed % print_mod == 0:
                     print("\nprocessed {}\n".format(processed))
     print("found {} file-paths".format(processed))
+
+
+def head_char_line(container: LTTextLineHorizontal) -> LTChar:
+    """
+    :rtype LTChar
+    :param container:
+    :return:
+    """
+    return container._objs[0]

@@ -3,10 +3,11 @@ from unittest import TestCase
 
 from pdfminer.layout import LTTextLineHorizontal, LTChar, LTTextBoxHorizontal
 
-from pdfstructure.hierarchy import HierarchyLineParser, condition_h2_extends_h1
-from pdfstructure.model import PdfElement, Style, ParentPdfElement
-from pdfstructure.style_analyser import TextSize
-from tests.test_title_finder import TestUtils
+from pdfstructure.hierarchy.headercompare import condition_h2_extends_h1
+from pdfstructure.hierarchy.parser import HierarchyParser
+from pdfstructure.model import PdfElement, Style, ParentPdfElement, TextSize
+from pdfstructure.source import FileSource
+from tests import helper
 
 
 class TestHierarchy(TestCase):
@@ -14,36 +15,50 @@ class TestHierarchy(TestCase):
     doc_with_columns = str(Path("resources/IE00BM67HT60-ATB-FS-DE-2020-2-28.pdf").absolute())
     straight_forward_doc = str(Path("resources/interview_cheatsheet.pdf").absolute())
 
+    def test_hierarchy_pdf_parser(self):
+        path = self.straight_forward_doc
+        parser = HierarchyParser()
+        source = FileSource(path)
+        pdf = parser.parse_pdf(source)
+        self.assertTrue(pdf.elements)
+
+        ## check that all header & sub headers are detected
+        headers = []
+        for header in pdf.traverse():
+            headers.append(header.heading.text)
+        self.assertEqual(78, len(headers))
+
     def test_grouping(self):
         test_doc = self.base_path + "5648.pdf"
-        parser = HierarchyLineParser()
-        lines_gen = TestUtils.generate_annotated_lines(test_doc)
-        structured = parser.process(lines_gen)
-        self.assertEqual(13, structured.elements[0].children.__len__())
+        parser = HierarchyParser()
+        lines_gen = helper.generate_annotated_lines(test_doc)
+        structured = parser.create_hierarchy(lines_gen)
+        self.assertEqual(13, structured[0].children.__len__())
 
     def test_grouping_bold_key_and_size(self):
-        parser = HierarchyLineParser()
-        elements_gen = TestUtils.generate_annotated_lines(self.straight_forward_doc)
-        document = parser.process(elements_gen)
-        self.assertEqual(len(document.elements), 9)
+        parser = HierarchyParser()
+        elements_gen = helper.generate_annotated_lines(self.straight_forward_doc)
+        elements = parser.create_hierarchy(elements_gen)
+        self.assertEqual(len(elements), 9)
 
     def test_grouping_bold_columns(self):
-        parser = HierarchyLineParser()
-        elements_gen = TestUtils.generate_annotated_lines(self.doc_with_columns)
-        document = parser.process(elements_gen)
-        self.assertTrue(document)
+        parser = HierarchyParser()
+        elements_gen = helper.generate_annotated_lines(self.doc_with_columns)
+        elements = parser.create_hierarchy(elements_gen)
+        self.assertEqual("Xtrackers MSCI World Information Technology UCITS ETF 1C", elements[1].heading.text)
+        self.assertEqual(7, elements[1].children.__len__())
 
 
 class TestSubHeaderConditions(TestCase):
     class TestFont:
         fontname = "Test"
-        
+
         def is_vertical(self):
             return True
-    
+
     def create_char(self, text):
         return LTChar((1, 2, 3, 4, 5, 6), TestSubHeaderConditions.TestFont(), 10, 10, 10, text, 10, (1, 1), 10, "")
-    
+
     def create_container(self, text):
         box = LTTextBoxHorizontal()
         line = LTTextLineHorizontal(0)
@@ -53,14 +68,14 @@ class TestSubHeaderConditions(TestCase):
         return box
 
     def test_condition_h2_extends_h1(self):
-        element1 = PdfElement(data=self.create_container("1.1 This is a test header"),
+        element1 = PdfElement(text_container=self.create_container("1.1 This is a test header"),
                               style=Style(bold=True, italic=True, font_name="test-font",
                                           mapped_font_size=TextSize.middle,
                                           mean_size=10))
-    
-        element2 = PdfElement(data=self.create_container("1.1.2 This is a subheader of 1.1"),
+
+        element2 = PdfElement(text_container=self.create_container("1.1.2 This is a subheader of 1.1"),
                               style=Style(bold=True, italic=True, font_name="test-font",
                                           mapped_font_size=TextSize.middle,
                                           mean_size=10))
-    
+
         self.assertTrue(condition_h2_extends_h1(ParentPdfElement(element1), ParentPdfElement(element2)))

@@ -1,1 +1,2 @@
-pdfminer.six
+sortedcontainers==2.2.2
+pdfminer.six==20200517

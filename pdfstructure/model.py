@@ -1,9 +1,8 @@
 from collections import defaultdict
+from enum import IntEnum, auto
 from typing import List
 
 from pdfminer.layout import LTTextContainer
-
-from pdfstructure.style_analyser import TextSize
 
 
 class Style:
@@ -25,11 +24,12 @@ class PdfElement:
     """
     """
 
-    def __init__(self, text_container: LTTextContainer, style: Style, level=0, text=None):
+    def __init__(self, text_container: LTTextContainer, style: Style, level=0, text=None, metadata=None):
         self._data = text_container
         self._text = text
         self.style = style
         self.level = None
+        self.metadata = metadata
         self.set_level(level)
 
     def set_level(self, level):
@@ -49,7 +49,8 @@ class PdfElement:
         @param data:
         @return:
         """
-        return PdfElement(data=None, style=Style.from_json(data["style"]), level=data["level"], text=data["text"])
+        return PdfElement(text_container=None, style=Style.from_json(data["style"]), level=data["level"],
+                          text=data["text"])
 
     def __str__(self):
         return self.text
@@ -94,9 +95,10 @@ class StructuredPdfDocument:
     """
     elements: List[ParentPdfElement]
 
-    def __init__(self, elements: [ParentPdfElement]):
+    def __init__(self, elements: [ParentPdfElement], style_info=None):
         self.metadata = defaultdict(str)
         self.elements = elements
+        self.metadata["style_info"] = style_info
 
     def update_metadata(self, key, value):
         self.metadata[key] = value
@@ -127,3 +129,24 @@ class StructuredPdfDocument:
         for element in self.elements:
             yield element
             yield from self.__traverse__in_order__(element)
+
+
+class TextSize(IntEnum):
+    xsmall = auto()
+    small = auto()
+    middle = auto()
+    large = auto()
+    xlarge = auto()
+
+    @classmethod
+    def from_range(cls, borders: tuple, value: int):
+        if value < borders[0]:
+            return cls.xsmall
+        elif value >= borders[0] and value < borders[1]:
+            return cls.small
+        elif value >= borders[1] and value < borders[2]:
+            return cls.middle
+        elif value >= borders[2] and value < borders[3]:
+            return cls.large
+        elif value >= borders[3]:
+            return cls.xlarge
