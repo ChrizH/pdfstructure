@@ -22,15 +22,17 @@ class PrettyStringPrinter(Printer):
     def make_item_pretty(self, item_gen: Iterator[ParentPdfElement]):
         """
         yield pretty string representation of given element
+        - add prefix for each paragraph, corresponding to its level
+        - put Title in brackets
         @param item_gen: all elements in order, generator provided by StructuredPdfDocument.traverse()
         """
         for element in item_gen:
             title_prefix = self.get_title_prefix(element.level)
             content_prefix = "\t" + title_prefix
-        
+
             title = "\n{}[{}]".format(title_prefix, element.heading.text.rstrip())
             yield title
-        
+
             contents = list(map(lambda content: content_prefix + content.text.rstrip(), element.content))
             if contents:
                 yield "\n" + "\n".join(contents) + "\n"

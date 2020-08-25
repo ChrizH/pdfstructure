@@ -51,7 +51,7 @@ class StyleDistributionMode(IntEnum):
 
 
 class HeaderSelector(ProcessUnit):
-    
+
     def __init__(self, style_info: StyleDistribution):
         self.style_info = style_info
         if style_info.amount_sizes == 1:
@@ -60,10 +60,10 @@ class HeaderSelector(ProcessUnit):
             self.mode = StyleDistributionMode.body_text_biggest
         else:
             self.mode = StyleDistributionMode.title_from_size
-    
+
     def merge_headers(self, headers, n=4):
         return "__".join(itertools.islice(headers, n))
-    
+
     def yield_forward_text_as_title(self, element_gen):
         for element in element_gen:
             if isinstance(element, PdfElement) and len(element._data._objs) > 2:
@@ -71,7 +71,7 @@ class HeaderSelector(ProcessUnit):
                 header = clean_title(header)
 
                 yield header
-    
+
     def yield_title_from_size(self, element_gen, threshold=TextSize.large):
         for element in element_gen:
             if not isinstance(element, PdfElement):
@@ -85,7 +85,7 @@ class HeaderSelector(ProcessUnit):
                 header = element._data.get_text().strip()
                 header = clean_title(header)
                 yield header
-    
+
     def process(self, element_gen):
         if self.mode == StyleDistributionMode.title_from_size:
             yield from self.yield_title_from_size(element_gen, threshold=TextSize.large)
@@ -101,7 +101,7 @@ class StyleAnnotator(ProcessUnit):
     def __init__(self, sizemapper: SizeMapper, style_info: StyleDistribution):
         self._sizeMapper = sizemapper
         self._styleInfo = style_info
-    
+
     def process(self, element_gen):  # element: LTTextContainer):
         """"
         annotate each element with fontsize
@@ -128,12 +128,12 @@ class StyleAnnotator(ProcessUnit):
 
 
 class DocumentTitleExtractor(ProcessUnit):
-    
+
     def process(self, distribution: StyleDistribution, elements):
         sizeMapper = PivotLogMapper(distribution)
         header_selector = HeaderSelector(distribution)
         style_annotator = StyleAnnotator(sizemapper=sizeMapper, style_info=distribution)
-        
+
         with_style = style_annotator.process(elements)
         grep_header = header_selector.process(with_style)
         return header_selector.merge_headers(grep_header, n=4)

@@ -28,7 +28,7 @@ def word_generator(text_container: LTTextContainer):
     @return:
     """
     characters = []
-    
+
     for obj in char_generator(text_container):
         character = obj.get_text()
         if character is not " ":
@@ -76,16 +76,16 @@ def truncate(number, decimals=0):
         raise ValueError("decimal places has to be 0 or more.")
     elif decimals == 0:
         return math.trunc(number)
-    
+
     factor = 10.0 ** decimals
     return math.trunc(number * factor) / factor
 
 
 class DocTypeFilter:
-    
+
     def __init__(self, endings=("doc", "docx", "ppt", "pptx", "xls", "xlsx", "odt", "rtf")):
         self.endings = endings if isinstance(endings, (list, tuple)) else (endings)
-    
+
     def test(self, name):
         return name.split(".")[-1].lower() in self.endings
 

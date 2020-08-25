@@ -23,7 +23,7 @@ def condition_boldness(h1: ParentPdfElement, h2: ParentPdfElement):
     h2start = next(word_generator(h2.heading._data))
     if numeration_pattern.match(h2start) and not numeration_pattern.match(h1start):
         return False
-    
+
     return h1.heading.style.bold and not h2.heading.style.bold
 
 
@@ -64,10 +64,10 @@ def condition_h1_slightly_bigger_h2(h1: ParentPdfElement, h2: ParentPdfElement):
 class SubHeaderPredicate:
     def __init__(self):
         self._conditions = []
-    
+
     def add_condition(self, condition):
         self._conditions.append(condition)
-    
+
     def test(self, h1, h2):
         return any(condition(h1, h2) for condition in self._conditions)
 
@@ -76,10 +76,10 @@ def header_detector(element):
     stats = Counter()
     terms = element._data
     style = element.style
-    
+
     if len(terms._objs) <= 2:
         return False
-    
+
     # data tuple per line, element from pdfminer, annotated style info for whole line
     # todo, compute ratios over whole line // or paragraph :O
     if style.bold or style.italic or style.mapped_font_size > TextSize.middle:
@@ -102,14 +102,14 @@ def check_valid_header_tokens(element):
                 alpha_count += 1
             if c.isnumeric():
                 numeric_count += 1
-            
+
             if alpha_count >= 2:
                 return True
     return False
 
 
 class HierarchyLineParser(ProcessUnit):
-    
+
     def __init__(self):
         self._isSubHeader = SubHeaderPredicate()
         self._isSubHeader.add_condition(condition_boldness)
