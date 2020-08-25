@@ -4,14 +4,14 @@ from pathlib import Path
 from unittest import TestCase
 
 from pdfstructure.hierarchy import HierarchyLineParser
-from pdfstructure.model import StructuredPdfDocument
+from pdfstructure.model import StructuredPdfDocument, ParentPdfElement
 from pdfstructure.printer import PrettyStringFilePrinter, PrettyStringPrinter, JsonFilePrinter, JsonStringPrinter
 from tests.test_title_finder import TestUtils
 
 
 class TestPrettyStringPrinter(TestCase):
     straight_forward_doc = str(Path("resources/interview_cheatsheet.pdf").absolute())
-    correctFormattedText = "[Data Structure Basics]\n\n\t[Array]\n\n\t\t[Definition:]\n\t\t Stores data elements" \
+    correctFormattedText = "[Data Structure Basics]\n\t[Array]\n\t\t[Definition:]\n\t\t\tStores data elements" \
                            " based on an sequential, most commonly 0 based, index."
     
     testDocument = None
@@ -21,6 +21,13 @@ class TestPrettyStringPrinter(TestCase):
         parser = HierarchyLineParser()
         elements_gen = TestUtils.generate_annotated_lines(cls.straight_forward_doc)
         cls.testDocument = parser.process(elements_gen)
+    
+    def test_print_traverse(self):
+        header: ParentPdfElement
+        for header in self.testDocument.traverse():
+            prefix = "".join(["\t" for i in range(header.level)])
+            print(prefix + header.heading.text)
+            [print(prefix + "  " + c.text) for c in header.content]
     
     def test_print_pretty_string(self):
         printer = PrettyStringPrinter()

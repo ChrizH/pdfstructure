@@ -69,7 +69,7 @@ class HeaderSelector(ProcessUnit):
             if isinstance(element, PdfElement) and len(element._data._objs) > 2:
                 header = element._data.get_text().strip()
                 header = clean_title(header)
-            
+
                 yield header
     
     def yield_title_from_size(self, element_gen, threshold=TextSize.large):
@@ -77,10 +77,10 @@ class HeaderSelector(ProcessUnit):
             if not isinstance(element, PdfElement):
                 print("unpredicted element {}".format(element))
                 continue
-    
+
             if not len(element._data._objs) > 2:
                 continue
-    
+
             if element.style.mapped_font_size >= threshold:
                 header = element._data.get_text().strip()
                 header = clean_title(header)
@@ -124,7 +124,7 @@ class StyleAnnotator(ProcessUnit):
                               mapped_font_size=mapped_size,
                               mean_size=mean_size)
 
-                    yield PdfElement(data=line, style=s)
+                    yield PdfElement(text_container=line, style=s)
 
 
 class DocumentTitleExtractor(ProcessUnit):

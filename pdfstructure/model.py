@@ -23,11 +23,10 @@ class Style:
 
 class PdfElement:
     """
-    
     """
     
-    def __init__(self, data: LTTextContainer, style: Style, level=0, text=None):
-        self._data = data
+    def __init__(self, text_container: LTTextContainer, style: Style, level=0, text=None):
+        self._data = text_container
         self._text = text
         self.style = style
         self.level = None
@@ -45,6 +44,11 @@ class PdfElement:
     
     @classmethod
     def from_json(cls, data: dict):
+        """
+        
+        @param data:
+        @return:
+        """
         return PdfElement(data=None, style=Style.from_json(data["style"]), level=data["level"], text=data["text"])
     
     def __str__(self):
@@ -93,14 +97,30 @@ class StructuredPdfDocument:
     
     def update_metadata(self, key, value):
         self.metadata[key] = value
-    
+
     @property
     def title(self):
         return self.metadata["title"]
-    
+
     @classmethod
     def from_json(cls, data: dict):
         elements = list(map(ParentPdfElement.from_json, data["elements"]))
         pdf = cls(elements)
         pdf.metadata.update(data.get("metadata"))
         return pdf
+
+    @staticmethod
+    def __traverse__in_order__(element: ParentPdfElement):
+        child: ParentPdfElement
+        for child in element.children:
+            yield child
+            yield from StructuredPdfDocument.__traverse__in_order__(child)
+
+    def traverse(self):
+        """
+        Traverse through hierarchy and yield element by element in-order.
+        @return:
+        """
+        for element in self.elements:
+            yield element
+            yield from self.__traverse__in_order__(element)

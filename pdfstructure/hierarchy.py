@@ -143,7 +143,7 @@ class HierarchyLineParser(ProcessUnit):
     def __pop_stack_until_match(self, stack, headerSize, header):
         # if top level is smaller than current header to test, pop it
         # repeat until top level is bigger or same
-    
+
         while self.__top_has_no_header(stack) or self.__should_pop_higher_level(stack, header):
             poped = stack.pop()
             # header on higher level in stack has sime FontSize
@@ -160,10 +160,10 @@ class HierarchyLineParser(ProcessUnit):
         levelStack = []
         element = next(element_gen)
         first = ParentPdfElement(element)
-    
+
         levelStack.append(first)
         structured.append(first)
-    
+
         for element in element_gen:
             # if line is header
             flat.append(element)
@@ -173,19 +173,19 @@ class HierarchyLineParser(ProcessUnit):
                 child = ParentPdfElement(element)
                 headerSize = style.mapped_font_size
                 stackPeekSize = levelStack[-1].heading.style.mapped_font_size
-            
+
                 if stackPeekSize > headerSize:
                     # append element as children
                     self.__push_to_stack(child, levelStack, structured)
-            
+
                 else:
                     # go up in hierarchy and insert element (as children) on its level
                     self.__pop_stack_until_match(levelStack, headerSize, child)
                     self.__push_to_stack(child, levelStack, structured)
-        
+
             else:
                 # no header found, add paragraph as a content element to previous node
                 # - content is on same level as its corresponding header
-                levelStack[-1].content.append(PdfElement(data, style, level=len(levelStack) - 1))
-    
+                levelStack[-1].content.append(PdfElement(text_container=data, style=style, level=len(levelStack) - 1))
+
         return StructuredPdfDocument(elements=structured)

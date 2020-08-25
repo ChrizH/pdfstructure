@@ -1,3 +1,6 @@
+import json
+from typing import Iterator
+
 from pdfstructure.model import ParentPdfElement, StructuredPdfDocument, PdfElement, Style
 from pdfstructure.utils import dict_subset
 
@@ -11,53 +14,31 @@ class PrettyStringPrinter(Printer):
     """
     pretty prints nested document structure with \t prefixes per level.
     """
-    
+
     @staticmethod
-    def get_prefix_for_level(level):
+    def get_title_prefix(level):
         return "".join(["\t" for i in range(level)])
-    
-    def print_content(self, element: PdfElement):
+
+    def make_item_pretty(self, item_gen: Iterator[ParentPdfElement]):
         """
-        print all contents of given element with appropriate level prefix.
-        a content element has no children.
-        @param element: content element within document structure.
-        @return:
+        yield pretty string representation of given element
+        @param item_gen: all elements in order, generator provided by StructuredPdfDocument.traverse()
         """
-        return " ".join((self.get_prefix_for_level(element.level), element.text))
-    
-    def print_nested(self, parent: ParentPdfElement):
-        """
-        prints nested parental element with its title, content and childrens content,
-        with its level prefix respectively.
-        @param parent: parent node within document structure
-        @return:
-        """
+        for element in item_gen:
+            title_prefix = self.get_title_prefix(element.level)
+            content_prefix = "\t" + title_prefix
         
-        def str_title(p: ParentPdfElement):
-            prefix = self.get_prefix_for_level(p.level)
-            return "{}[{}]".format(prefix, p.heading.text)
+            title = "\n{}[{}]".format(title_prefix, element.heading.text.rstrip())
+            yield title
         
-        def str_content(p: ParentPdfElement):
-            return "\n".join(self.print_content(e) for e in p.content)
-        
-        def str_children_content(p: ParentPdfElement):
-            return " ".join(self.print_nested(e) for e in p.children)
-        
-        return "{}\n{}\n{}".format(str_title(parent),
-                                   str_content(parent),
-                                   str_children_content(parent))
-    
-    @staticmethod
-    def str_document_title(document):
-        return "[[{}]]\n\n".format(document.title)
-    
+            contents = list(map(lambda content: content_prefix + content.text.rstrip(), element.content))
+            if contents:
+                yield "\n" + "\n".join(contents) + "\n"
+
     def print(self, document: StructuredPdfDocument, *args, **kwargs):
-        data = [self.print_nested(e) for e in document.elements]
-        
-        if document.title:
-            data.insert(0, self.str_document_title(document))
-        
-        return "\n".join(data)
+        item_gen = document.traverse()
+        data = [item for item in self.make_item_pretty(item_gen)]
+        return "".join(data)
 
 
 class PrettyStringFilePrinter(PrettyStringPrinter):
@@ -75,14 +56,10 @@ class PrettyStringFilePrinter(PrettyStringPrinter):
         output_file = kwargs.get("file_path")
         print("write to file: {}".format(output_file))
         with open(output_file, "w") as file:
-            if document.title:
-                file.write(self.str_document_title(document))
-    
-            [file.write(self.print_nested(e)) for e in document.elements]
+            item_gen = document.traverse()
+            for pretty in self.make_item_pretty(item_gen):
+                file.write(pretty)
         return output_file
-
-
-import json
 
 
 class ElementTextEncoder(json.JSONEncoder):
