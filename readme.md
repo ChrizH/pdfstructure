@@ -5,6 +5,9 @@ The document structure, or hierarchy, stores the relation between chapters, sect
 
 `pdfstructure` is in early development and built on top of [pdfminer.six](https://github.com/pdfminer/pdfminer.six). 
 
+- Paragraph extraction is performed leveraging `pdfminer.high_level.extract_pages()`.
+- Those paragraphs are then grouped together according to some basic (extendable) heuristics.
+
 ## Document Model
 
 ```
@@ -31,22 +34,37 @@ class TextElement:
 
 ## Load and parse PDF
 
+**Illustration of document structure**
+
+The following screenshot contains sections and subsections with their respective content. 
+In that case, the structure can be easily parsed by leveraging the Font Style only.
+
+![https://gist.github.com/TSiege/cbb0507082bb18ff7e4b](tests/resources/interview_cheatsheet-excerpt.png?raw=true)
+*PDF source: [github.com/TSiege](https://gist.github.com/TSiege/cbb0507082bb18ff7e4b)*
+
+
+**Parse PDF**
 ```
-# specify source (that implements source.read())
-source = FileSource(path)   
-# analyse document and parse as nested data structure
-pdf = parser.parse_pdf(source)
+    parser = HierarchyParser() 
+    
+    # specify source (that implements source.read())
+    source = FileSource(path) 
+     
+    # analyse document and parse as nested data structure
+    document = parser.parse_pdf(source)
 ```
 
 ### Serialize Document to String
 To export the parsed structure, use a printer implementation.
 ```
-stringExporter = PrettyStringPrinter()
+    stringExporter = PrettyStringPrinter()
 
-prettyString = stringExporter.print(pdf)
+    prettyString = stringExporter.print(document)
 ```
 
 **Excerpt of the parsed document (serialized to string)**
+
+[Parsed data: interview_cheatsheet_pretty.txt](tests/resources/interview_cheatsheet_pretty.txt)
 ```
 [Search Basics]
 	[Breadth First Search]
@@ -64,13 +82,16 @@ prettyString = stringExporter.print(pdf)
 			The queue uses more memory because it needs to stores pointers
 ```
 
-### Serialize Document to JSON
+### Encode Document to JSON
 ```
     printer = JsonFilePrinter()
 
     file_path = Path("resources/parsed/interview_cheatsheet.json")
-    printer.print(self.testDocument, file_path=str(file_path.absolute()))
+    
+    printer.print(document, file_path=str(file_path.absolute()))
 ```
+
+[Parsed data: interview_cheatsheet.json](tests/resources/interview_cheatsheet.json)
 
 **Excerpt of exported json**
 ```
@@ -136,3 +157,25 @@ prettyString = stringExporter.print(pdf)
                             },
          ....          
 ```
+
+
+### Load JSON as StructuredPdfDocument
+
+Of course, encoded documents can be easily decoded and used for further analysis. 
+However, detailed information like bounding boxes or coordinates for each character are not persisted.
+
+```
+jsonString = json.load(file)
+document = StructuredPdfDocument.from_json(jsonString)
+
+print(document.title)
+$ "interview_cheatsheet.pdf"
+```
+
+
+# TODOs
+- [ ] **Detect the document layout type (Columns, Book, Magazine)**
+    
+    The provided layout analysis algorithm by pdfminer.six performs well on more straightforward documents with default settings. 
+    However, more complicated layouts like scientific papers need custom `LAParams` settings to retrieve paragraphs in correct reading order.
+- [ ] High level diagram of algorithm workflow
