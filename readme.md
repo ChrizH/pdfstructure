@@ -64,7 +64,7 @@ To export the parsed structure, use a printer implementation.
 
 **Excerpt of the parsed document (serialized to string)**
 
-[Parsed data: interview_cheatsheet_pretty.txt](tests/resources/interview_cheatsheet_pretty.txt?raw=true)
+[Parsed data: interview_cheatsheet_pretty.txt](tests/resources/parsed/interview_cheatsheet_pretty.txt?raw=true)
 ```
 [Search Basics]
 	[Breadth First Search]
@@ -91,7 +91,7 @@ To export the parsed structure, use a printer implementation.
     printer.print(document, file_path=str(file_path.absolute()))
 ```
 
-[Parsed data: interview_cheatsheet.json](tests/resources/interview_cheatsheet.json?raw=true)
+[Parsed data: interview_cheatsheet.json](tests/resources/parsed/interview_cheatsheet.json?raw=true)
 
 **Excerpt of exported json**
 ```
