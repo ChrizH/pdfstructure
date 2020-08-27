@@ -39,7 +39,7 @@ class TextElement:
 The following screenshot contains sections and subsections with their respective content. 
 In that case, the structure can be easily parsed by leveraging the Font Style only.
 
-![https://gist.github.com/TSiege/cbb0507082bb18ff7e4b](tests/resources/interview_cheatsheet-excerpt.png?raw=true)
+![Example PDF](tests/resources/interview_cheatsheet-excerpt.png?raw=true)
 *PDF source: [github.com/TSiege](https://gist.github.com/TSiege/cbb0507082bb18ff7e4b)*
 
 
@@ -64,7 +64,7 @@ To export the parsed structure, use a printer implementation.
 
 **Excerpt of the parsed document (serialized to string)**
 
-[Parsed data: interview_cheatsheet_pretty.txt](tests/resources/interview_cheatsheet_pretty.txt)
+[Parsed data: interview_cheatsheet_pretty.txt](tests/resources/interview_cheatsheet_pretty.txt?raw=true)
 ```
 [Search Basics]
 	[Breadth First Search]
@@ -91,7 +91,7 @@ To export the parsed structure, use a printer implementation.
     printer.print(document, file_path=str(file_path.absolute()))
 ```
 
-[Parsed data: interview_cheatsheet.json](tests/resources/interview_cheatsheet.json)
+[Parsed data: interview_cheatsheet.json](tests/resources/interview_cheatsheet.json?raw=true)
 
 **Excerpt of exported json**
 ```
