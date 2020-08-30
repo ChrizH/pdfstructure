@@ -45,6 +45,9 @@ In that case, the structure can be easily parsed by leveraging the Font Style on
 
 **Parse PDF**
 ```
+    from pdfstructure.hierarchy.parser import HierarchyParser
+    from pdfstructure.source import FileSource
+
     parser = HierarchyParser() 
     
     # specify source (that implements source.read())
@@ -57,8 +60,9 @@ In that case, the structure can be easily parsed by leveraging the Font Style on
 ### Serialize Document to String
 To export the parsed structure, use a printer implementation.
 ```
-    stringExporter = PrettyStringPrinter()
+    from pdfstructure.printer import PrettyStringPrinter
 
+    stringExporter = PrettyStringPrinter()
     prettyString = stringExporter.print(document)
 ```
 
@@ -84,8 +88,9 @@ To export the parsed structure, use a printer implementation.
 
 ### Encode Document to JSON
 ```
+    from pdfstructure.printer import JsonFilePrinter
+    
     printer = JsonFilePrinter()
-
     file_path = Path("resources/parsed/interview_cheatsheet.json")
     
     printer.print(document, file_path=str(file_path.absolute()))
@@ -165,11 +170,37 @@ Of course, encoded documents can be easily decoded and used for further analysis
 However, detailed information like bounding boxes or coordinates for each character are not persisted.
 
 ```
-jsonString = json.load(file)
-document = StructuredPdfDocument.from_json(jsonString)
+    from pdfstructure.model.document import StructuredPdfDocument
 
-print(document.title)
-$ "interview_cheatsheet.pdf"
+    jsonString = json.load(file)
+    document = StructuredPdfDocument.from_json(jsonString)
+    
+    print(document.title)
+
+        $ "interview_cheatsheet.pdf"
+```
+
+## Traverse through document structure
+Having all paragraphs and sections organised as a general tree, 
+its straight forward to iterate through the layers and search for specific elements like headlines, or extract all main headers like chapter titles.  
+
+Two document traversal generators are available that yield each section `in-order` or in `level-order` respectively. 
+```
+    from pdfstructure.hierarchy.traversal import traverse_in_order
+
+    elements_flat_in_order = [element for element in traverse_in_order(document)]
+
+    Exemplary illustration of yield order:
+        """
+                         5   10
+                      /   \    \
+                     1     2    3
+                   / | \        |
+                  a  b  c       x
+    
+        yield order:
+        - [5,1,a,b,c,2,10,3,x]
+        """
 ```
 
 

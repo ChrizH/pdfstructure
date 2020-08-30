@@ -1,6 +1,6 @@
 import re
 
-from pdfstructure.model import Section
+from pdfstructure.model.document import Section
 from pdfstructure.utils import word_generator
 
 numeration_pattern = re.compile("[\\d+.?]+")

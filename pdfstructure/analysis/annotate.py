@@ -1,9 +1,11 @@
 import statistics
 
 from pdfminer.layout import LTTextBoxHorizontal
+
 from pdfstructure.analysis.sizemapper import SizeMapper
 from pdfstructure.analysis.styledistribution import StyleDistribution
-from pdfstructure.model import TextSize, Style, TextElement
+from pdfstructure.model.document import TextElement
+from pdfstructure.model.style import Style, TextSize
 from pdfstructure.utils import head_char_line, truncate
 
 

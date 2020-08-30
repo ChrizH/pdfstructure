@@ -3,7 +3,7 @@ from pathlib import Path
 from unittest import TestCase
 
 from pdfstructure.hierarchy.parser import HierarchyParser
-from pdfstructure.model import StructuredPdfDocument
+from pdfstructure.model.document import StructuredPdfDocument
 from pdfstructure.printer import PrettyStringFilePrinter, PrettyStringPrinter, JsonFilePrinter, JsonStringPrinter
 from pdfstructure.source import FileSource
 

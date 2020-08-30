@@ -3,7 +3,7 @@ from enum import Enum
 from typing import Type
 
 from pdfstructure.analysis.styledistribution import StyleDistribution
-from pdfstructure.model import TextSize
+from pdfstructure.model.style import TextSize
 
 
 class SizeMapper:

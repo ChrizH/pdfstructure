@@ -2,12 +2,13 @@ from pathlib import Path
 from typing import List, Generator
 
 from pdfminer.layout import LTTextContainer
+
 from pdfstructure.analysis.annotate import StyleAnnotator
 from pdfstructure.analysis.sizemapper import PivotLogMapper
 from pdfstructure.analysis.styledistribution import count_sizes
 from pdfstructure.hierarchy.detectheader import header_detector
 from pdfstructure.hierarchy.headercompare import get_default_sub_header_conditions
-from pdfstructure.model import TextElement, Section, StructuredPdfDocument
+from pdfstructure.model.document import TextElement, Section, StructuredPdfDocument
 from pdfstructure.source import Source
 
 

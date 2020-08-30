@@ -8,7 +8,7 @@ import pandas as pd
 from pdfstructure.analysis.annotate import StyleAnnotator
 from pdfstructure.analysis.sizemapper import PivotLogMapper, PivotLinearMapper
 from pdfstructure.analysis.styledistribution import count_sizes, StyleDistribution
-from pdfstructure.model import TextSize
+from pdfstructure.model.style import TextSize
 from pdfstructure.utils import element_generator, find_file, DocTypeFilter
 
 

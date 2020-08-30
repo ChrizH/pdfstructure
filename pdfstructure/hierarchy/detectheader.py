@@ -1,6 +1,7 @@
 from collections import Counter
 
-from pdfstructure.model import TextSize, TextElement
+from pdfstructure.model.document import TextElement
+from pdfstructure.model.style import TextSize
 from pdfstructure.utils import word_generator
 
 

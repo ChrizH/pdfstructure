@@ -2,9 +2,11 @@ from pathlib import Path
 from unittest import TestCase
 
 from pdfminer.layout import LTTextLineHorizontal, LTChar, LTTextBoxHorizontal
+
 from pdfstructure.hierarchy.headercompare import condition_h2_extends_h1
 from pdfstructure.hierarchy.parser import HierarchyParser
-from pdfstructure.model import TextElement, Style, Section, TextSize
+from pdfstructure.model.document import TextElement, Section
+from pdfstructure.model.style import Style, TextSize
 from pdfstructure.source import FileSource
 from tests import helper
 
@@ -19,13 +21,8 @@ class TestHierarchy(TestCase):
         parser = HierarchyParser()
         source = FileSource(path)
         pdf = parser.parse_pdf(source)
-        self.assertTrue(pdf.elements)
-
-        ## check that all header & sub headers are detected
-        headers = []
-        for header in pdf.traverse():
-            headers.append(header.heading.text)
-        self.assertEqual(78, len(headers))
+        self.assertEqual(9, len(pdf.elements))
+        self.assertEqual("Data Structure Basics", pdf.elements[5].heading.text)
 
     def test_grouping(self):
         test_doc = self.base_path + "5648.pdf"

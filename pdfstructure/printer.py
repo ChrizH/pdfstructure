@@ -1,7 +1,9 @@
 import json
 from typing import Iterator
 
-from pdfstructure.model import Section, StructuredPdfDocument, TextElement, Style
+from pdfstructure.hierarchy.traversal import traverse_in_order
+from pdfstructure.model.document import Section, StructuredPdfDocument, TextElement
+from pdfstructure.model.style import Style
 from pdfstructure.utils import dict_subset
 
 
@@ -38,8 +40,8 @@ class PrettyStringPrinter(Printer):
                 yield "\n" + "\n".join(contents) + "\n"
 
     def print(self, document: StructuredPdfDocument, *args, **kwargs):
-        item_gen = document.traverse()
-        data = [item for item in self.make_item_pretty(item_gen)]
+        element_iterator = traverse_in_order(document)
+        data = [item for item in self.make_item_pretty(element_iterator)]
         return "".join(data)
 
 
@@ -58,8 +60,8 @@ class PrettyStringFilePrinter(PrettyStringPrinter):
         output_file = kwargs.get("file_path")
         print("write to file: {}".format(output_file))
         with open(output_file, "w") as file:
-            item_gen = document.traverse()
-            for pretty in self.make_item_pretty(item_gen):
+            element_iterator = traverse_in_order(document)
+            for pretty in self.make_item_pretty(element_iterator):
                 file.write(pretty)
         return output_file
 

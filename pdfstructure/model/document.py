@@ -1,23 +1,10 @@
 from collections import defaultdict
-from enum import IntEnum, auto
 from typing import List
 
 from pdfminer.layout import LTTextContainer
 
-
-class Style:
-    def __init__(self, bold, italic, font_name, mapped_font_size, mean_size):
-        self.bold = bold
-        self.italic = italic
-        self.font_name = font_name
-        self.mapped_font_size = mapped_font_size
-        self.mean_size = mean_size
-
-    @classmethod
-    def from_json(cls, data: dict):
-        mapped_size = TextSize[data["mapped_font_size"]]
-        data["mapped_font_size"] = mapped_size
-        return cls(**data)
+from pdfstructure.analysis.styledistribution import StyleDistribution
+from pdfstructure.model.style import Style
 
 
 class TextElement:
@@ -41,7 +28,7 @@ class TextElement:
     @classmethod
     def from_json(cls, data: dict):
         """
-        
+
         @param data:
         @return:
         """
@@ -91,14 +78,18 @@ class StructuredPdfDocument:
     def __init__(self, elements: [Section], style_info=None):
         self.metadata = defaultdict(str)
         self.elements = elements
-        self.metadata["style_info"] = style_info
+        self.metadata["style_distribution"] = style_info
 
     def update_metadata(self, key, value):
         self.metadata[key] = value
 
     @property
     def title(self):
-        return self.metadata["title"]
+        return self.metadata.get("title")
+
+    @property
+    def style_distribution(self) -> StyleDistribution:
+        return self.metadata.get("style_distribution")
 
     @classmethod
     def from_json(cls, data: dict):
@@ -106,40 +97,3 @@ class StructuredPdfDocument:
         pdf = cls(elements)
         pdf.metadata.update(data.get("metadata"))
         return pdf
-
-    @staticmethod
-    def __traverse__in_order__(element: Section):
-        child: Section
-        for child in element.children:
-            yield child
-            yield from StructuredPdfDocument.__traverse__in_order__(child)
-
-    def traverse(self):
-        """
-        Traverse through hierarchy and yield element by element in-order.
-        @return:
-        """
-        for element in self.elements:
-            yield element
-            yield from self.__traverse__in_order__(element)
-
-
-class TextSize(IntEnum):
-    xsmall = auto()
-    small = auto()
-    middle = auto()
-    large = auto()
-    xlarge = auto()
-
-    @classmethod
-    def from_range(cls, borders: tuple, value: int):
-        if value < borders[0]:
-            return cls.xsmall
-        elif value >= borders[0] and value < borders[1]:
-            return cls.small
-        elif value >= borders[1] and value < borders[2]:
-            return cls.middle
-        elif value >= borders[2] and value < borders[3]:
-            return cls.large
-        elif value >= borders[3]:
-            return cls.xlarge
