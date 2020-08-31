@@ -19,18 +19,19 @@
     },
     "elements": [
         {
-            "heading": {
-                "style": {
-                    "bold": false,
-                    "italic": false,
-                    "font_name": "Times-Roman",
-                    "mapped_font_size": "small",
-                    "mean_size": 7.9
-                },
-                "page": 0,
-                "text": "31/10/2019"
-            },
+            "heading": null,
             "content": [
+                {
+                    "style": {
+                        "bold": false,
+                        "italic": false,
+                        "font_name": "Times-Roman",
+                        "mapped_font_size": "small",
+                        "mean_size": 7.9
+                    },
+                    "page": 0,
+                    "text": "31/10/2019"
+                },
                 {
                     "style": {
                         "bold": false,

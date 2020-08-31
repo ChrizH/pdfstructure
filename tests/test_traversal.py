@@ -3,19 +3,22 @@ from unittest import TestCase
 
 from pdfstructure.hierarchy.parser import HierarchyParser
 from pdfstructure.hierarchy.traversal import traverse_in_order, traverse_level_order, get_document_depth
+from pdfstructure.model.document import DanglingTextSection
 from pdfstructure.source import FileSource
 
 
 class TestDocumentTraversal(TestCase):
     straight_forward_doc = str(Path("resources/interview_cheatsheet.pdf").absolute())
+    same_style_doc = str(Path("resources/SameStyleOnly.pdf").absolute())
     test_doc = None
+    test_doc_same_style = None
 
     @classmethod
     def setUpClass(cls) -> None:
-        path = cls.straight_forward_doc
         parser = HierarchyParser()
-        source = FileSource(path)
-        cls.test_doc = parser.parse_pdf(source)
+        cls.test_doc_same_style = parser.parse_pdf(FileSource(cls.same_style_doc))
+
+        cls.test_doc = parser.parse_pdf(FileSource(cls.straight_forward_doc))
 
     def test_get_height(self):
         h = get_document_depth(self.test_doc)
@@ -57,3 +60,17 @@ class TestDocumentTraversal(TestCase):
         self.assertEqual("Recursive Algorithms", elements[-3].heading.text)
         self.assertEqual("Iterative Algorithms", elements[-2].heading.text)
         self.assertEqual("Greedy Algorithm", elements[-1].heading.text)
+
+    def test_test_level_order_but_flat_structure(self):
+        level_iterator = traverse_level_order(self.test_doc_same_style)
+        elements = [element for element in level_iterator]
+        self.assertEqual(1, len(elements))
+        self.assertIsInstance(elements[0], DanglingTextSection)
+        self.assertEqual(10, len(elements[0].content))
+
+    def test_test_in_order_but_flat_structure(self):
+        level_iterator = traverse_in_order(self.test_doc_same_style)
+        elements = [element for element in level_iterator]
+        self.assertEqual(1, len(elements))
+        self.assertIsInstance(elements[0], DanglingTextSection)
+        self.assertEqual(10, len(elements[0].content))

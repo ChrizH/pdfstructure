@@ -28,6 +28,7 @@ class StyleAnnotator:
         for element in element_gen:
             if isinstance(element, LTTextBoxHorizontal):
                 # todo, capture pdfminers paragraph dedection logic
+                #  currently single lines are forwarded, detected paragraph container is lost
                 for line in element:
                     # get average size of all characters
                     sizes = [sub_char.size for sub_char in line

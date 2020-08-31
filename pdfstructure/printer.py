@@ -32,7 +32,7 @@ class PrettyStringPrinter(Printer):
             title_prefix = self.get_title_prefix(element.level)
             content_prefix = "\t" + title_prefix
 
-            title = "\n{}[{}]".format(title_prefix, element.heading.text.rstrip())
+            title = "\n{}[{}]".format(title_prefix, element.heading_text.rstrip())
             yield title
 
             contents = list(map(lambda content: content_prefix + content.text.rstrip(), element.content))

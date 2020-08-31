@@ -32,8 +32,10 @@ class TextElement:
         @param data:
         @return:
         """
-        return TextElement(text_container=None, style=Style.from_json(data["style"]),
-                           text=data["text"])
+        if data:
+            return TextElement(text_container=None, style=Style.from_json(data["style"]),
+                               text=data["text"])
+        return None
 
     def __str__(self):
         return self.text
@@ -54,6 +56,12 @@ class Section:
     def set_level(self, level):
         self.level = level
 
+    def append_content(self, paragraph: TextElement):
+        self.content.append(paragraph)
+
+    def append_children(self, section):
+        self.children.append(section)
+
     @classmethod
     def from_json(cls, data: dict):
         content = list(map(TextElement.from_json, data.get("content")))
@@ -64,9 +72,24 @@ class Section:
         element.content = content
         return element
 
+    @property
+    def heading_text(self):
+        if self.heading and self.heading.text:
+            return self.heading.text
+        else:
+            return ""
+
     def __str__(self):
         return "{}\n{}".format(self.heading.text,
                                " ".join([str(e) for e in self.content]))
+
+
+class DanglingTextSection(Section):
+    def __init__(self):
+        super().__init__(element=None)
+
+    def __str__(self):
+        return "{}".format(" ".join([str(e) for e in self.content]))
 
 
 class StructuredPdfDocument:

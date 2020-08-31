@@ -43,3 +43,22 @@ class Style:
         mapped_size = TextSize[data["mapped_font_size"]]
         data["mapped_font_size"] = mapped_size
         return cls(**data)
+
+    def __gt__(self, other):
+        if isinstance(other, Style):
+            return self.mapped_font_size > other.mapped_font_size or \
+                   self.mapped_font_size == other.mapped_font_size and self.bold and not other.bold
+        return False
+
+    def __lt__(self, other):
+        if isinstance(other, Style):
+            return self.mapped_font_size < other.mapped_font_size or \
+                   self.mapped_font_size == other.mapped_font_size and not self.bold and other.bold
+        return False
+
+    def __eq__(self, other):
+        if isinstance(other, Style):
+            return self.mapped_font_size == other.mapped_font_size and \
+                   self.bold == other.bold
+        else:
+            return False

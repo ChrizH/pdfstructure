@@ -1,5 +1,6 @@
 
-[31/10/2019]
+[]
+	31/10/2019
 	This is my technical interview cheat sheet. Feel free to fork it or do whatever you want with it. PLEASE let me know if there are any errors or if a…
 
 [TSiege / The Technical Interview Cheat Sheet.md]

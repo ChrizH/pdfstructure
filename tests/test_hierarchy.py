@@ -5,7 +5,7 @@ from pdfminer.layout import LTTextLineHorizontal, LTChar, LTTextBoxHorizontal
 
 from pdfstructure.hierarchy.headercompare import condition_h2_extends_h1
 from pdfstructure.hierarchy.parser import HierarchyParser
-from pdfstructure.model.document import TextElement, Section
+from pdfstructure.model.document import TextElement, Section, DanglingTextSection
 from pdfstructure.model.style import Style, TextSize
 from pdfstructure.source import FileSource
 from tests import helper
@@ -15,6 +15,24 @@ class TestHierarchy(TestCase):
     base_path = "/home/christian/Documents/data_recovery_katharina/pdf/"
     doc_with_columns = str(Path("resources/IE00BM67HT60-ATB-FS-DE-2020-2-28.pdf").absolute())
     straight_forward_doc = str(Path("resources/interview_cheatsheet.pdf").absolute())
+
+    same_style_doc = str(Path("resources/SameStyleOnly.pdf").absolute())
+    same_size_bold_header = str(Path("resources/SameSize_BoldTitle.pdf").absolute())
+    same_size_enum_header = str(Path("resources/SameSize_EnumeratedTitle.pdf").absolute())
+
+    def test_no_hierarchy_detected(self):
+        parser = HierarchyParser()
+        pdf = parser.parse_pdf(FileSource(self.same_style_doc))
+        self.assertEqual(10, len(pdf.elements[0].content))
+
+        self.assertIsInstance(pdf.elements[0], DanglingTextSection)
+
+    def test_hierarchy_bold_title(self):
+        parser = HierarchyParser()
+        pdf = parser.parse_pdf(FileSource(self.same_size_bold_header))
+        self.assertEqual(2, len(pdf.elements))
+        self.assertEqual("Lorem Ipsum.", pdf.elements[0].heading.text)
+        self.assertEqual("Appendix", pdf.elements[1].heading.text)
 
     def test_hierarchy_pdf_parser(self):
         path = self.straight_forward_doc

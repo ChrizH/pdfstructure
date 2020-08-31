@@ -43,8 +43,8 @@ class TestPrettyStringPrinter(TestCase):
 
         decoded_document = StructuredPdfDocument.from_json(json.loads(jsonString))
 
-        self.assertEqual(self.testDocument.elements[0].heading.text,
-                         decoded_document.elements[0].heading.text)
+        self.assertEqual(self.testDocument.elements[1].heading.text,
+                         decoded_document.elements[1].heading.text)
         self.assertEqual(self.testDocument.elements[-1].heading.text,
                          decoded_document.elements[-1].heading.text)
 
@@ -60,8 +60,8 @@ class TestPrettyStringPrinter(TestCase):
         with open(file_path, "r") as file:
             decoded_document = StructuredPdfDocument.from_json(json.load(file))
 
-            self.assertEqual(self.testDocument.elements[0].heading.text,
-                             decoded_document.elements[0].heading.text)
+            self.assertEqual(self.testDocument.elements[1].heading.text,
+                             decoded_document.elements[1].heading.text)
             self.assertEqual(self.testDocument.elements[-1].heading.text,
                              decoded_document.elements[-1].heading.text)
 

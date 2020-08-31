@@ -8,7 +8,7 @@ from pdfstructure.analysis.sizemapper import PivotLogMapper
 from pdfstructure.analysis.styledistribution import count_sizes
 from pdfstructure.hierarchy.detectheader import header_detector
 from pdfstructure.hierarchy.headercompare import get_default_sub_header_conditions
-from pdfstructure.model.document import TextElement, Section, StructuredPdfDocument
+from pdfstructure.model.document import TextElement, Section, StructuredPdfDocument, DanglingTextSection
 from pdfstructure.source import Source
 
 
@@ -64,12 +64,7 @@ class HierarchyParser:
         @return:
         """
         structured = []
-        levelStack = []
-        element = next(element_gen)
-        first = Section(element)
-
-        levelStack.append(first)
-        structured.append(first)
+        level_stack = []
 
         for element in element_gen:
             # if line is header
@@ -77,22 +72,40 @@ class HierarchyParser:
             style = element.style
             if header_detector(element):
                 child = Section(element)
-                headerSize = style.mapped_font_size
-                stackPeekSize = levelStack[-1].heading.style.mapped_font_size
+                header_size = style.mapped_font_size
 
-                if stackPeekSize > headerSize:
+                # initial state - push and continue with next element
+                if not level_stack:
+                    self.__push_to_stack(child, level_stack, structured)
+                    continue
+
+                stack_peek_size = level_stack[-1].heading.style.mapped_font_size
+
+                if stack_peek_size > header_size:
                     # append element as children
-                    self.__push_to_stack(child, levelStack, structured)
+                    self.__push_to_stack(child, level_stack, structured)
 
                 else:
                     # go up in hierarchy and insert element (as children) on its level
-                    self.__pop_stack_until_match(levelStack, headerSize, child)
-                    self.__push_to_stack(child, levelStack, structured)
+                    self.__pop_stack_until_match(level_stack, header_size, child)
+                    self.__push_to_stack(child, level_stack, structured)
 
             else:
                 # no header found, add paragraph as a content element to previous node
                 # - content is on same level as its corresponding header
-                levelStack[-1].content.append(element)
+                if level_stack:
+                    level_stack[-1].append_content(element)
+                else:
+                    # add dangling content as section
+                    content = DanglingTextSection()
+                    content.append_content(element)
+                    content.set_level(len(level_stack))
+
+                    # if last element in output structure has also no header, merge
+                    if structured and isinstance(structured[-1], DanglingTextSection):
+                        structured[-1].append_content(element)
+                    else:
+                        structured.append(content)
 
         return structured
 
