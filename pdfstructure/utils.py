@@ -117,4 +117,6 @@ def head_char_line(container: LTTextLineHorizontal) -> LTChar:
     :param container:
     :return:
     """
-    return container._objs[0]
+    for obj in container:
+        if isinstance(obj, LTChar):
+            return obj

@@ -13,12 +13,12 @@
 		<script src="https://gis
 		This is my technical interview cheat sheet. Feel free to fork it or do whatever you want with it. PLEASE let me know if there are any errors or if anything
 		crucial is missing. I will add more links soon.
-		The Technical Interview Cheat Sheet.md
 
+	[The Technical Interview Cheat Sheet.md]
 [ANNOUNCEMENT]
 	I have moved this over to the Tech Interview Cheat Sheet Repo since a gist is too difficult to maintain as an open source
-	endevaor and there is no way to version it. I have updated below, but I will not be able to keep this one up to date so
-	please checkout the repo instead. The below is just for some preservation for those who stumble across here.
+endevaor and there is no way to version it. I have updated below, but I will not be able to keep this one up to date so
+please checkout the repo instead. The below is just for some preservation for those who stumble across here.
 	\
 
 [Studying for a Tech Interview Sucks, so Here's a Cheat Sheet to Help]
@@ -37,15 +37,12 @@
 
 		[What you need to know:]
 			Optimal for indexing; bad at searching, inserting, and deleting (except at the end).
-
-		[Linear arrays, or one dimensional arrays, are the most basic.]
+			Linear arrays, or one dimensional arrays, are the most basic.
 			Are static in size, meaning that they are declared with a fixed size.
-
-		[Dynamic arrays are like one dimensional arrays, but have reserved space for additional elements.]
+			Dynamic arrays are like one dimensional arrays, but have reserved space for additional elements.
 			If a dynamic array is full, it copies its contents to a larger array.
-
-		[Multi dimensional arrays nested arrays that allow for multiple dimensions such as an array of arrays providing a 2]
-			dimensional spacial representation via x, y coordinates.
+			Multi dimensional arrays nested arrays that allow for multiple dimensions such as an array of arrays providing a 2
+dimensional spacial representation via x, y coordinates.
 			https://gist.github.com/TSiege/cbb0507082bb18ff7e4b#ﬁle-the-technical-interview-cheat-sheet-md
 			1/18
 			31/10/2019
@@ -65,14 +62,12 @@
 
 		[What you need to know:]
 			Designed to optimize insertion and deletion, slow at indexing and searching.
-
-		[Doubly linked list has nodes that also reference the previous node.]
-		[Circularly linked list is simple linked list whose tail, the last node, references the head, the first node.]
-		[Stack, commonly implemented with linked lists but can be made from arrays too.]
+			Doubly linked list has nodes that also reference the previous node.
+			Circularly linked list is simple linked list whose tail, the last node, references the head, the first node.
+			Stack, commonly implemented with linked lists but can be made from arrays too.
 			Stacks are last in, first out (LIFO) data structures.
 			Made with a linked list by having the head be the only place for insertion and removal.
-
-		[Queues, too can be implemented with a linked list or an array.]
+			Queues, too can be implemented with a linked list or an array.
 			Queues are a first in, first out (FIFO) data structure.
 			Made with a doubly linked list that only removes from head and adds to tail.
 
@@ -85,16 +80,14 @@
 	[Hash Table or Hash Map]
 		[Definition:]
 			Stores data with key value pairs.
-
-		[Hash functions accept a key and return an output unique only to that specific key.]
+			Hash functions accept a key and return an output unique only to that specific key.
 			This is known as hashing, which is the concept that an input and an output have a one-to-one correspondence
 			to map information.
 			Hash functions return a unique address in memory for that data.
 
 		[What you need to know:]
 			Designed to optimize searching, insertion, and deletion.
-
-		[Hash collisions are when a hash function returns the same output for two distinct inputs.]
+			Hash collisions are when a hash function returns the same output for two distinct inputs.
 			All hash functions have this problem.
 			This is often accommodated for by having the hash tables be very large.
 			Hashes are important for associative arrays and database indexing.
@@ -117,7 +110,8 @@
 			Designed to optimize searching and sorting.
 			A degenerate tree is an unbalanced tree, which if entirely one-sided is a essentially a linked list.
 			They are comparably simple to implement than other data structures.
-			Used to make binary search trees.
+
+		[Used to make binary search trees.]
 			A binary tree that uses comparable keys to assign which direction a child is.
 			Left child has a key smaller than it's parent node.
 			Right child has a key greater than it's parent node.
@@ -154,9 +148,9 @@
 			An algorithm that searches a tree (or graph) by searching depth of the tree first, starting at the root.
 			It traverses left down a tree until it cannot go further.
 			Once it reaches the end of a branch it traverses back up trying the right child of nodes on that branch, and if
-			possible left from the right children.
+possible left from the right children.
 			When finished examining a branch it moves to the node right of the root then tries to go left on all it's children
-			until it reaches the bottom.
+until it reaches the bottom.
 			The right most node is evaluated last (the node that is right of all it's ancestors).
 
 		[What you need to know:]
@@ -167,7 +161,7 @@
 			Optimal for searching a tree that is deeper than it is wide.
 			Uses a stack to push nodes onto.
 			Because a stack is LIFO it does not need to keep track of the nodes pointers and is therefore less memory
-			intensive than breadth first search.
+intensive than breadth first search.
 			Once it cannot go further left it begins evaluating the stack.
 
 		[Time Complexity:]
@@ -182,9 +176,9 @@
 
 		[Nuances:]
 			Because BFS uses queues to store information about the nodes and its children, it could use more memory than is
-			available on your computer. (But you probably won't have to worry about this.)
+available on your computer. (But you probably won't have to worry about this.)
 			If using a DFS on a tree that is very deep you might go unnecessarily deep in the search. See xkcd for more
-			information.
+information.
 			Breadth First Search tends to be a looping algorithm.
 			Depth First Search tends to be a recursive algorithm.
 
@@ -211,9 +205,9 @@
 		[Definition:]
 			A comparison based sorting algorithm
 			Divides entire dataset in half by selecting the middle element and putting all smaller elements to the left of the
-			element and larger ones to the right.
+element and larger ones to the right.
 			It repeats this process on the left side until it is comparing only two elements at which point the left side is
-			sorted.
+sorted.
 			When the left side is finished sorting it performs the same operation on the right side.
 			https://gist.github.com/TSiege/cbb0507082bb18ff7e4b#ﬁle-the-technical-interview-cheat-sheet-md
 			4/18
@@ -223,7 +217,7 @@
 
 		[What you need to know:]
 			While it has the same Big O as (or worse in some cases) many other sorting algorithms it is often faster in practice
-			than many other sorting algorithms, such as merge sort.
+than many other sorting algorithms, such as merge sort.
 			Know that it halves the data set by the average continuously until all the information is sorted.
 
 		[Time Complexity:]
@@ -256,14 +250,14 @@
 	[Recursive Algorithms]
 		[Definition:]
 			An algorithm that calls itself in its definition.
+			Recursive case a conditional statement that is used to trigger the recursion.
+			Base case a conditional statement that is used to break the recursion.
 
-		[Recursive case a conditional statement that is used to trigger the recursion.]
-		[Base case a conditional statement that is used to break the recursion.]
 		[What you need to know:]
 		[Stack level too deep and stack overflow.]
 			If you've seen either of these from a recursive algorithm, you messed up.
 			It means that your base case was never triggered because it was faulty or the problem was so massive you ran
-			out of alloted memory.
+out of alloted memory.
 			Knowing whether or not you will reach a base case is integral to correctly using recursion.
 			Often used in Depth First Search
 
@@ -283,23 +277,22 @@
 
 		[Recursion Vs. Iteration]
 			The differences between recursion and iteration can be confusing to distinguish since both can be used to implement
-			the other. But know that,
+the other. But know that,
 			Recursion is, usually, more expressive and easier to implement.
 			Iteration uses less memory.
-
-		[Functional languages tend to use recursion. (i.e. Haskell)]
-		[Imperative languages tend to use iteration. (i.e. Ruby)]
+			Functional languages tend to use recursion. (i.e. Haskell)
+			Imperative languages tend to use iteration. (i.e. Ruby)
 			Check out this Stack Overflow post for more info.
 
 		[Pseudo Code of Moving Through an Array (this is why iteration is used for this)]
-			Recursion                         | Iteration
-			----------------------------------|----------------------------------
-			recursive method (array, n)       | iterative method (array)
-			if array[n] is not nil          |   for n from 0 to size of array
-			print array[n]                |     print(array[n])
-			recursive method(array, n+1)  |
-			else                            |
-			exit loop                     |
+			Recursion                         | Iteration 
+----------------------------------|---------------------------------- 
+recursive method (array, n)       | iterative method (array) 
+  if array[n] is not nil          |   for n from 0 to size of array 
+    print array[n]                |     print(array[n]) 
+    recursive method(array, n+1)  | 
+  else                            | 
+    exit loop                     |
 
 	[Greedy Algorithm]
 		[Definition:]
@@ -317,16 +310,16 @@
 			Often a greedy algorithm can help reduce the Big O of an algorithm.
 
 		[Pseudo Code of a Greedy Algorithm to Find Largest Difference of any Two Numbers in an Array.]
-			greedy algorithm (array)
-			var largest difference = 0
-			var new difference = find next difference (array[n], array[n+1])
-			largest difference = new difference if new difference is > largest difference
-			repeat above two steps until all differences have been found
-			return largest difference
+			greedy algorithm (array) 
+  var largest difference = 0 
+  var new difference = find next difference (array[n], array[n+1]) 
+  largest difference = new difference if new difference is > largest difference 
+  repeat above two steps until all differences have been found 
+  return largest difference
 			This algorithm never needed to compare all the differences to one another, saving it an entire iteration.
 			Author
 
 			[Owner]
-			[TSiege commented on 2 May 2014]
+				TSiege commented on 2 May 2014
 				https://gist.github.com/TSiege/cbb0507082bb18ff7e4b#ﬁle-the-technical-interview-cheat-sheet-md
 				6/18

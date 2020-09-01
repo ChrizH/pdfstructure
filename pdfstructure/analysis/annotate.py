@@ -1,12 +1,13 @@
 import statistics
+from collections import Counter
 
-from pdfminer.layout import LTTextBoxHorizontal
+from pdfminer.layout import LTTextBoxHorizontal, LTChar
 
 from pdfstructure.analysis.sizemapper import SizeMapper
 from pdfstructure.analysis.styledistribution import StyleDistribution
 from pdfstructure.model.document import TextElement
 from pdfstructure.model.style import Style, TextSize
-from pdfstructure.utils import head_char_line, truncate
+from pdfstructure.utils import truncate
 
 
 class StyleAnnotator:
@@ -21,27 +22,41 @@ class StyleAnnotator:
         self._sizeMapper = sizemapper
         self._styleInfo = style_info
 
+    @staticmethod
+    def __investigate_box_style(element):
+        fonts = Counter()
+        sizes = []
+        for line in element:
+            for c in line:
+                if isinstance(c, LTChar):
+                    fonts.update([c.fontname])
+                    sizes.append(c.size)
+        return fonts, sizes
+
     def process(self, element_gen):  # element: LTTextContainer):
         """"
         annotate each element with fontsize
         """
+        reading_order = 0
         for element in element_gen:
             if isinstance(element, LTTextBoxHorizontal):
-                # todo, capture pdfminers paragraph dedection logic
-                #  currently single lines are forwarded, detected paragraph container is lost
-                for line in element:
-                    # get average size of all characters
-                    sizes = [sub_char.size for sub_char in line
-                             if hasattr(sub_char, "size")]
-                    # mostCommonSize = statistics.mean(sizes)
-                    fontName = head_char_line(line).fontname
-                    mapped_size = self._sizeMapper.translate(target_enum=TextSize,
-                                                             value=max(sizes))
-                    mean_size = truncate(statistics.mean(sizes), 1)
-                    s = Style(bold="bold" in str(fontName.lower()),
-                              italic="italic" in fontName.lower(),
-                              font_name=fontName,
-                              mapped_font_size=mapped_size,
-                              mean_size=mean_size)
-                    yield TextElement(text_container=line, style=s,
-                                      page=element.page if hasattr(element, "page") else None)
+
+                fonts, sizes = self.__investigate_box_style(element)
+                if not fonts:
+                    continue
+
+                font_name = fonts.most_common(1)[0][0]
+                mean_size = truncate(statistics.mean(sizes), 1)
+                # todo currently empty boxes are forwarded.. with holding only \n
+                mapped_size = self._sizeMapper.translate(target_enum=TextSize,
+                                                         value=max(sizes))
+                s = Style(bold="bold" in str(font_name.lower()),
+                          italic="italic" in font_name.lower(),
+                          font_name=font_name,
+                          mapped_font_size=mapped_size,
+                          mean_size=mean_size)
+
+                yield TextElement(text_container=element, style=s,
+                                  page=element.page if hasattr(element, "page") else None,
+                                  reading_order=reading_order)
+                reading_order += 1

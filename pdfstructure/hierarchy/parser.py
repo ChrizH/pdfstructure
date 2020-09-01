@@ -68,7 +68,6 @@ class HierarchyParser:
 
         for element in element_gen:
             # if line is header
-            data = element._data
             style = element.style
             if header_detector(element):
                 child = Section(element)

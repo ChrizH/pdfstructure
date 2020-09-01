@@ -12,11 +12,12 @@ class TextElement:
     Represents one single TextContainer like a line of words.
     """
 
-    def __init__(self, text_container: LTTextContainer, style: Style, text=None, page=None):
+    def __init__(self, text_container: LTTextContainer, style: Style, text=None, page=None, reading_order=0):
         self._data = text_container
         self._text = text
         self.style = style
         self.page = page
+        self.reading_order = reading_order
 
     @property
     def text(self):
@@ -47,6 +48,7 @@ class Section:
     """
 
     def __init__(self, element: TextElement, level=0):
+        # todo, use reading_order of contents & children
         self.heading = element
         self.content = []  # PdfElements
         self.children = []  # ParentPdfElements

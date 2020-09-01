@@ -1,7 +1,7 @@
 from typing import Generator, Any
 
 from pdfminer.high_level import extract_pages
-from pdfminer.layout import LTTextContainer, LAParams
+from pdfminer.layout import LTTextContainer, LAParams, LTFigure, LTTextBoxHorizontal, LTTextLineHorizontal, LTChar
 
 
 class Source:
@@ -42,6 +42,34 @@ class FileSource(Source):
     def config(self):
         return self.__dict__
 
+    def __handle_lt_figure(self, element: LTFigure):
+        """
+        sometimes pieces of text are wrongly detected as LTFigure, e.g. in slide-sets with border lines.
+        -> extract text from LTFigure line by line put them into a LTTextBoxHorizontal as a workaround
+        @return: LTTextBoxHorizontal containing found texts line by line
+        """
+        # check if text is hold within figure element, forward
+
+        line = LTTextLineHorizontal(0)
+        wrapper = LTTextBoxHorizontal()
+        wrapper.add(line)
+
+        y_prior = element._objs[0].y0
+
+        for letter in element:
+            if isinstance(letter, LTChar):
+                if abs(letter.y0 - y_prior) > 0.05:
+                    # new line, yield wrapper
+                    wrapper.analyze(self.la_params)
+                    yield wrapper
+
+                    wrapper = LTTextBoxHorizontal()
+                    line = LTTextLineHorizontal(0)
+                    wrapper.add(line)
+                    y_prior = letter.y0
+
+                line.add(letter)
+
     def read(self) -> Generator[LTTextContainer, Any, None]:
         pNumber = 0
         # disable boxes_flow, style based hierarchy detection is based on purely flat list of paragraphs
@@ -54,7 +82,9 @@ class FileSource(Source):
         #   - straight forward document
         for page_layout in extract_pages(self.uri, laparams=self.la_params, page_numbers=self.page_numbers):
             for element in page_layout:
+                element.page = pNumber
                 if isinstance(element, LTTextContainer):
-                    element.page = pNumber
                     yield element
+                elif isinstance(element, LTFigure):
+                    yield from self.__handle_lt_figure(element)
             pNumber += 1

@@ -10,7 +10,7 @@ def header_detector(element: TextElement):
     terms = element._data
     style = element.style
 
-    if len(terms._objs) <= 2:
+    if len(element.text) <= 2:
         return False
 
     # data tuple per line, element from pdfminer, annotated style info for whole line

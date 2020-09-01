@@ -30,6 +30,7 @@
                         "mean_size": 7.9
                     },
                     "page": 0,
+                    "reading_order": 0,
                     "text": "31/10/2019"
                 },
                 {
@@ -41,6 +42,7 @@
                         "mean_size": 7.9
                     },
                     "page": 0,
+                    "reading_order": 1,
                     "text": "This is my technical interview cheat sheet. Feel free to fork it or do whatever you want with it. PLEASE let me know if there are any errors or if a\u2026"
                 }
             ],
@@ -50,13 +52,14 @@
         {
             "heading": {
                 "style": {
-                    "bold": false,
+                    "bold": true,
                     "italic": false,
-                    "font_name": ".SFNSText",
+                    "font_name": ".SFNSText-Semibold",
                     "mapped_font_size": "large",
                     "mean_size": 9.6
                 },
                 "page": 0,
+                "reading_order": 2,
                 "text": "TSiege / The Technical Interview Cheat Sheet.md"
             },
             "content": [
@@ -69,6 +72,7 @@
                         "mean_size": 6.4
                     },
                     "page": 0,
+                    "reading_order": 3,
                     "text": "Last active 2 days ago \u2022 Report abuse"
                 },
                 {
@@ -80,6 +84,7 @@
                         "mean_size": 7.4
                     },
                     "page": 0,
+                    "reading_order": 4,
                     "text": ""
                 },
                 {
@@ -91,6 +96,7 @@
                         "mean_size": 7.4
                     },
                     "page": 0,
+                    "reading_order": 5,
                     "text": ""
                 }
             ],
@@ -105,6 +111,7 @@
                             "mean_size": 6.4
                         },
                         "page": 0,
+                        "reading_order": 6,
                         "text": "Embed"
                     },
                     "content": [],
@@ -121,6 +128,7 @@
                             "mean_size": 6.4
                         },
                         "page": 0,
+                        "reading_order": 7,
                         "text": "Download ZIP"
                     },
                     "content": [
@@ -133,6 +141,7 @@
                                 "mean_size": 6.4
                             },
                             "page": 0,
+                            "reading_order": 8,
                             "text": "<script src=\"https://gis"
                         },
                         {
@@ -144,6 +153,7 @@
                                 "mean_size": 7.4
                             },
                             "page": 0,
+                            "reading_order": 9,
                             "text": "This is my technical interview cheat sheet. Feel free to fork it or do whatever you want with it. PLEASE let me know if there are any errors or if anything"
                         },
                         {
@@ -155,20 +165,27 @@
                                 "mean_size": 7.4
                             },
                             "page": 0,
+                            "reading_order": 10,
                             "text": "crucial is missing. I will add more links soon."
-                        },
-                        {
-                            "style": {
-                                "bold": false,
-                                "italic": false,
-                                "font_name": "Menlo-Regular",
-                                "mapped_font_size": "xsmall",
-                                "mean_size": 6.4
-                            },
-                            "page": 0,
-                            "text": "The Technical Interview Cheat Sheet.md"
                         }
                     ],
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": true,
+                            "italic": false,
+                            "font_name": "Menlo-Bold",
+                            "mapped_font_size": "xsmall",
+                            "mean_size": 6.4
+                        },
+                        "page": 0,
+                        "reading_order": 11,
+                        "text": "The Technical Interview Cheat Sheet.md"
+                    },
+                    "content": [],
                     "children": [],
                     "level": 1
                 }
@@ -185,6 +202,7 @@
                     "mean_size": 12.8
                 },
                 "page": 0,
+                "reading_order": 12,
                 "text": "ANNOUNCEMENT"
             },
             "content": [
@@ -197,7 +215,8 @@
                         "mean_size": 8.5
                     },
                     "page": 0,
-                    "text": "I have moved this over to the Tech Interview Cheat Sheet Repo since a gist is too difficult to maintain as an open source"
+                    "reading_order": 13,
+                    "text": "I have moved this over to the Tech Interview Cheat Sheet Repo since a gist is too difficult to maintain as an open source\nendevaor and there is no way to version it. I have updated below, but I will not be able to keep this one up to date so\nplease checkout the repo instead. The below is just for some preservation for those who stumble across here."
                 },
                 {
                     "style": {
@@ -208,28 +227,7 @@
                         "mean_size": 8.5
                     },
                     "page": 0,
-                    "text": "endevaor and there is no way to version it. I have updated below, but I will not be able to keep this one up to date so"
-                },
-                {
-                    "style": {
-                        "bold": false,
-                        "italic": false,
-                        "font_name": ".SFNSText",
-                        "mapped_font_size": "middle",
-                        "mean_size": 8.5
-                    },
-                    "page": 0,
-                    "text": "please checkout the repo instead. The below is just for some preservation for those who stumble across here."
-                },
-                {
-                    "style": {
-                        "bold": false,
-                        "italic": false,
-                        "font_name": ".SFNSText",
-                        "mapped_font_size": "middle",
-                        "mean_size": 8.5
-                    },
-                    "page": 0,
+                    "reading_order": 14,
                     "text": "\\"
                 }
             ],
@@ -246,6 +244,7 @@
                     "mean_size": 12.8
                 },
                 "page": 0,
+                "reading_order": 15,
                 "text": "Studying for a Tech Interview Sucks, so Here's a Cheat Sheet to Help"
             },
             "content": [
@@ -258,6 +257,7 @@
                         "mean_size": 8.5
                     },
                     "page": 0,
+                    "reading_order": 16,
                     "text": "This list is meant to be both a quick guide and reference for further research into these topics. It's basically a summary of"
                 },
                 {
@@ -269,6 +269,7 @@
                         "mean_size": 8.5
                     },
                     "page": 0,
+                    "reading_order": 17,
                     "text": "that comp sci course you never took or forgot about, so there's no way it can cover everything in depth."
                 }
             ],
@@ -285,6 +286,7 @@
                     "mean_size": 12.8
                 },
                 "page": 0,
+                "reading_order": 18,
                 "text": "Contributing"
             },
             "content": [
@@ -297,6 +299,7 @@
                         "mean_size": 8.5
                     },
                     "page": 0,
+                    "reading_order": 19,
                     "text": "Please see the Tech Interview Cheat Sheet Repo"
                 }
             ],
@@ -313,6 +316,7 @@
                     "mean_size": 12.8
                 },
                 "page": 0,
+                "reading_order": 20,
                 "text": "Data Structure Basics"
             },
             "content": [],
@@ -327,6 +331,7 @@
                             "mean_size": 10.6
                         },
                         "page": 0,
+                        "reading_order": 21,
                         "text": "Array"
                     },
                     "content": [],
@@ -341,6 +346,7 @@
                                     "mean_size": 8.5
                                 },
                                 "page": 0,
+                                "reading_order": 22,
                                 "text": "Definition:"
                             },
                             "content": [
@@ -353,6 +359,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 0,
+                                    "reading_order": 23,
                                     "text": "Stores data elements based on an sequential, most commonly 0 based, index."
                                 },
                                 {
@@ -364,6 +371,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 0,
+                                    "reading_order": 24,
                                     "text": "Based on tuples from set theory."
                                 },
                                 {
@@ -375,6 +383,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 0,
+                                    "reading_order": 25,
                                     "text": "They are one of the oldest, most commonly used data structures."
                                 }
                             ],
@@ -391,6 +400,7 @@
                                     "mean_size": 8.5
                                 },
                                 "page": 0,
+                                "reading_order": 26,
                                 "text": "What you need to know:"
                             },
                             "content": [
@@ -403,25 +413,9 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 0,
+                                    "reading_order": 27,
                                     "text": "Optimal for indexing; bad at searching, inserting, and deleting (except at the end)."
-                                }
-                            ],
-                            "children": [],
-                            "level": 2
-                        },
-                        {
-                            "heading": {
-                                "style": {
-                                    "bold": true,
-                                    "italic": false,
-                                    "font_name": ".SFNSText-Semibold",
-                                    "mapped_font_size": "middle",
-                                    "mean_size": 8.5
                                 },
-                                "page": 0,
-                                "text": "Linear arrays, or one dimensional arrays, are the most basic."
-                            },
-                            "content": [
                                 {
                                     "style": {
                                         "bold": false,
@@ -431,25 +425,21 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 0,
+                                    "reading_order": 28,
+                                    "text": "Linear arrays, or one dimensional arrays, are the most basic."
+                                },
+                                {
+                                    "style": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "font_name": ".SFNSText",
+                                        "mapped_font_size": "middle",
+                                        "mean_size": 8.5
+                                    },
+                                    "page": 0,
+                                    "reading_order": 29,
                                     "text": "Are static in size, meaning that they are declared with a fixed size."
-                                }
-                            ],
-                            "children": [],
-                            "level": 2
-                        },
-                        {
-                            "heading": {
-                                "style": {
-                                    "bold": true,
-                                    "italic": false,
-                                    "font_name": ".SFNSText-Semibold",
-                                    "mapped_font_size": "middle",
-                                    "mean_size": 8.5
                                 },
-                                "page": 0,
-                                "text": "Dynamic arrays are like one dimensional arrays, but have reserved space for additional elements."
-                            },
-                            "content": [
                                 {
                                     "style": {
                                         "bold": false,
@@ -459,25 +449,21 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 0,
+                                    "reading_order": 30,
+                                    "text": "Dynamic arrays are like one dimensional arrays, but have reserved space for additional elements."
+                                },
+                                {
+                                    "style": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "font_name": ".SFNSText",
+                                        "mapped_font_size": "middle",
+                                        "mean_size": 8.5
+                                    },
+                                    "page": 0,
+                                    "reading_order": 31,
                                     "text": "If a dynamic array is full, it copies its contents to a larger array."
-                                }
-                            ],
-                            "children": [],
-                            "level": 2
-                        },
-                        {
-                            "heading": {
-                                "style": {
-                                    "bold": true,
-                                    "italic": false,
-                                    "font_name": ".SFNSText-Semibold",
-                                    "mapped_font_size": "middle",
-                                    "mean_size": 8.5
                                 },
-                                "page": 0,
-                                "text": "Multi dimensional arrays nested arrays that allow for multiple dimensions such as an array of arrays providing a 2"
-                            },
-                            "content": [
                                 {
                                     "style": {
                                         "bold": false,
@@ -487,7 +473,8 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 0,
-                                    "text": "dimensional spacial representation via x, y coordinates."
+                                    "reading_order": 32,
+                                    "text": "Multi dimensional arrays nested arrays that allow for multiple dimensions such as an array of arrays providing a 2\ndimensional spacial representation via x, y coordinates."
                                 },
                                 {
                                     "style": {
@@ -498,6 +485,7 @@
                                         "mean_size": 7.9
                                     },
                                     "page": 0,
+                                    "reading_order": 33,
                                     "text": "https://gist.github.com/TSiege/cbb0507082bb18ff7e4b#\ufb01le-the-technical-interview-cheat-sheet-md"
                                 },
                                 {
@@ -509,6 +497,7 @@
                                         "mean_size": 7.9
                                     },
                                     "page": 0,
+                                    "reading_order": 34,
                                     "text": "1/18"
                                 },
                                 {
@@ -520,6 +509,7 @@
                                         "mean_size": 7.9
                                     },
                                     "page": 1,
+                                    "reading_order": 35,
                                     "text": "31/10/2019"
                                 },
                                 {
@@ -531,6 +521,7 @@
                                         "mean_size": 7.9
                                     },
                                     "page": 1,
+                                    "reading_order": 36,
                                     "text": "This is my technical interview cheat sheet. Feel free to fork it or do whatever you want with it. PLEASE let me know if there are any errors or if a\u2026"
                                 }
                             ],
@@ -547,6 +538,7 @@
                                     "mean_size": 8.5
                                 },
                                 "page": 1,
+                                "reading_order": 37,
                                 "text": "Time Complexity:"
                             },
                             "content": [
@@ -559,6 +551,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 1,
+                                    "reading_order": 38,
                                     "text": "Indexing: Linear array: O(1), Dynamic array: O(1)"
                                 },
                                 {
@@ -570,6 +563,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 1,
+                                    "reading_order": 39,
                                     "text": "Search: Linear array: O(n), Dynamic array: O(n)"
                                 },
                                 {
@@ -581,6 +575,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 1,
+                                    "reading_order": 40,
                                     "text": "Optimized Search: Linear array: O(log n), Dynamic array: O(log n)"
                                 },
                                 {
@@ -592,6 +587,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 1,
+                                    "reading_order": 41,
                                     "text": "Insertion: Linear array: n/a Dynamic array: O(n)"
                                 }
                             ],
@@ -611,6 +607,7 @@
                             "mean_size": 10.6
                         },
                         "page": 1,
+                        "reading_order": 42,
                         "text": "Linked List"
                     },
                     "content": [],
@@ -625,6 +622,7 @@
                                     "mean_size": 8.5
                                 },
                                 "page": 1,
+                                "reading_order": 43,
                                 "text": "Definition:"
                             },
                             "content": [
@@ -637,6 +635,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 1,
+                                    "reading_order": 44,
                                     "text": "Stores data with nodes that point to other nodes."
                                 },
                                 {
@@ -648,6 +647,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 1,
+                                    "reading_order": 45,
                                     "text": "Nodes, at its most basic it has one datum and one reference (another node)."
                                 },
                                 {
@@ -659,6 +659,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 1,
+                                    "reading_order": 46,
                                     "text": "A linked list chains nodes together by pointing one node's reference towards another node."
                                 }
                             ],
@@ -675,6 +676,7 @@
                                     "mean_size": 8.5
                                 },
                                 "page": 1,
+                                "reading_order": 47,
                                 "text": "What you need to know:"
                             },
                             "content": [
@@ -687,57 +689,9 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 1,
+                                    "reading_order": 48,
                                     "text": "Designed to optimize insertion and deletion, slow at indexing and searching."
-                                }
-                            ],
-                            "children": [],
-                            "level": 2
-                        },
-                        {
-                            "heading": {
-                                "style": {
-                                    "bold": true,
-                                    "italic": false,
-                                    "font_name": ".SFNSText-Semibold",
-                                    "mapped_font_size": "middle",
-                                    "mean_size": 8.5
                                 },
-                                "page": 1,
-                                "text": "Doubly linked list has nodes that also reference the previous node."
-                            },
-                            "content": [],
-                            "children": [],
-                            "level": 2
-                        },
-                        {
-                            "heading": {
-                                "style": {
-                                    "bold": true,
-                                    "italic": false,
-                                    "font_name": ".SFNSText-Semibold",
-                                    "mapped_font_size": "middle",
-                                    "mean_size": 8.5
-                                },
-                                "page": 1,
-                                "text": "Circularly linked list is simple linked list whose tail, the last node, references the head, the first node."
-                            },
-                            "content": [],
-                            "children": [],
-                            "level": 2
-                        },
-                        {
-                            "heading": {
-                                "style": {
-                                    "bold": true,
-                                    "italic": false,
-                                    "font_name": ".SFNSText-Semibold",
-                                    "mapped_font_size": "middle",
-                                    "mean_size": 8.5
-                                },
-                                "page": 1,
-                                "text": "Stack, commonly implemented with linked lists but can be made from arrays too."
-                            },
-                            "content": [
                                 {
                                     "style": {
                                         "bold": false,
@@ -747,6 +701,43 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 1,
+                                    "reading_order": 49,
+                                    "text": "Doubly linked list has nodes that also reference the previous node."
+                                },
+                                {
+                                    "style": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "font_name": ".SFNSText",
+                                        "mapped_font_size": "middle",
+                                        "mean_size": 8.5
+                                    },
+                                    "page": 1,
+                                    "reading_order": 50,
+                                    "text": "Circularly linked list is simple linked list whose tail, the last node, references the head, the first node."
+                                },
+                                {
+                                    "style": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "font_name": ".SFNSText",
+                                        "mapped_font_size": "middle",
+                                        "mean_size": 8.5
+                                    },
+                                    "page": 1,
+                                    "reading_order": 51,
+                                    "text": "Stack, commonly implemented with linked lists but can be made from arrays too."
+                                },
+                                {
+                                    "style": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "font_name": ".SFNSText",
+                                        "mapped_font_size": "middle",
+                                        "mean_size": 8.5
+                                    },
+                                    "page": 1,
+                                    "reading_order": 52,
                                     "text": "Stacks are last in, first out (LIFO) data structures."
                                 },
                                 {
@@ -758,25 +749,9 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 1,
+                                    "reading_order": 53,
                                     "text": "Made with a linked list by having the head be the only place for insertion and removal."
-                                }
-                            ],
-                            "children": [],
-                            "level": 2
-                        },
-                        {
-                            "heading": {
-                                "style": {
-                                    "bold": true,
-                                    "italic": false,
-                                    "font_name": ".SFNSText-Semibold",
-                                    "mapped_font_size": "middle",
-                                    "mean_size": 8.5
                                 },
-                                "page": 1,
-                                "text": "Queues, too can be implemented with a linked list or an array."
-                            },
-                            "content": [
                                 {
                                     "style": {
                                         "bold": false,
@@ -786,6 +761,19 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 1,
+                                    "reading_order": 54,
+                                    "text": "Queues, too can be implemented with a linked list or an array."
+                                },
+                                {
+                                    "style": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "font_name": ".SFNSText",
+                                        "mapped_font_size": "middle",
+                                        "mean_size": 8.5
+                                    },
+                                    "page": 1,
+                                    "reading_order": 55,
                                     "text": "Queues are a first in, first out (FIFO) data structure."
                                 },
                                 {
@@ -797,6 +785,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 1,
+                                    "reading_order": 56,
                                     "text": "Made with a doubly linked list that only removes from head and adds to tail."
                                 }
                             ],
@@ -813,6 +802,7 @@
                                     "mean_size": 8.5
                                 },
                                 "page": 1,
+                                "reading_order": 57,
                                 "text": "Time Complexity:"
                             },
                             "content": [
@@ -825,6 +815,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 1,
+                                    "reading_order": 58,
                                     "text": "Indexing: Linked Lists: O(n)"
                                 },
                                 {
@@ -836,6 +827,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 1,
+                                    "reading_order": 59,
                                     "text": "Search: Linked Lists: O(n)"
                                 },
                                 {
@@ -847,6 +839,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 1,
+                                    "reading_order": 60,
                                     "text": "Optimized Search: Linked Lists: O(n)"
                                 },
                                 {
@@ -858,6 +851,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 1,
+                                    "reading_order": 61,
                                     "text": "Insertion: Linked Lists: O(1)"
                                 }
                             ],
@@ -877,6 +871,7 @@
                             "mean_size": 10.6
                         },
                         "page": 1,
+                        "reading_order": 62,
                         "text": "Hash Table or Hash Map"
                     },
                     "content": [],
@@ -891,6 +886,7 @@
                                     "mean_size": 8.5
                                 },
                                 "page": 1,
+                                "reading_order": 63,
                                 "text": "Definition:"
                             },
                             "content": [
@@ -903,25 +899,9 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 1,
+                                    "reading_order": 64,
                                     "text": "Stores data with key value pairs."
-                                }
-                            ],
-                            "children": [],
-                            "level": 2
-                        },
-                        {
-                            "heading": {
-                                "style": {
-                                    "bold": true,
-                                    "italic": false,
-                                    "font_name": ".SFNSText-Semibold",
-                                    "mapped_font_size": "middle",
-                                    "mean_size": 8.5
                                 },
-                                "page": 1,
-                                "text": "Hash functions accept a key and return an output unique only to that specific key."
-                            },
-                            "content": [
                                 {
                                     "style": {
                                         "bold": false,
@@ -931,6 +911,19 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 1,
+                                    "reading_order": 65,
+                                    "text": "Hash functions accept a key and return an output unique only to that specific key."
+                                },
+                                {
+                                    "style": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "font_name": ".SFNSText",
+                                        "mapped_font_size": "middle",
+                                        "mean_size": 8.5
+                                    },
+                                    "page": 1,
+                                    "reading_order": 66,
                                     "text": "This is known as hashing, which is the concept that an input and an output have a one-to-one correspondence"
                                 },
                                 {
@@ -942,6 +935,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 1,
+                                    "reading_order": 67,
                                     "text": "to map information."
                                 },
                                 {
@@ -953,6 +947,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 1,
+                                    "reading_order": 68,
                                     "text": "Hash functions return a unique address in memory for that data."
                                 }
                             ],
@@ -969,6 +964,7 @@
                                     "mean_size": 8.5
                                 },
                                 "page": 1,
+                                "reading_order": 69,
                                 "text": "What you need to know:"
                             },
                             "content": [
@@ -981,25 +977,9 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 1,
+                                    "reading_order": 70,
                                     "text": "Designed to optimize searching, insertion, and deletion."
-                                }
-                            ],
-                            "children": [],
-                            "level": 2
-                        },
-                        {
-                            "heading": {
-                                "style": {
-                                    "bold": true,
-                                    "italic": false,
-                                    "font_name": ".SFNSText-Semibold",
-                                    "mapped_font_size": "middle",
-                                    "mean_size": 8.5
                                 },
-                                "page": 1,
-                                "text": "Hash collisions are when a hash function returns the same output for two distinct inputs."
-                            },
-                            "content": [
                                 {
                                     "style": {
                                         "bold": false,
@@ -1009,6 +989,19 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 1,
+                                    "reading_order": 71,
+                                    "text": "Hash collisions are when a hash function returns the same output for two distinct inputs."
+                                },
+                                {
+                                    "style": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "font_name": ".SFNSText",
+                                        "mapped_font_size": "middle",
+                                        "mean_size": 8.5
+                                    },
+                                    "page": 1,
+                                    "reading_order": 72,
                                     "text": "All hash functions have this problem."
                                 },
                                 {
@@ -1020,6 +1013,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 1,
+                                    "reading_order": 73,
                                     "text": "This is often accommodated for by having the hash tables be very large."
                                 },
                                 {
@@ -1031,6 +1025,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 1,
+                                    "reading_order": 74,
                                     "text": "Hashes are important for associative arrays and database indexing."
                                 }
                             ],
@@ -1047,6 +1042,7 @@
                                     "mean_size": 8.5
                                 },
                                 "page": 1,
+                                "reading_order": 75,
                                 "text": "Time Complexity:"
                             },
                             "content": [
@@ -1059,6 +1055,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 1,
+                                    "reading_order": 76,
                                     "text": "Indexing: Hash Tables: O(1)"
                                 },
                                 {
@@ -1070,6 +1067,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 1,
+                                    "reading_order": 77,
                                     "text": "Search: Hash Tables: O(1)"
                                 },
                                 {
@@ -1081,6 +1079,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 1,
+                                    "reading_order": 78,
                                     "text": "Insertion: Hash Tables: O(1)"
                                 }
                             ],
@@ -1100,6 +1099,7 @@
                             "mean_size": 10.6
                         },
                         "page": 1,
+                        "reading_order": 79,
                         "text": "Binary Tree"
                     },
                     "content": [],
@@ -1114,6 +1114,7 @@
                                     "mean_size": 8.5
                                 },
                                 "page": 1,
+                                "reading_order": 80,
                                 "text": "Definition:"
                             },
                             "content": [
@@ -1126,6 +1127,7 @@
                                         "mean_size": 7.9
                                     },
                                     "page": 1,
+                                    "reading_order": 81,
                                     "text": "https://gist.github.com/TSiege/cbb0507082bb18ff7e4b#\ufb01le-the-technical-interview-cheat-sheet-md"
                                 },
                                 {
@@ -1137,6 +1139,7 @@
                                         "mean_size": 7.9
                                     },
                                     "page": 1,
+                                    "reading_order": 82,
                                     "text": "2/18"
                                 },
                                 {
@@ -1148,6 +1151,7 @@
                                         "mean_size": 7.9
                                     },
                                     "page": 2,
+                                    "reading_order": 83,
                                     "text": "31/10/2019"
                                 },
                                 {
@@ -1159,6 +1163,7 @@
                                         "mean_size": 7.9
                                     },
                                     "page": 2,
+                                    "reading_order": 84,
                                     "text": "This is my technical interview cheat sheet. Feel free to fork it or do whatever you want with it. PLEASE let me know if there are any errors or if a\u2026"
                                 },
                                 {
@@ -1170,6 +1175,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 2,
+                                    "reading_order": 85,
                                     "text": "Is a tree like data structure where every node has at most two children."
                                 },
                                 {
@@ -1181,6 +1187,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 2,
+                                    "reading_order": 86,
                                     "text": "There is one left and right child node."
                                 }
                             ],
@@ -1197,6 +1204,7 @@
                                     "mean_size": 8.5
                                 },
                                 "page": 2,
+                                "reading_order": 87,
                                 "text": "What you need to know:"
                             },
                             "content": [
@@ -1209,6 +1217,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 2,
+                                    "reading_order": 88,
                                     "text": "Designed to optimize searching and sorting."
                                 },
                                 {
@@ -1220,6 +1229,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 2,
+                                    "reading_order": 89,
                                     "text": "A degenerate tree is an unbalanced tree, which if entirely one-sided is a essentially a linked list."
                                 },
                                 {
@@ -1231,8 +1241,27 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 2,
+                                    "reading_order": 90,
                                     "text": "They are comparably simple to implement than other data structures."
+                                }
+                            ],
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": true,
+                                    "italic": false,
+                                    "font_name": ".SFNSText-Semibold",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 8.5
                                 },
+                                "page": 2,
+                                "reading_order": 91,
+                                "text": "Used to make binary search trees."
+                            },
+                            "content": [
                                 {
                                     "style": {
                                         "bold": false,
@@ -1242,17 +1271,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 2,
-                                    "text": "Used to make binary search trees."
-                                },
-                                {
-                                    "style": {
-                                        "bold": false,
-                                        "italic": false,
-                                        "font_name": ".SFNSText",
-                                        "mapped_font_size": "middle",
-                                        "mean_size": 8.5
-                                    },
-                                    "page": 2,
+                                    "reading_order": 92,
                                     "text": "A binary tree that uses comparable keys to assign which direction a child is."
                                 },
                                 {
@@ -1264,6 +1283,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 2,
+                                    "reading_order": 93,
                                     "text": "Left child has a key smaller than it's parent node."
                                 },
                                 {
@@ -1275,6 +1295,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 2,
+                                    "reading_order": 94,
                                     "text": "Right child has a key greater than it's parent node."
                                 },
                                 {
@@ -1286,6 +1307,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 2,
+                                    "reading_order": 95,
                                     "text": "There can be no duplicate node."
                                 },
                                 {
@@ -1297,6 +1319,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 2,
+                                    "reading_order": 96,
                                     "text": "Because of the above it is more likely to be used as a data structure than a binary tree."
                                 }
                             ],
@@ -1313,6 +1336,7 @@
                                     "mean_size": 8.5
                                 },
                                 "page": 2,
+                                "reading_order": 97,
                                 "text": "Time Complexity:"
                             },
                             "content": [
@@ -1325,6 +1349,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 2,
+                                    "reading_order": 98,
                                     "text": "Indexing: Binary Search Tree: O(log n)"
                                 },
                                 {
@@ -1336,6 +1361,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 2,
+                                    "reading_order": 99,
                                     "text": "Search: Binary Search Tree: O(log n)"
                                 },
                                 {
@@ -1347,6 +1373,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 2,
+                                    "reading_order": 100,
                                     "text": "Insertion: Binary Search Tree: O(log n)"
                                 }
                             ],
@@ -1369,6 +1396,7 @@
                     "mean_size": 12.8
                 },
                 "page": 2,
+                "reading_order": 101,
                 "text": "Search Basics"
             },
             "content": [],
@@ -1383,6 +1411,7 @@
                             "mean_size": 10.6
                         },
                         "page": 2,
+                        "reading_order": 102,
                         "text": "Breadth First Search"
                     },
                     "content": [],
@@ -1397,6 +1426,7 @@
                                     "mean_size": 8.5
                                 },
                                 "page": 2,
+                                "reading_order": 103,
                                 "text": "Definition:"
                             },
                             "content": [
@@ -1409,6 +1439,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 2,
+                                    "reading_order": 104,
                                     "text": "An algorithm that searches a tree (or graph) by searching levels of the tree first, starting at the root."
                                 },
                                 {
@@ -1420,6 +1451,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 2,
+                                    "reading_order": 105,
                                     "text": "It finds every node on the same level, most often moving left to right."
                                 },
                                 {
@@ -1431,6 +1463,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 2,
+                                    "reading_order": 106,
                                     "text": "While doing this it tracks the children nodes of the nodes on the current level."
                                 },
                                 {
@@ -1442,6 +1475,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 2,
+                                    "reading_order": 107,
                                     "text": "When finished examining a level it moves to the left most node on the next level."
                                 },
                                 {
@@ -1453,6 +1487,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 2,
+                                    "reading_order": 108,
                                     "text": "The bottom-right most node is evaluated last (the node that is deepest and is farthest right of it's level)."
                                 }
                             ],
@@ -1469,6 +1504,7 @@
                                     "mean_size": 8.5
                                 },
                                 "page": 2,
+                                "reading_order": 109,
                                 "text": "What you need to know:"
                             },
                             "content": [
@@ -1481,6 +1517,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 2,
+                                    "reading_order": 110,
                                     "text": "Optimal for searching a tree that is wider than it is deep."
                                 },
                                 {
@@ -1492,6 +1529,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 2,
+                                    "reading_order": 111,
                                     "text": "Uses a queue to store information about the tree while it traverses a tree."
                                 },
                                 {
@@ -1503,6 +1541,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 2,
+                                    "reading_order": 112,
                                     "text": "Because it uses a queue it is more memory intensive than depth first search."
                                 },
                                 {
@@ -1514,6 +1553,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 2,
+                                    "reading_order": 113,
                                     "text": "The queue uses more memory because it needs to stores pointers"
                                 }
                             ],
@@ -1530,6 +1570,7 @@
                                     "mean_size": 8.5
                                 },
                                 "page": 2,
+                                "reading_order": 114,
                                 "text": "Time Complexity:"
                             },
                             "content": [
@@ -1542,6 +1583,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 2,
+                                    "reading_order": 115,
                                     "text": "Search: Breadth First Search: O(V + E)"
                                 },
                                 {
@@ -1553,6 +1595,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 2,
+                                    "reading_order": 116,
                                     "text": "E is number of edges"
                                 },
                                 {
@@ -1564,6 +1607,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 2,
+                                    "reading_order": 117,
                                     "text": "V is number of vertices"
                                 }
                             ],
@@ -1583,6 +1627,7 @@
                             "mean_size": 10.6
                         },
                         "page": 2,
+                        "reading_order": 118,
                         "text": "Depth First Search"
                     },
                     "content": [],
@@ -1597,6 +1642,7 @@
                                     "mean_size": 8.5
                                 },
                                 "page": 2,
+                                "reading_order": 119,
                                 "text": "Definition:"
                             },
                             "content": [
@@ -1609,6 +1655,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 2,
+                                    "reading_order": 120,
                                     "text": "An algorithm that searches a tree (or graph) by searching depth of the tree first, starting at the root."
                                 },
                                 {
@@ -1620,6 +1667,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 2,
+                                    "reading_order": 121,
                                     "text": "It traverses left down a tree until it cannot go further."
                                 },
                                 {
@@ -1631,7 +1679,8 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 2,
-                                    "text": "Once it reaches the end of a branch it traverses back up trying the right child of nodes on that branch, and if"
+                                    "reading_order": 122,
+                                    "text": "Once it reaches the end of a branch it traverses back up trying the right child of nodes on that branch, and if\npossible left from the right children."
                                 },
                                 {
                                     "style": {
@@ -1642,7 +1691,8 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 2,
-                                    "text": "possible left from the right children."
+                                    "reading_order": 123,
+                                    "text": "When finished examining a branch it moves to the node right of the root then tries to go left on all it's children\nuntil it reaches the bottom."
                                 },
                                 {
                                     "style": {
@@ -1653,28 +1703,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 2,
-                                    "text": "When finished examining a branch it moves to the node right of the root then tries to go left on all it's children"
-                                },
-                                {
-                                    "style": {
-                                        "bold": false,
-                                        "italic": false,
-                                        "font_name": ".SFNSText",
-                                        "mapped_font_size": "middle",
-                                        "mean_size": 8.5
-                                    },
-                                    "page": 2,
-                                    "text": "until it reaches the bottom."
-                                },
-                                {
-                                    "style": {
-                                        "bold": false,
-                                        "italic": false,
-                                        "font_name": ".SFNSText",
-                                        "mapped_font_size": "middle",
-                                        "mean_size": 8.5
-                                    },
-                                    "page": 2,
+                                    "reading_order": 124,
                                     "text": "The right most node is evaluated last (the node that is right of all it's ancestors)."
                                 }
                             ],
@@ -1691,6 +1720,7 @@
                                     "mean_size": 8.5
                                 },
                                 "page": 2,
+                                "reading_order": 125,
                                 "text": "What you need to know:"
                             },
                             "content": [
@@ -1703,6 +1733,7 @@
                                         "mean_size": 7.9
                                     },
                                     "page": 2,
+                                    "reading_order": 126,
                                     "text": "https://gist.github.com/TSiege/cbb0507082bb18ff7e4b#\ufb01le-the-technical-interview-cheat-sheet-md"
                                 },
                                 {
@@ -1714,6 +1745,7 @@
                                         "mean_size": 7.9
                                     },
                                     "page": 2,
+                                    "reading_order": 127,
                                     "text": "3/18"
                                 },
                                 {
@@ -1725,6 +1757,7 @@
                                         "mean_size": 7.9
                                     },
                                     "page": 3,
+                                    "reading_order": 128,
                                     "text": "31/10/2019"
                                 },
                                 {
@@ -1736,6 +1769,7 @@
                                         "mean_size": 7.9
                                     },
                                     "page": 3,
+                                    "reading_order": 129,
                                     "text": "This is my technical interview cheat sheet. Feel free to fork it or do whatever you want with it. PLEASE let me know if there are any errors or if a\u2026"
                                 },
                                 {
@@ -1747,6 +1781,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 3,
+                                    "reading_order": 130,
                                     "text": "Optimal for searching a tree that is deeper than it is wide."
                                 },
                                 {
@@ -1758,6 +1793,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 3,
+                                    "reading_order": 131,
                                     "text": "Uses a stack to push nodes onto."
                                 },
                                 {
@@ -1769,7 +1805,8 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 3,
-                                    "text": "Because a stack is LIFO it does not need to keep track of the nodes pointers and is therefore less memory"
+                                    "reading_order": 132,
+                                    "text": "Because a stack is LIFO it does not need to keep track of the nodes pointers and is therefore less memory\nintensive than breadth first search."
                                 },
                                 {
                                     "style": {
@@ -1780,17 +1817,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 3,
-                                    "text": "intensive than breadth first search."
-                                },
-                                {
-                                    "style": {
-                                        "bold": false,
-                                        "italic": false,
-                                        "font_name": ".SFNSText",
-                                        "mapped_font_size": "middle",
-                                        "mean_size": 8.5
-                                    },
-                                    "page": 3,
+                                    "reading_order": 133,
                                     "text": "Once it cannot go further left it begins evaluating the stack."
                                 }
                             ],
@@ -1807,6 +1834,7 @@
                                     "mean_size": 8.5
                                 },
                                 "page": 3,
+                                "reading_order": 134,
                                 "text": "Time Complexity:"
                             },
                             "content": [
@@ -1819,6 +1847,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 3,
+                                    "reading_order": 135,
                                     "text": "Search: Depth First Search: O(|E| + |V|)"
                                 },
                                 {
@@ -1830,6 +1859,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 3,
+                                    "reading_order": 136,
                                     "text": "E is number of edges"
                                 },
                                 {
@@ -1841,6 +1871,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 3,
+                                    "reading_order": 137,
                                     "text": "V is number of vertices"
                                 }
                             ],
@@ -1857,6 +1888,7 @@
                                     "mean_size": 8.5
                                 },
                                 "page": 3,
+                                "reading_order": 138,
                                 "text": "Breadth First Search Vs. Depth First Search"
                             },
                             "content": [
@@ -1869,6 +1901,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 3,
+                                    "reading_order": 139,
                                     "text": "The simple answer to this question is that it depends on the size and shape of the tree."
                                 },
                                 {
@@ -1880,6 +1913,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 3,
+                                    "reading_order": 140,
                                     "text": "For wide, shallow trees use Breadth First Search"
                                 },
                                 {
@@ -1891,6 +1925,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 3,
+                                    "reading_order": 141,
                                     "text": "For deep, narrow trees use Depth First Search"
                                 }
                             ],
@@ -1907,6 +1942,7 @@
                                     "mean_size": 8.5
                                 },
                                 "page": 3,
+                                "reading_order": 142,
                                 "text": "Nuances:"
                             },
                             "content": [
@@ -1919,7 +1955,8 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 3,
-                                    "text": "Because BFS uses queues to store information about the nodes and its children, it could use more memory than is"
+                                    "reading_order": 143,
+                                    "text": "Because BFS uses queues to store information about the nodes and its children, it could use more memory than is\navailable on your computer. (But you probably won't have to worry about this.)"
                                 },
                                 {
                                     "style": {
@@ -1930,7 +1967,8 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 3,
-                                    "text": "available on your computer. (But you probably won't have to worry about this.)"
+                                    "reading_order": 144,
+                                    "text": "If using a DFS on a tree that is very deep you might go unnecessarily deep in the search. See xkcd for more\ninformation."
                                 },
                                 {
                                     "style": {
@@ -1941,28 +1979,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 3,
-                                    "text": "If using a DFS on a tree that is very deep you might go unnecessarily deep in the search. See xkcd for more"
-                                },
-                                {
-                                    "style": {
-                                        "bold": false,
-                                        "italic": false,
-                                        "font_name": ".SFNSText",
-                                        "mapped_font_size": "middle",
-                                        "mean_size": 8.5
-                                    },
-                                    "page": 3,
-                                    "text": "information."
-                                },
-                                {
-                                    "style": {
-                                        "bold": false,
-                                        "italic": false,
-                                        "font_name": ".SFNSText",
-                                        "mapped_font_size": "middle",
-                                        "mean_size": 8.5
-                                    },
-                                    "page": 3,
+                                    "reading_order": 145,
                                     "text": "Breadth First Search tends to be a looping algorithm."
                                 },
                                 {
@@ -1974,6 +1991,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 3,
+                                    "reading_order": 146,
                                     "text": "Depth First Search tends to be a recursive algorithm."
                                 }
                             ],
@@ -1996,6 +2014,7 @@
                     "mean_size": 12.8
                 },
                 "page": 3,
+                "reading_order": 147,
                 "text": "Efficient Sorting Basics"
             },
             "content": [],
@@ -2010,6 +2029,7 @@
                             "mean_size": 10.6
                         },
                         "page": 3,
+                        "reading_order": 148,
                         "text": "Merge Sort"
                     },
                     "content": [],
@@ -2024,6 +2044,7 @@
                                     "mean_size": 8.5
                                 },
                                 "page": 3,
+                                "reading_order": 149,
                                 "text": "Definition:"
                             },
                             "content": [
@@ -2036,6 +2057,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 3,
+                                    "reading_order": 150,
                                     "text": "A comparison based sorting algorithm"
                                 },
                                 {
@@ -2047,6 +2069,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 3,
+                                    "reading_order": 151,
                                     "text": "Divides entire dataset into groups of at most two."
                                 },
                                 {
@@ -2058,6 +2081,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 3,
+                                    "reading_order": 152,
                                     "text": "Compares each number one at a time, moving the smallest number to left of the pair."
                                 },
                                 {
@@ -2069,6 +2093,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 3,
+                                    "reading_order": 153,
                                     "text": "Once all pairs sorted it then compares left most elements of the two leftmost pairs creating a sorted group of"
                                 },
                                 {
@@ -2080,6 +2105,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 3,
+                                    "reading_order": 154,
                                     "text": "four with the smallest numbers on the left and the largest ones on the right."
                                 },
                                 {
@@ -2091,6 +2117,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 3,
+                                    "reading_order": 155,
                                     "text": "This process is repeated until there is only one set."
                                 }
                             ],
@@ -2107,6 +2134,7 @@
                                     "mean_size": 8.5
                                 },
                                 "page": 3,
+                                "reading_order": 156,
                                 "text": "What you need to know:"
                             },
                             "content": [
@@ -2119,6 +2147,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 3,
+                                    "reading_order": 157,
                                     "text": "This is one of the most basic sorting algorithms."
                                 },
                                 {
@@ -2130,6 +2159,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 3,
+                                    "reading_order": 158,
                                     "text": "Know that it divides all the data into as small possible sets then compares them."
                                 }
                             ],
@@ -2146,6 +2176,7 @@
                                     "mean_size": 8.5
                                 },
                                 "page": 3,
+                                "reading_order": 159,
                                 "text": "Time Complexity:"
                             },
                             "content": [
@@ -2158,6 +2189,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 3,
+                                    "reading_order": 160,
                                     "text": "Best Case Sort: Merge Sort: O(n)"
                                 },
                                 {
@@ -2169,6 +2201,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 3,
+                                    "reading_order": 161,
                                     "text": "Average Case Sort: Merge Sort: O(n log n)"
                                 },
                                 {
@@ -2180,6 +2213,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 3,
+                                    "reading_order": 162,
                                     "text": "Worst Case Sort: Merge Sort: O(n log n)"
                                 }
                             ],
@@ -2199,6 +2233,7 @@
                             "mean_size": 10.6
                         },
                         "page": 3,
+                        "reading_order": 163,
                         "text": "Quicksort"
                     },
                     "content": [],
@@ -2213,6 +2248,7 @@
                                     "mean_size": 8.5
                                 },
                                 "page": 3,
+                                "reading_order": 164,
                                 "text": "Definition:"
                             },
                             "content": [
@@ -2225,6 +2261,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 3,
+                                    "reading_order": 165,
                                     "text": "A comparison based sorting algorithm"
                                 },
                                 {
@@ -2236,7 +2273,8 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 3,
-                                    "text": "Divides entire dataset in half by selecting the middle element and putting all smaller elements to the left of the"
+                                    "reading_order": 166,
+                                    "text": "Divides entire dataset in half by selecting the middle element and putting all smaller elements to the left of the\nelement and larger ones to the right."
                                 },
                                 {
                                     "style": {
@@ -2247,7 +2285,8 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 3,
-                                    "text": "element and larger ones to the right."
+                                    "reading_order": 167,
+                                    "text": "It repeats this process on the left side until it is comparing only two elements at which point the left side is\nsorted."
                                 },
                                 {
                                     "style": {
@@ -2258,28 +2297,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 3,
-                                    "text": "It repeats this process on the left side until it is comparing only two elements at which point the left side is"
-                                },
-                                {
-                                    "style": {
-                                        "bold": false,
-                                        "italic": false,
-                                        "font_name": ".SFNSText",
-                                        "mapped_font_size": "middle",
-                                        "mean_size": 8.5
-                                    },
-                                    "page": 3,
-                                    "text": "sorted."
-                                },
-                                {
-                                    "style": {
-                                        "bold": false,
-                                        "italic": false,
-                                        "font_name": ".SFNSText",
-                                        "mapped_font_size": "middle",
-                                        "mean_size": 8.5
-                                    },
-                                    "page": 3,
+                                    "reading_order": 168,
                                     "text": "When the left side is finished sorting it performs the same operation on the right side."
                                 },
                                 {
@@ -2291,6 +2309,7 @@
                                         "mean_size": 7.9
                                     },
                                     "page": 3,
+                                    "reading_order": 169,
                                     "text": "https://gist.github.com/TSiege/cbb0507082bb18ff7e4b#\ufb01le-the-technical-interview-cheat-sheet-md"
                                 },
                                 {
@@ -2302,6 +2321,7 @@
                                         "mean_size": 7.9
                                     },
                                     "page": 3,
+                                    "reading_order": 170,
                                     "text": "4/18"
                                 },
                                 {
@@ -2313,6 +2333,7 @@
                                         "mean_size": 7.9
                                     },
                                     "page": 4,
+                                    "reading_order": 171,
                                     "text": "31/10/2019"
                                 },
                                 {
@@ -2324,6 +2345,7 @@
                                         "mean_size": 7.9
                                     },
                                     "page": 4,
+                                    "reading_order": 172,
                                     "text": "This is my technical interview cheat sheet. Feel free to fork it or do whatever you want with it. PLEASE let me know if there are any errors or if a\u2026"
                                 },
                                 {
@@ -2335,6 +2357,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 4,
+                                    "reading_order": 173,
                                     "text": "Computer architecture favors the quicksort process."
                                 }
                             ],
@@ -2351,6 +2374,7 @@
                                     "mean_size": 8.5
                                 },
                                 "page": 4,
+                                "reading_order": 174,
                                 "text": "What you need to know:"
                             },
                             "content": [
@@ -2363,7 +2387,8 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 4,
-                                    "text": "While it has the same Big O as (or worse in some cases) many other sorting algorithms it is often faster in practice"
+                                    "reading_order": 175,
+                                    "text": "While it has the same Big O as (or worse in some cases) many other sorting algorithms it is often faster in practice\nthan many other sorting algorithms, such as merge sort."
                                 },
                                 {
                                     "style": {
@@ -2374,17 +2399,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 4,
-                                    "text": "than many other sorting algorithms, such as merge sort."
-                                },
-                                {
-                                    "style": {
-                                        "bold": false,
-                                        "italic": false,
-                                        "font_name": ".SFNSText",
-                                        "mapped_font_size": "middle",
-                                        "mean_size": 8.5
-                                    },
-                                    "page": 4,
+                                    "reading_order": 176,
                                     "text": "Know that it halves the data set by the average continuously until all the information is sorted."
                                 }
                             ],
@@ -2401,6 +2416,7 @@
                                     "mean_size": 8.5
                                 },
                                 "page": 4,
+                                "reading_order": 177,
                                 "text": "Time Complexity:"
                             },
                             "content": [
@@ -2413,6 +2429,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 4,
+                                    "reading_order": 178,
                                     "text": "Best Case Sort: Merge Sort: O(n)"
                                 },
                                 {
@@ -2424,6 +2441,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 4,
+                                    "reading_order": 179,
                                     "text": "Average Case Sort: Merge Sort: O(n log n)"
                                 },
                                 {
@@ -2435,6 +2453,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 4,
+                                    "reading_order": 180,
                                     "text": "Worst Case Sort: Merge Sort: O(n^2)"
                                 }
                             ],
@@ -2454,6 +2473,7 @@
                             "mean_size": 10.6
                         },
                         "page": 4,
+                        "reading_order": 181,
                         "text": "Bubble Sort"
                     },
                     "content": [],
@@ -2468,6 +2488,7 @@
                                     "mean_size": 8.5
                                 },
                                 "page": 4,
+                                "reading_order": 182,
                                 "text": "Definition:"
                             },
                             "content": [
@@ -2480,6 +2501,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 4,
+                                    "reading_order": 183,
                                     "text": "A comparison based sorting algorithm"
                                 },
                                 {
@@ -2491,6 +2513,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 4,
+                                    "reading_order": 184,
                                     "text": "It iterates left to right comparing every couplet, moving the smaller element to the left."
                                 },
                                 {
@@ -2502,6 +2525,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 4,
+                                    "reading_order": 185,
                                     "text": "It repeats this process until it no longer moves an element to the left."
                                 }
                             ],
@@ -2518,6 +2542,7 @@
                                     "mean_size": 8.5
                                 },
                                 "page": 4,
+                                "reading_order": 186,
                                 "text": "What you need to know:"
                             },
                             "content": [
@@ -2530,6 +2555,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 4,
+                                    "reading_order": 187,
                                     "text": "While it is very simple to implement, it is the least efficient of these three sorting methods."
                                 },
                                 {
@@ -2541,6 +2567,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 4,
+                                    "reading_order": 188,
                                     "text": "Know that it moves one space to the right comparing two elements at a time and moving the smaller on to left."
                                 }
                             ],
@@ -2557,6 +2584,7 @@
                                     "mean_size": 8.5
                                 },
                                 "page": 4,
+                                "reading_order": 189,
                                 "text": "Time Complexity:"
                             },
                             "content": [
@@ -2569,6 +2597,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 4,
+                                    "reading_order": 190,
                                     "text": "Best Case Sort: Merge Sort: O(n)"
                                 },
                                 {
@@ -2580,6 +2609,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 4,
+                                    "reading_order": 191,
                                     "text": "Average Case Sort: Merge Sort: O(n^2)"
                                 },
                                 {
@@ -2591,6 +2621,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 4,
+                                    "reading_order": 192,
                                     "text": "Worst Case Sort: Merge Sort: O(n^2)"
                                 }
                             ],
@@ -2607,6 +2638,7 @@
                                     "mean_size": 8.5
                                 },
                                 "page": 4,
+                                "reading_order": 193,
                                 "text": "Merge Sort Vs. Quicksort"
                             },
                             "content": [
@@ -2619,6 +2651,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 4,
+                                    "reading_order": 194,
                                     "text": "Quicksort is likely faster in practice."
                                 },
                                 {
@@ -2630,6 +2663,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 4,
+                                    "reading_order": 195,
                                     "text": "Merge Sort divides the set into the smallest possible groups immediately then reconstructs the incrementally as it"
                                 },
                                 {
@@ -2641,6 +2675,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 4,
+                                    "reading_order": 196,
                                     "text": "sorts the groupings."
                                 },
                                 {
@@ -2652,6 +2687,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 4,
+                                    "reading_order": 197,
                                     "text": "Quicksort continually divides the set by the average, until the set is recursively sorted."
                                 }
                             ],
@@ -2674,6 +2710,7 @@
                     "mean_size": 12.8
                 },
                 "page": 4,
+                "reading_order": 198,
                 "text": "Basic Types of Algorithms"
             },
             "content": [],
@@ -2688,6 +2725,7 @@
                             "mean_size": 10.6
                         },
                         "page": 4,
+                        "reading_order": 199,
                         "text": "Recursive Algorithms"
                     },
                     "content": [],
@@ -2702,6 +2740,7 @@
                                     "mean_size": 8.5
                                 },
                                 "page": 4,
+                                "reading_order": 200,
                                 "text": "Definition:"
                             },
                             "content": [
@@ -2714,7 +2753,32 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 4,
+                                    "reading_order": 201,
                                     "text": "An algorithm that calls itself in its definition."
+                                },
+                                {
+                                    "style": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "font_name": ".SFNSText",
+                                        "mapped_font_size": "middle",
+                                        "mean_size": 8.5
+                                    },
+                                    "page": 4,
+                                    "reading_order": 202,
+                                    "text": "Recursive case a conditional statement that is used to trigger the recursion."
+                                },
+                                {
+                                    "style": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "font_name": ".SFNSText",
+                                        "mapped_font_size": "middle",
+                                        "mean_size": 8.5
+                                    },
+                                    "page": 4,
+                                    "reading_order": 203,
+                                    "text": "Base case a conditional statement that is used to break the recursion."
                                 }
                             ],
                             "children": [],
@@ -2730,38 +2794,7 @@
                                     "mean_size": 8.5
                                 },
                                 "page": 4,
-                                "text": "Recursive case a conditional statement that is used to trigger the recursion."
-                            },
-                            "content": [],
-                            "children": [],
-                            "level": 2
-                        },
-                        {
-                            "heading": {
-                                "style": {
-                                    "bold": true,
-                                    "italic": false,
-                                    "font_name": ".SFNSText-Semibold",
-                                    "mapped_font_size": "middle",
-                                    "mean_size": 8.5
-                                },
-                                "page": 4,
-                                "text": "Base case a conditional statement that is used to break the recursion."
-                            },
-                            "content": [],
-                            "children": [],
-                            "level": 2
-                        },
-                        {
-                            "heading": {
-                                "style": {
-                                    "bold": true,
-                                    "italic": false,
-                                    "font_name": ".SFNSText-Semibold",
-                                    "mapped_font_size": "middle",
-                                    "mean_size": 8.5
-                                },
-                                "page": 4,
+                                "reading_order": 204,
                                 "text": "What you need to know:"
                             },
                             "content": [],
@@ -2778,6 +2811,7 @@
                                     "mean_size": 8.5
                                 },
                                 "page": 4,
+                                "reading_order": 205,
                                 "text": "Stack level too deep and stack overflow."
                             },
                             "content": [
@@ -2790,6 +2824,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 4,
+                                    "reading_order": 206,
                                     "text": "If you've seen either of these from a recursive algorithm, you messed up."
                                 },
                                 {
@@ -2801,7 +2836,8 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 4,
-                                    "text": "It means that your base case was never triggered because it was faulty or the problem was so massive you ran"
+                                    "reading_order": 207,
+                                    "text": "It means that your base case was never triggered because it was faulty or the problem was so massive you ran\nout of alloted memory."
                                 },
                                 {
                                     "style": {
@@ -2812,17 +2848,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 4,
-                                    "text": "out of alloted memory."
-                                },
-                                {
-                                    "style": {
-                                        "bold": false,
-                                        "italic": false,
-                                        "font_name": ".SFNSText",
-                                        "mapped_font_size": "middle",
-                                        "mean_size": 8.5
-                                    },
-                                    "page": 4,
+                                    "reading_order": 208,
                                     "text": "Knowing whether or not you will reach a base case is integral to correctly using recursion."
                                 },
                                 {
@@ -2834,6 +2860,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 4,
+                                    "reading_order": 209,
                                     "text": "Often used in Depth First Search"
                                 }
                             ],
@@ -2853,6 +2880,7 @@
                             "mean_size": 10.6
                         },
                         "page": 4,
+                        "reading_order": 210,
                         "text": "Iterative Algorithms"
                     },
                     "content": [],
@@ -2867,6 +2895,7 @@
                                     "mean_size": 8.5
                                 },
                                 "page": 4,
+                                "reading_order": 211,
                                 "text": "Definition:"
                             },
                             "content": [
@@ -2879,6 +2908,7 @@
                                         "mean_size": 7.9
                                     },
                                     "page": 4,
+                                    "reading_order": 212,
                                     "text": "https://gist.github.com/TSiege/cbb0507082bb18ff7e4b#\ufb01le-the-technical-interview-cheat-sheet-md"
                                 },
                                 {
@@ -2890,6 +2920,7 @@
                                         "mean_size": 7.9
                                     },
                                     "page": 4,
+                                    "reading_order": 213,
                                     "text": "5/18"
                                 },
                                 {
@@ -2901,6 +2932,7 @@
                                         "mean_size": 7.9
                                     },
                                     "page": 5,
+                                    "reading_order": 214,
                                     "text": "31/10/2019"
                                 },
                                 {
@@ -2912,6 +2944,7 @@
                                         "mean_size": 7.9
                                     },
                                     "page": 5,
+                                    "reading_order": 215,
                                     "text": "This is my technical interview cheat sheet. Feel free to fork it or do whatever you want with it. PLEASE let me know if there are any errors or if a\u2026"
                                 },
                                 {
@@ -2923,6 +2956,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 5,
+                                    "reading_order": 216,
                                     "text": "An algorithm that is called repeatedly but for a finite number of times, each time being a single iteration."
                                 },
                                 {
@@ -2934,6 +2968,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 5,
+                                    "reading_order": 217,
                                     "text": "Often used to move incrementally through a data set."
                                 }
                             ],
@@ -2950,6 +2985,7 @@
                                     "mean_size": 8.5
                                 },
                                 "page": 5,
+                                "reading_order": 218,
                                 "text": "What you need to know:"
                             },
                             "content": [
@@ -2962,6 +2998,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 5,
+                                    "reading_order": 219,
                                     "text": "Generally you will see iteration as loops, for, while, and until statements."
                                 },
                                 {
@@ -2973,6 +3010,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 5,
+                                    "reading_order": 220,
                                     "text": "Think of iteration as moving one at a time through a set."
                                 },
                                 {
@@ -2984,6 +3022,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 5,
+                                    "reading_order": 221,
                                     "text": "Often used to move through an array."
                                 }
                             ],
@@ -3000,6 +3039,7 @@
                                     "mean_size": 8.5
                                 },
                                 "page": 5,
+                                "reading_order": 222,
                                 "text": "Recursion Vs. Iteration"
                             },
                             "content": [
@@ -3012,7 +3052,8 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 5,
-                                    "text": "The differences between recursion and iteration can be confusing to distinguish since both can be used to implement"
+                                    "reading_order": 223,
+                                    "text": "The differences between recursion and iteration can be confusing to distinguish since both can be used to implement\nthe other. But know that,"
                                 },
                                 {
                                     "style": {
@@ -3023,17 +3064,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 5,
-                                    "text": "the other. But know that,"
-                                },
-                                {
-                                    "style": {
-                                        "bold": false,
-                                        "italic": false,
-                                        "font_name": ".SFNSText",
-                                        "mapped_font_size": "middle",
-                                        "mean_size": 8.5
-                                    },
-                                    "page": 5,
+                                    "reading_order": 224,
                                     "text": "Recursion is, usually, more expressive and easier to implement."
                                 },
                                 {
@@ -3045,41 +3076,9 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 5,
+                                    "reading_order": 225,
                                     "text": "Iteration uses less memory."
-                                }
-                            ],
-                            "children": [],
-                            "level": 2
-                        },
-                        {
-                            "heading": {
-                                "style": {
-                                    "bold": true,
-                                    "italic": false,
-                                    "font_name": ".SFNSText-Semibold",
-                                    "mapped_font_size": "middle",
-                                    "mean_size": 8.5
                                 },
-                                "page": 5,
-                                "text": "Functional languages tend to use recursion. (i.e. Haskell)"
-                            },
-                            "content": [],
-                            "children": [],
-                            "level": 2
-                        },
-                        {
-                            "heading": {
-                                "style": {
-                                    "bold": true,
-                                    "italic": false,
-                                    "font_name": ".SFNSText-Semibold",
-                                    "mapped_font_size": "middle",
-                                    "mean_size": 8.5
-                                },
-                                "page": 5,
-                                "text": "Imperative languages tend to use iteration. (i.e. Ruby)"
-                            },
-                            "content": [
                                 {
                                     "style": {
                                         "bold": false,
@@ -3089,6 +3088,31 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 5,
+                                    "reading_order": 226,
+                                    "text": "Functional languages tend to use recursion. (i.e. Haskell)"
+                                },
+                                {
+                                    "style": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "font_name": ".SFNSText",
+                                        "mapped_font_size": "middle",
+                                        "mean_size": 8.5
+                                    },
+                                    "page": 5,
+                                    "reading_order": 227,
+                                    "text": "Imperative languages tend to use iteration. (i.e. Ruby)"
+                                },
+                                {
+                                    "style": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "font_name": ".SFNSText",
+                                        "mapped_font_size": "middle",
+                                        "mean_size": 8.5
+                                    },
+                                    "page": 5,
+                                    "reading_order": 228,
                                     "text": "Check out this Stack Overflow post for more info."
                                 }
                             ],
@@ -3105,6 +3129,7 @@
                                     "mean_size": 8.5
                                 },
                                 "page": 5,
+                                "reading_order": 229,
                                 "text": "Pseudo Code of Moving Through an Array (this is why iteration is used for this)"
                             },
                             "content": [
@@ -3117,84 +3142,8 @@
                                         "mean_size": 7.2
                                     },
                                     "page": 5,
-                                    "text": "Recursion                         | Iteration"
-                                },
-                                {
-                                    "style": {
-                                        "bold": false,
-                                        "italic": false,
-                                        "font_name": "Menlo-Regular",
-                                        "mapped_font_size": "small",
-                                        "mean_size": 7.2
-                                    },
-                                    "page": 5,
-                                    "text": "----------------------------------|----------------------------------"
-                                },
-                                {
-                                    "style": {
-                                        "bold": false,
-                                        "italic": false,
-                                        "font_name": "Menlo-Regular",
-                                        "mapped_font_size": "small",
-                                        "mean_size": 7.2
-                                    },
-                                    "page": 5,
-                                    "text": "recursive method (array, n)       | iterative method (array)"
-                                },
-                                {
-                                    "style": {
-                                        "bold": false,
-                                        "italic": false,
-                                        "font_name": "Menlo-Regular",
-                                        "mapped_font_size": "small",
-                                        "mean_size": 7.2
-                                    },
-                                    "page": 5,
-                                    "text": "if array[n] is not nil          |   for n from 0 to size of array"
-                                },
-                                {
-                                    "style": {
-                                        "bold": false,
-                                        "italic": false,
-                                        "font_name": "Menlo-Regular",
-                                        "mapped_font_size": "small",
-                                        "mean_size": 7.2
-                                    },
-                                    "page": 5,
-                                    "text": "print array[n]                |     print(array[n])"
-                                },
-                                {
-                                    "style": {
-                                        "bold": false,
-                                        "italic": false,
-                                        "font_name": "Menlo-Regular",
-                                        "mapped_font_size": "small",
-                                        "mean_size": 7.2
-                                    },
-                                    "page": 5,
-                                    "text": "recursive method(array, n+1)  |"
-                                },
-                                {
-                                    "style": {
-                                        "bold": false,
-                                        "italic": false,
-                                        "font_name": "Menlo-Regular",
-                                        "mapped_font_size": "small",
-                                        "mean_size": 7.2
-                                    },
-                                    "page": 5,
-                                    "text": "else                            |"
-                                },
-                                {
-                                    "style": {
-                                        "bold": false,
-                                        "italic": false,
-                                        "font_name": "Menlo-Regular",
-                                        "mapped_font_size": "small",
-                                        "mean_size": 7.2
-                                    },
-                                    "page": 5,
-                                    "text": "exit loop                     |"
+                                    "reading_order": 230,
+                                    "text": "Recursion                         | Iteration \n----------------------------------|---------------------------------- \nrecursive method (array, n)       | iterative method (array) \n  if array[n] is not nil          |   for n from 0 to size of array \n    print array[n]                |     print(array[n]) \n    recursive method(array, n+1)  | \n  else                            | \n    exit loop                     |"
                                 }
                             ],
                             "children": [],
@@ -3213,6 +3162,7 @@
                             "mean_size": 10.6
                         },
                         "page": 5,
+                        "reading_order": 231,
                         "text": "Greedy Algorithm"
                     },
                     "content": [],
@@ -3227,6 +3177,7 @@
                                     "mean_size": 8.5
                                 },
                                 "page": 5,
+                                "reading_order": 232,
                                 "text": "Definition:"
                             },
                             "content": [
@@ -3239,6 +3190,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 5,
+                                    "reading_order": 233,
                                     "text": "An algorithm that, while executing, selects only the information that meets a certain criteria."
                                 },
                                 {
@@ -3250,6 +3202,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 5,
+                                    "reading_order": 234,
                                     "text": "The general five components, taken from Wikipedia:"
                                 },
                                 {
@@ -3261,6 +3214,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 5,
+                                    "reading_order": 235,
                                     "text": "A candidate set, from which a solution is created."
                                 },
                                 {
@@ -3272,6 +3226,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 5,
+                                    "reading_order": 236,
                                     "text": "A selection function, which chooses the best candidate to be added to the solution."
                                 },
                                 {
@@ -3283,6 +3238,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 5,
+                                    "reading_order": 237,
                                     "text": "A feasibility function, that is used to determine if a candidate can be used to contribute to a solution."
                                 },
                                 {
@@ -3294,6 +3250,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 5,
+                                    "reading_order": 238,
                                     "text": "An objective function, which assigns a value to a solution, or a partial solution."
                                 },
                                 {
@@ -3305,6 +3262,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 5,
+                                    "reading_order": 239,
                                     "text": "A solution function, which will indicate when we have discovered a complete solution."
                                 }
                             ],
@@ -3321,6 +3279,7 @@
                                     "mean_size": 8.5
                                 },
                                 "page": 5,
+                                "reading_order": 240,
                                 "text": "What you need to know:"
                             },
                             "content": [
@@ -3333,6 +3292,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 5,
+                                    "reading_order": 241,
                                     "text": "Used to find the expedient, though non-optimal, solution for a given problem."
                                 },
                                 {
@@ -3344,6 +3304,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 5,
+                                    "reading_order": 242,
                                     "text": "Generally used on sets of data where only a small proportion of the information evaluated meets the desired result."
                                 },
                                 {
@@ -3355,6 +3316,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 5,
+                                    "reading_order": 243,
                                     "text": "Often a greedy algorithm can help reduce the Big O of an algorithm."
                                 }
                             ],
@@ -3371,6 +3333,7 @@
                                     "mean_size": 8.5
                                 },
                                 "page": 5,
+                                "reading_order": 244,
                                 "text": "Pseudo Code of a Greedy Algorithm to Find Largest Difference of any Two Numbers in an Array."
                             },
                             "content": [
@@ -3383,62 +3346,8 @@
                                         "mean_size": 7.2
                                     },
                                     "page": 5,
-                                    "text": "greedy algorithm (array)"
-                                },
-                                {
-                                    "style": {
-                                        "bold": false,
-                                        "italic": false,
-                                        "font_name": "Menlo-Regular",
-                                        "mapped_font_size": "small",
-                                        "mean_size": 7.2
-                                    },
-                                    "page": 5,
-                                    "text": "var largest difference = 0"
-                                },
-                                {
-                                    "style": {
-                                        "bold": false,
-                                        "italic": false,
-                                        "font_name": "Menlo-Regular",
-                                        "mapped_font_size": "small",
-                                        "mean_size": 7.2
-                                    },
-                                    "page": 5,
-                                    "text": "var new difference = find next difference (array[n], array[n+1])"
-                                },
-                                {
-                                    "style": {
-                                        "bold": false,
-                                        "italic": false,
-                                        "font_name": "Menlo-Regular",
-                                        "mapped_font_size": "small",
-                                        "mean_size": 7.2
-                                    },
-                                    "page": 5,
-                                    "text": "largest difference = new difference if new difference is > largest difference"
-                                },
-                                {
-                                    "style": {
-                                        "bold": false,
-                                        "italic": false,
-                                        "font_name": "Menlo-Regular",
-                                        "mapped_font_size": "small",
-                                        "mean_size": 7.2
-                                    },
-                                    "page": 5,
-                                    "text": "repeat above two steps until all differences have been found"
-                                },
-                                {
-                                    "style": {
-                                        "bold": false,
-                                        "italic": false,
-                                        "font_name": "Menlo-Regular",
-                                        "mapped_font_size": "small",
-                                        "mean_size": 7.2
-                                    },
-                                    "page": 5,
-                                    "text": "return largest difference"
+                                    "reading_order": 245,
+                                    "text": "greedy algorithm (array) \n  var largest difference = 0 \n  var new difference = find next difference (array[n], array[n+1]) \n  largest difference = new difference if new difference is > largest difference \n  repeat above two steps until all differences have been found \n  return largest difference"
                                 },
                                 {
                                     "style": {
@@ -3449,6 +3358,7 @@
                                         "mean_size": 8.5
                                     },
                                     "page": 5,
+                                    "reading_order": 246,
                                     "text": "This algorithm never needed to compare all the differences to one another, saving it an entire iteration."
                                 },
                                 {
@@ -3460,6 +3370,7 @@
                                         "mean_size": 6.4
                                     },
                                     "page": 5,
+                                    "reading_order": 247,
                                     "text": "Author"
                                 }
                             ],
@@ -3474,25 +3385,22 @@
                                             "mean_size": 6.4
                                         },
                                         "page": 5,
+                                        "reading_order": 248,
                                         "text": "Owner"
                                     },
-                                    "content": [],
-                                    "children": [],
-                                    "level": 3
-                                },
-                                {
-                                    "heading": {
-                                        "style": {
-                                            "bold": true,
-                                            "italic": false,
-                                            "font_name": ".SFNSText-Semibold",
-                                            "mapped_font_size": "small",
-                                            "mean_size": 7.4
-                                        },
-                                        "page": 5,
-                                        "text": "TSiege commented on 2 May 2014"
-                                    },
                                     "content": [
+                                        {
+                                            "style": {
+                                                "bold": false,
+                                                "italic": false,
+                                                "font_name": ".SFNSText",
+                                                "mapped_font_size": "small",
+                                                "mean_size": 7.4
+                                            },
+                                            "page": 5,
+                                            "reading_order": 249,
+                                            "text": "TSiege commented on 2 May 2014"
+                                        },
                                         {
                                             "style": {
                                                 "bold": false,
@@ -3502,6 +3410,7 @@
                                                 "mean_size": 7.9
                                             },
                                             "page": 5,
+                                            "reading_order": 250,
                                             "text": "https://gist.github.com/TSiege/cbb0507082bb18ff7e4b#\ufb01le-the-technical-interview-cheat-sheet-md"
                                         },
                                         {
@@ -3513,6 +3422,7 @@
                                                 "mean_size": 7.9
                                             },
                                             "page": 5,
+                                            "reading_order": 251,
                                             "text": "6/18"
                                         }
                                     ],
