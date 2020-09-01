@@ -42,7 +42,7 @@ class StyleAnnotator:
             if isinstance(element, LTTextBoxHorizontal):
 
                 fonts, sizes = self.__investigate_box_style(element)
-                if not fonts:
+                if not fonts or not element.get_text().rstrip():
                     continue
 
                 font_name = fonts.most_common(1)[0][0]

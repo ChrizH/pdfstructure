@@ -49,7 +49,7 @@ class TestPrettyStringPrinter(TestCase):
                          decoded_document.elements[-1].heading.text)
 
         self.assertEqual("Array", decoded_document.elements[5].children[0].heading.text)
-        self.assertEqual("Time Complexity:", decoded_document.elements[5].children[0].children[5].heading.text)
+        self.assertEqual("Time Complexity:", decoded_document.elements[5].children[0].children[2].heading.text)
 
     def test_print_json_file(self):
         printer = JsonFilePrinter()
@@ -66,4 +66,4 @@ class TestPrettyStringPrinter(TestCase):
                              decoded_document.elements[-1].heading.text)
 
             self.assertEqual("Array", decoded_document.elements[5].children[0].heading.text)
-            self.assertEqual("Time Complexity:", decoded_document.elements[5].children[0].children[5].heading.text)
+            self.assertEqual("Time Complexity:", decoded_document.elements[5].children[0].children[2].heading.text)

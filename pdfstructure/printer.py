@@ -35,7 +35,11 @@ class PrettyStringPrinter(Printer):
             title = "\n{}[{}]".format(title_prefix, element.heading_text.rstrip())
             yield title
 
-            contents = list(map(lambda content: content_prefix + content.text.rstrip(), element.content))
+            # insert correct prefix for multiline text bodies
+            contents = list(map(lambda content: content_prefix
+                                                + content.text.rstrip().replace("\n", "\n{}".format(content_prefix)),
+                                element.content))
+
             if contents:
                 yield "\n" + "\n".join(contents) + "\n"
 
