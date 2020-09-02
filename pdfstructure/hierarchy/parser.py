@@ -92,19 +92,19 @@ class HierarchyParser:
             else:
                 # no header found, add paragraph as a content element to previous node
                 # - content is on same level as its corresponding header
+                content_node = Section(element, level=len(level_stack))
                 if level_stack:
-                    level_stack[-1].append_content(element)
+                    level_stack[-1].append_children(content_node)
                 else:
-                    # add dangling content as section
-                    content = DanglingTextSection()
-                    content.append_content(element)
-                    content.set_level(len(level_stack))
-
                     # if last element in output structure has also no header, merge
                     if structured and isinstance(structured[-1], DanglingTextSection):
-                        structured[-1].append_content(element)
+                        structured[-1].append_children(content_node)
                     else:
-                        structured.append(content)
+                        # # add dangling content as section
+                        dangling_content = DanglingTextSection()
+                        dangling_content.append_children(content_node)
+                        dangling_content.set_level(len(level_stack))
+                        structured.append(dangling_content)
 
         return structured
 

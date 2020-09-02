@@ -66,7 +66,14 @@ def condition_h1_enum_h2_not(h1: Section, h2: Section):
     """
     e.g.    h1  -> 1.1 some header title
             h2  -> some other header title
+    -> applies only if both headers are of same style type
+
     """
+    if h2.heading.style.bold and not h1.heading.style.bold:
+        return False
+    #if h2.heading.style.font_name != h1.heading.style.font_name:
+    #    return False
+
     h1start = next(word_generator(h1.heading._data))
     h2start = next(word_generator(h2.heading._data))
     return numeration_pattern.match(h1start) and not numeration_pattern.match(h2start)

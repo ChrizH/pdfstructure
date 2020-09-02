@@ -37,7 +37,6 @@ class StyleAnnotator:
         """"
         annotate each element with fontsize
         """
-        reading_order = 0
         for element in element_gen:
             if isinstance(element, LTTextBoxHorizontal):
 
@@ -56,7 +55,10 @@ class StyleAnnotator:
                           mapped_font_size=mapped_size,
                           mean_size=mean_size)
 
+                # todo, split lines within LTTextBoxHorizontal
+                #  split using style as differentiator
+                #  e.g 1st is title with bold text
+                #      2nd & 3rd line are introduction lines with body style
+                #      -> forward 2 boxes (header, content)
                 yield TextElement(text_container=element, style=s,
-                                  page=element.page if hasattr(element, "page") else None,
-                                  reading_order=reading_order)
-                reading_order += 1
+                                  page=element.page if hasattr(element, "page") else None)

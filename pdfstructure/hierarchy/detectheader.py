@@ -15,7 +15,8 @@ def header_detector(element: TextElement):
 
     # data tuple per line, element from pdfminer, annotated style info for whole line
     # todo, compute ratios over whole line // or paragraph :O
-    if style.bold or style.italic or style.mapped_font_size > TextSize.middle:
+    if (style.bold or style.italic) and style.mapped_font_size >= TextSize.middle \
+            or style.mapped_font_size > TextSize.middle:
         return check_valid_header_tokens(terms)
     else:
         return False

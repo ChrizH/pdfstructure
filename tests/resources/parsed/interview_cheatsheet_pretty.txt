@@ -1,18 +1,18 @@
 
+
 []
-	31/10/2019
-	This is my technical interview cheat sheet. Feel free to fork it or do whatever you want with it. PLEASE let me know if there are any errors or if a…
+31/10/2019
+This is my technical interview cheat sheet. Feel free to fork it or do whatever you want with it. PLEASE let me know if there are any errors or if a…
 
 [TSiege / The Technical Interview Cheat Sheet.md]
 	Last active 2 days ago • Report abuse
+	Embed
+	Download ZIP
+	<script src="https://gis
+	This is my technical interview cheat sheet. Feel free to fork it or do whatever you want with it. PLEASE let me know if there are any errors or if anything
+	crucial is missing. I will add more links soon.
+	The Technical Interview Cheat Sheet.md
 
-	[Embed]
-	[Download ZIP]
-		<script src="https://gis
-		This is my technical interview cheat sheet. Feel free to fork it or do whatever you want with it. PLEASE let me know if there are any errors or if anything
-		crucial is missing. I will add more links soon.
-
-	[The Technical Interview Cheat Sheet.md]
 [ANNOUNCEMENT]
 	I have moved this over to the Tech Interview Cheat Sheet Repo since a gist is too difficult to maintain as an open source
 	endevaor and there is no way to version it. I have updated below, but I will not be able to keep this one up to date so
@@ -27,7 +27,9 @@
 	Please see the Tech Interview Cheat Sheet Repo
 
 [Data Structure Basics]
+
 	[Array]
+
 		[Definition:]
 			Stores data elements based on an sequential, most commonly 0 based, index.
 			Based on tuples from set theory.
@@ -53,6 +55,7 @@
 			Insertion: Linear array: n/a Dynamic array: O(n)
 
 	[Linked List]
+
 		[Definition:]
 			Stores data with nodes that point to other nodes.
 			Nodes, at its most basic it has one datum and one reference (another node).
@@ -76,6 +79,7 @@
 			Insertion: Linked Lists: O(1)
 
 	[Hash Table or Hash Map]
+
 		[Definition:]
 			Stores data with key value pairs.
 			Hash functions accept a key and return an output unique only to that specific key.
@@ -96,6 +100,7 @@
 			Insertion: Hash Tables: O(1)
 
 	[Binary Tree]
+
 		[Definition:]
 			https://gist.github.com/TSiege/cbb0507082bb18ff7e4b#ﬁle-the-technical-interview-cheat-sheet-md
 			2/18
@@ -122,7 +127,9 @@
 			Insertion: Binary Search Tree: O(log n)
 
 [Search Basics]
+
 	[Breadth First Search]
+
 		[Definition:]
 			An algorithm that searches a tree (or graph) by searching levels of the tree first, starting at the root.
 			It finds every node on the same level, most often moving left to right.
@@ -142,6 +149,7 @@
 			V is number of vertices
 
 	[Depth First Search]
+
 		[Definition:]
 			An algorithm that searches a tree (or graph) by searching depth of the tree first, starting at the root.
 			It traverses left down a tree until it cannot go further.
@@ -181,7 +189,9 @@
 			Depth First Search tends to be a recursive algorithm.
 
 [Efficient Sorting Basics]
+
 	[Merge Sort]
+
 		[Definition:]
 			A comparison based sorting algorithm
 			Divides entire dataset into groups of at most two.
@@ -200,6 +210,7 @@
 			Worst Case Sort: Merge Sort: O(n log n)
 
 	[Quicksort]
+
 		[Definition:]
 			A comparison based sorting algorithm
 			Divides entire dataset in half by selecting the middle element and putting all smaller elements to the left of the
@@ -224,6 +235,7 @@
 			Worst Case Sort: Merge Sort: O(n^2)
 
 	[Bubble Sort]
+
 		[Definition:]
 			A comparison based sorting algorithm
 			It iterates left to right comparing every couplet, moving the smaller element to the left.
@@ -245,13 +257,15 @@
 			Quicksort continually divides the set by the average, until the set is recursively sorted.
 
 [Basic Types of Algorithms]
+
 	[Recursive Algorithms]
+
 		[Definition:]
 			An algorithm that calls itself in its definition.
 			Recursive case a conditional statement that is used to trigger the recursion.
 			Base case a conditional statement that is used to break the recursion.
+		What you need to know:
 
-		[What you need to know:]
 		[Stack level too deep and stack overflow.]
 			If you've seen either of these from a recursive algorithm, you messed up.
 			It means that your base case was never triggered because it was faulty or the problem was so massive you ran
@@ -260,6 +274,7 @@
 			Often used in Depth First Search
 
 	[Iterative Algorithms]
+
 		[Definition:]
 			https://gist.github.com/TSiege/cbb0507082bb18ff7e4b#ﬁle-the-technical-interview-cheat-sheet-md
 			5/18
@@ -293,6 +308,7 @@
 			    exit loop                     |
 
 	[Greedy Algorithm]
+
 		[Definition:]
 			An algorithm that, while executing, selects only the information that meets a certain criteria.
 			The general five components, taken from Wikipedia:
@@ -316,8 +332,7 @@
 			  return largest difference
 			This algorithm never needed to compare all the differences to one another, saving it an entire iteration.
 			Author
-
-			[Owner]
-				TSiege commented on 2 May 2014
-				https://gist.github.com/TSiege/cbb0507082bb18ff7e4b#ﬁle-the-technical-interview-cheat-sheet-md
-				6/18
+			Owner
+			TSiege commented on 2 May 2014
+			https://gist.github.com/TSiege/cbb0507082bb18ff7e4b#ﬁle-the-technical-interview-cheat-sheet-md
+			6/18

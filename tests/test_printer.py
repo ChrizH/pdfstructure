@@ -11,7 +11,7 @@ from pdfstructure.source import FileSource
 class TestPrettyStringPrinter(TestCase):
     straight_forward_doc = str(Path("resources/interview_cheatsheet.pdf").absolute())
     column_doc = str(Path("resources/IE00BM67HT60-ATB-FS-DE-2020-2-28.pdf").absolute())
-    correctFormattedText = "[Data Structure Basics]\n\t[Array]\n\t\t[Definition:]\n\t\t\tStores data elements" \
+    correctFormattedText = "[Data Structure Basics]\n\n\t[Array]\n\n\t\t[Definition:]\n\t\t\tStores data elements" \
                            " based on an sequential, most commonly 0 based, index."
 
     testDocument = None

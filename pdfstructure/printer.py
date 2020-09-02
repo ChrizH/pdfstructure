@@ -29,19 +29,15 @@ class PrettyStringPrinter(Printer):
         @param item_gen: all elements in order, generator provided by StructuredPdfDocument.traverse()
         """
         for element in item_gen:
-            title_prefix = self.get_title_prefix(element.level)
-            content_prefix = "\t" + title_prefix
-
-            title = "\n{}[{}]".format(title_prefix, element.heading_text.rstrip())
-            yield title
-
-            # insert correct prefix for multiline text bodies
-            contents = list(map(lambda content: content_prefix
-                                                + content.text.rstrip().replace("\n", "\n{}".format(content_prefix)),
-                                element.content))
-
-            if contents:
-                yield "\n" + "\n".join(contents) + "\n"
+            prefix = self.get_title_prefix(element.level)
+            formatted_text = element.heading_text.rstrip().replace("\n", "\n{}".format(prefix))
+            # if element has children, then its content is a header
+            if element.children:
+                content = "\n\n{}[{}]".format(prefix, formatted_text)
+            else:
+                # render as normal content
+                content = "\n{}{}".format(prefix, formatted_text)
+            yield content
 
     def print(self, document: StructuredPdfDocument, *args, **kwargs):
         element_iterator = traverse_in_order(document)

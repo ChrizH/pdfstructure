@@ -12,12 +12,11 @@ class TextElement:
     Represents one single TextContainer like a line of words.
     """
 
-    def __init__(self, text_container: LTTextContainer, style: Style, text=None, page=None, reading_order=0):
+    def __init__(self, text_container: LTTextContainer, style: Style, text=None, page=None):
         self._data = text_container
         self._text = text
         self.style = style
         self.page = page
-        self.reading_order = reading_order
 
     @property
     def text(self):
@@ -48,30 +47,23 @@ class Section:
     """
 
     def __init__(self, element: TextElement, level=0):
-        # todo, use reading_order of contents & children
         self.heading = element
-        self.content = []  # PdfElements
-        self.children = []  # ParentPdfElements
+        self.children = []  # Section
         self.level = None
         self.set_level(level)
 
     def set_level(self, level):
         self.level = level
 
-    def append_content(self, paragraph: TextElement):
-        self.content.append(paragraph)
-
     def append_children(self, section):
         self.children.append(section)
 
     @classmethod
     def from_json(cls, data: dict):
-        content = list(map(TextElement.from_json, data.get("content")))
         children = list(map(Section.from_json, data.get("children")))
         heading = TextElement.from_json(data.get("heading"))
         element = cls(heading, data["level"])
         element.children = children
-        element.content = content
         return element
 
     @property
@@ -83,7 +75,7 @@ class Section:
 
     def __str__(self):
         return "{}\n{}".format(self.heading.text,
-                               " ".join([str(e) for e in self.content]))
+                               " ".join([str(child.heading.text) for child in self.children]))
 
 
 class DanglingTextSection(Section):

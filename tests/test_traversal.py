@@ -26,23 +26,24 @@ class TestDocumentTraversal(TestCase):
 
     def test_traverse_in_order(self):
         elements = [element for element in traverse_in_order(self.test_doc)]
-        self.assertEqual(78, len(elements))
-        self.assertEqual("Data Structure Basics", elements[7].heading.text)
-        self.assertEqual("Array", elements[8].heading.text)
-        self.assertEqual("Definition:", elements[9].heading.text)
+        self.assertEqual(251, len(elements))
+        self.assertEqual("Data Structure Basics", elements[19].heading.text)
+        self.assertEqual("Array", elements[20].heading.text)
+        self.assertEqual("Definition:", elements[21].heading.text)
 
     def test_traverse_level_order(self):
         elements = [element for element in traverse_level_order(self.test_doc)]
 
-        self.assertEqual(78, len(elements))
+        self.assertEqual(251, len(elements))
 
         self.assertEqual("Data Structure Basics", elements[5].heading.text)
         self.assertEqual("Search Basics", elements[6].heading.text)
         self.assertEqual("Efficient Sorting Basics", elements[7].heading.text)
         self.assertEqual("Basic Types of Algorithms", elements[8].heading.text)
 
-        self.assertEqual("Owner", elements[-2].heading.text)
-        self.assertEqual("TSiege commented on 2 May 2014", elements[-1].heading.text)
+        self.assertEqual("https://gist.github.com/TSiege/"
+                         "cbb0507082bb18ff7e4b#ﬁle-the-technical-interview-cheat-sheet-md", elements[-2].heading.text)
+        self.assertEqual("6/18", elements[-1].heading.text)
 
     def test_traverse_level_order_max_depth(self):
         mid_level = get_document_depth(self.test_doc) / 2
@@ -50,7 +51,7 @@ class TestDocumentTraversal(TestCase):
         level_iterator = traverse_level_order(self.test_doc, max_depth=mid_level)
         elements = [element for element in level_iterator]
 
-        self.assertEqual(23, len(elements))
+        self.assertEqual(35, len(elements))
 
         self.assertEqual("Data Structure Basics", elements[5].heading.text)
         self.assertEqual("Search Basics", elements[6].heading.text)
@@ -64,13 +65,13 @@ class TestDocumentTraversal(TestCase):
     def test_test_level_order_but_flat_structure(self):
         level_iterator = traverse_level_order(self.test_doc_same_style)
         elements = [element for element in level_iterator]
-        self.assertEqual(1, len(elements))
+        self.assertEqual(5, len(elements))
         self.assertIsInstance(elements[0], DanglingTextSection)
-        self.assertEqual(10, len(elements[0].content))
+        self.assertEqual("Lorem Ipsum.", elements[1].heading_text)
 
     def test_test_in_order_but_flat_structure(self):
         level_iterator = traverse_in_order(self.test_doc_same_style)
         elements = [element for element in level_iterator]
-        self.assertEqual(1, len(elements))
+        self.assertEqual(5, len(elements))
         self.assertIsInstance(elements[0], DanglingTextSection)
-        self.assertEqual(10, len(elements[0].content))
+        self.assertEqual("Lorem Ipsum.", elements[1].heading_text)

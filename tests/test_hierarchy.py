@@ -23,7 +23,7 @@ class TestHierarchy(TestCase):
     def test_no_hierarchy_detected(self):
         parser = HierarchyParser()
         pdf = parser.parse_pdf(FileSource(self.same_style_doc))
-        self.assertEqual(4, len(pdf.elements[0].content))
+        self.assertEqual(4, len(pdf.elements[0].children))
 
         self.assertIsInstance(pdf.elements[0], DanglingTextSection)
 
