@@ -45,6 +45,7 @@ class Section:
     """
     Represents a section with title, contents and children
     """
+    heading: TextElement
 
     def __init__(self, element: TextElement, level=0):
         self.heading = element

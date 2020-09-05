@@ -3,7 +3,7 @@ import re
 from pdfstructure.model.document import Section
 from pdfstructure.utils import word_generator
 
-numeration_pattern = re.compile("[\\d+.?]+")
+numeration_pattern = re.compile("^(?=.*\d+)((?=.*\.)|(?=.*:)).*$")
 white_space_pattern = re.compile("\\s+")
 
 

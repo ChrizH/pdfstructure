@@ -1,12 +1,8 @@
 from pathlib import Path
 from unittest import TestCase
 
-from pdfminer.layout import LTTextLineHorizontal, LTChar, LTTextBoxHorizontal
-
-from pdfstructure.hierarchy.headercompare import condition_h2_extends_h1
 from pdfstructure.hierarchy.parser import HierarchyParser
-from pdfstructure.model.document import TextElement, Section, DanglingTextSection
-from pdfstructure.model.style import Style, TextSize
+from pdfstructure.model.document import DanglingTextSection
 from pdfstructure.source import FileSource
 from tests import helper
 
@@ -63,35 +59,3 @@ class TestHierarchy(TestCase):
         elements_gen = helper.generate_annotated_lines(self.doc_with_columns)
         elements = parser.create_hierarchy(elements_gen)
         self.assertEqual("Xtrackers MSCI World Information Technology UCITS ETF 1C", elements[1].heading.text)
-
-
-class TestSubHeaderConditions(TestCase):
-    class TestFont:
-        fontname = "Test"
-
-        def is_vertical(self):
-            return True
-
-    def create_char(self, text):
-        return LTChar((1, 2, 3, 4, 5, 6), TestSubHeaderConditions.TestFont(), 10, 10, 10, text, 10, (1, 1), 10, "")
-
-    def create_container(self, text):
-        box = LTTextBoxHorizontal()
-        line = LTTextLineHorizontal(0)
-        for c in text:
-            line.add(self.create_char(c))
-        box.add(line)
-        return box
-
-    def test_condition_h2_extends_h1(self):
-        element1 = TextElement(text_container=self.create_container("1.1 This is a test header"),
-                               style=Style(bold=True, italic=True, font_name="test-font",
-                                           mapped_font_size=TextSize.middle,
-                                           mean_size=10))
-
-        element2 = TextElement(text_container=self.create_container("1.1.2 This is a subheader of 1.1"),
-                               style=Style(bold=True, italic=True, font_name="test-font",
-                                           mapped_font_size=TextSize.middle,
-                                           mean_size=10))
-
-        self.assertTrue(condition_h2_extends_h1(Section(element1), Section(element2)))
