@@ -31,7 +31,7 @@
                             "mean_size": 7.9,
                             "max_size": 7.999999346666641
                         },
-                        "page": null,
+                        "page": 0,
                         "text": "31/10/2019"
                     },
                     "children": [],
@@ -47,7 +47,7 @@
                             "mean_size": 7.9,
                             "max_size": 7.999999346666755
                         },
-                        "page": null,
+                        "page": 0,
                         "text": "This is my technical interview cheat sheet. Feel free to fork it or do whatever you want with it. PLEASE let me know if there are any errors or if a\u2026"
                     },
                     "children": [],
@@ -66,7 +66,7 @@
                     "mean_size": 9.6,
                     "max_size": 9.604742863802358
                 },
-                "page": null,
+                "page": 0,
                 "text": "TSiege / The Technical Interview Cheat Sheet.md"
             },
             "children": [
@@ -80,7 +80,7 @@
                             "mean_size": 6.4,
                             "max_size": 6.403161909201572
                         },
-                        "page": null,
+                        "page": 0,
                         "text": "Last active 2 days ago \u2022 Report abuse"
                     },
                     "children": [],
@@ -96,7 +96,7 @@
                             "mean_size": 6.4,
                             "max_size": 6.403161909201572
                         },
-                        "page": null,
+                        "page": 0,
                         "text": "Embed"
                     },
                     "children": [],
@@ -112,7 +112,7 @@
                             "mean_size": 6.4,
                             "max_size": 6.403161909201572
                         },
-                        "page": null,
+                        "page": 0,
                         "text": "Download ZIP"
                     },
                     "children": [],
@@ -128,7 +128,7 @@
                             "mean_size": 6.4,
                             "max_size": 6.403161909201572
                         },
-                        "page": null,
+                        "page": 0,
                         "text": "<script src=\"https://gis"
                     },
                     "children": [],
@@ -144,7 +144,7 @@
                             "mean_size": 7.4,
                             "max_size": 7.470355560735129
                         },
-                        "page": null,
+                        "page": 0,
                         "text": "This is my technical interview cheat sheet. Feel free to fork it or do whatever you want with it. PLEASE let me know if there are any errors or if anything"
                     },
                     "children": [],
@@ -160,7 +160,7 @@
                             "mean_size": 7.4,
                             "max_size": 7.470355560735129
                         },
-                        "page": null,
+                        "page": 0,
                         "text": "crucial is missing. I will add more links soon."
                     },
                     "children": [],
@@ -176,7 +176,7 @@
                             "mean_size": 6.4,
                             "max_size": 6.403161909201572
                         },
-                        "page": null,
+                        "page": 0,
                         "text": "The Technical Interview Cheat Sheet.md"
                     },
                     "children": [],
@@ -195,7 +195,7 @@
                     "mean_size": 12.8,
                     "max_size": 12.806323818403143
                 },
-                "page": null,
+                "page": 0,
                 "text": "ANNOUNCEMENT"
             },
             "children": [
@@ -209,7 +209,7 @@
                             "mean_size": 8.5,
                             "max_size": 8.5375492122688
                         },
-                        "page": null,
+                        "page": 0,
                         "text": "I have moved this over to the Tech Interview Cheat Sheet Repo since a gist is too difficult to maintain as an open source\nendevaor and there is no way to version it. I have updated below, but I will not be able to keep this one up to date so\nplease checkout the repo instead. The below is just for some preservation for those who stumble across here."
                     },
                     "children": [],
@@ -225,7 +225,7 @@
                             "mean_size": 8.5,
                             "max_size": 8.537549212268743
                         },
-                        "page": null,
+                        "page": 0,
                         "text": "\\"
                     },
                     "children": [],
@@ -244,7 +244,7 @@
                     "mean_size": 12.8,
                     "max_size": 12.806323818403143
                 },
-                "page": null,
+                "page": 0,
                 "text": "Studying for a Tech Interview Sucks, so Here's a Cheat Sheet to Help"
             },
             "children": [
@@ -258,7 +258,7 @@
                             "mean_size": 8.5,
                             "max_size": 8.537549212268743
                         },
-                        "page": null,
+                        "page": 0,
                         "text": "This list is meant to be both a quick guide and reference for further research into these topics. It's basically a summary of"
                     },
                     "children": [],
@@ -274,7 +274,7 @@
                             "mean_size": 8.5,
                             "max_size": 8.537549212268743
                         },
-                        "page": null,
+                        "page": 0,
                         "text": "that comp sci course you never took or forgot about, so there's no way it can cover everything in depth."
                     },
                     "children": [],
@@ -293,7 +293,7 @@
                     "mean_size": 12.8,
                     "max_size": 12.806323818403143
                 },
-                "page": null,
+                "page": 0,
                 "text": "Contributing"
             },
             "children": [
@@ -307,7 +307,7 @@
                             "mean_size": 8.5,
                             "max_size": 8.537549212268743
                         },
-                        "page": null,
+                        "page": 0,
                         "text": "Please see the Tech Interview Cheat Sheet Repo"
                     },
                     "children": [],
@@ -326,7 +326,7 @@
                     "mean_size": 12.8,
                     "max_size": 12.806323818403143
                 },
-                "page": null,
+                "page": 0,
                 "text": "Data Structure Basics"
             },
             "children": [
@@ -340,7 +340,7 @@
                             "mean_size": 10.6,
                             "max_size": 10.671936515335972
                         },
-                        "page": null,
+                        "page": 0,
                         "text": "Array"
                     },
                     "children": [
@@ -354,7 +354,7 @@
                                     "mean_size": 8.5,
                                     "max_size": 8.537549212268772
                                 },
-                                "page": null,
+                                "page": 0,
                                 "text": "Definition:"
                             },
                             "children": [
@@ -368,7 +368,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268772
                                         },
-                                        "page": null,
+                                        "page": 0,
                                         "text": "Stores data elements based on an sequential, most commonly 0 based, index."
                                     },
                                     "children": [],
@@ -384,7 +384,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268772
                                         },
-                                        "page": null,
+                                        "page": 0,
                                         "text": "Based on tuples from set theory."
                                     },
                                     "children": [],
@@ -400,7 +400,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268772
                                         },
-                                        "page": null,
+                                        "page": 0,
                                         "text": "They are one of the oldest, most commonly used data structures."
                                     },
                                     "children": [],
@@ -419,7 +419,7 @@
                                     "mean_size": 8.5,
                                     "max_size": 8.537549212268772
                                 },
-                                "page": null,
+                                "page": 0,
                                 "text": "What you need to know:"
                             },
                             "children": [
@@ -433,7 +433,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268772
                                         },
-                                        "page": null,
+                                        "page": 0,
                                         "text": "Optimal for indexing; bad at searching, inserting, and deleting (except at the end)."
                                     },
                                     "children": [],
@@ -449,7 +449,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268772
                                         },
-                                        "page": null,
+                                        "page": 0,
                                         "text": "Linear arrays, or one dimensional arrays, are the most basic."
                                     },
                                     "children": [],
@@ -465,7 +465,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268772
                                         },
-                                        "page": null,
+                                        "page": 0,
                                         "text": "Are static in size, meaning that they are declared with a fixed size."
                                     },
                                     "children": [],
@@ -481,7 +481,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268772
                                         },
-                                        "page": null,
+                                        "page": 0,
                                         "text": "Dynamic arrays are like one dimensional arrays, but have reserved space for additional elements."
                                     },
                                     "children": [],
@@ -497,7 +497,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268772
                                         },
-                                        "page": null,
+                                        "page": 0,
                                         "text": "If a dynamic array is full, it copies its contents to a larger array."
                                     },
                                     "children": [],
@@ -513,7 +513,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268772
                                         },
-                                        "page": null,
+                                        "page": 0,
                                         "text": "Multi dimensional arrays nested arrays that allow for multiple dimensions such as an array of arrays providing a 2\ndimensional spacial representation via x, y coordinates."
                                     },
                                     "children": [],
@@ -529,7 +529,7 @@
                                             "mean_size": 7.9,
                                             "max_size": 7.999999346666678
                                         },
-                                        "page": null,
+                                        "page": 0,
                                         "text": "https://gist.github.com/TSiege/cbb0507082bb18ff7e4b#\ufb01le-the-technical-interview-cheat-sheet-md"
                                     },
                                     "children": [],
@@ -545,7 +545,7 @@
                                             "mean_size": 7.9,
                                             "max_size": 7.999999346666678
                                         },
-                                        "page": null,
+                                        "page": 0,
                                         "text": "1/18"
                                     },
                                     "children": [],
@@ -561,7 +561,7 @@
                                             "mean_size": 7.9,
                                             "max_size": 7.999999346666641
                                         },
-                                        "page": null,
+                                        "page": 1,
                                         "text": "31/10/2019"
                                     },
                                     "children": [],
@@ -577,7 +577,7 @@
                                             "mean_size": 7.9,
                                             "max_size": 7.999999346666755
                                         },
-                                        "page": null,
+                                        "page": 1,
                                         "text": "This is my technical interview cheat sheet. Feel free to fork it or do whatever you want with it. PLEASE let me know if there are any errors or if a\u2026"
                                     },
                                     "children": [],
@@ -596,7 +596,7 @@
                                     "mean_size": 8.5,
                                     "max_size": 8.5375492122688
                                 },
-                                "page": null,
+                                "page": 1,
                                 "text": "Time Complexity:"
                             },
                             "children": [
@@ -610,7 +610,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 1,
                                         "text": "Indexing: Linear array: O(1), Dynamic array: O(1)"
                                     },
                                     "children": [],
@@ -626,7 +626,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 1,
                                         "text": "Search: Linear array: O(n), Dynamic array: O(n)"
                                     },
                                     "children": [],
@@ -642,7 +642,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 1,
                                         "text": "Optimized Search: Linear array: O(log n), Dynamic array: O(log n)"
                                     },
                                     "children": [],
@@ -658,7 +658,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 1,
                                         "text": "Insertion: Linear array: n/a Dynamic array: O(n)"
                                     },
                                     "children": [],
@@ -680,7 +680,7 @@
                             "mean_size": 10.6,
                             "max_size": 10.671936515335915
                         },
-                        "page": null,
+                        "page": 1,
                         "text": "Linked List"
                     },
                     "children": [
@@ -694,7 +694,7 @@
                                     "mean_size": 8.5,
                                     "max_size": 8.5375492122688
                                 },
-                                "page": null,
+                                "page": 1,
                                 "text": "Definition:"
                             },
                             "children": [
@@ -708,7 +708,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 1,
                                         "text": "Stores data with nodes that point to other nodes."
                                     },
                                     "children": [],
@@ -724,7 +724,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 1,
                                         "text": "Nodes, at its most basic it has one datum and one reference (another node)."
                                     },
                                     "children": [],
@@ -740,7 +740,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 1,
                                         "text": "A linked list chains nodes together by pointing one node's reference towards another node."
                                     },
                                     "children": [],
@@ -759,7 +759,7 @@
                                     "mean_size": 8.5,
                                     "max_size": 8.5375492122688
                                 },
-                                "page": null,
+                                "page": 1,
                                 "text": "What you need to know:"
                             },
                             "children": [
@@ -773,7 +773,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 1,
                                         "text": "Designed to optimize insertion and deletion, slow at indexing and searching."
                                     },
                                     "children": [],
@@ -789,7 +789,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 1,
                                         "text": "Doubly linked list has nodes that also reference the previous node."
                                     },
                                     "children": [],
@@ -805,7 +805,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 1,
                                         "text": "Circularly linked list is simple linked list whose tail, the last node, references the head, the first node."
                                     },
                                     "children": [],
@@ -821,7 +821,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 1,
                                         "text": "Stack, commonly implemented with linked lists but can be made from arrays too."
                                     },
                                     "children": [],
@@ -837,7 +837,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 1,
                                         "text": "Stacks are last in, first out (LIFO) data structures."
                                     },
                                     "children": [],
@@ -853,7 +853,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 1,
                                         "text": "Made with a linked list by having the head be the only place for insertion and removal."
                                     },
                                     "children": [],
@@ -869,7 +869,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 1,
                                         "text": "Queues, too can be implemented with a linked list or an array."
                                     },
                                     "children": [],
@@ -885,7 +885,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 1,
                                         "text": "Queues are a first in, first out (FIFO) data structure."
                                     },
                                     "children": [],
@@ -901,7 +901,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 1,
                                         "text": "Made with a doubly linked list that only removes from head and adds to tail."
                                     },
                                     "children": [],
@@ -920,7 +920,7 @@
                                     "mean_size": 8.5,
                                     "max_size": 8.537549212268743
                                 },
-                                "page": null,
+                                "page": 1,
                                 "text": "Time Complexity:"
                             },
                             "children": [
@@ -934,7 +934,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 1,
                                         "text": "Indexing: Linked Lists: O(n)"
                                     },
                                     "children": [],
@@ -950,7 +950,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 1,
                                         "text": "Search: Linked Lists: O(n)"
                                     },
                                     "children": [],
@@ -966,7 +966,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 1,
                                         "text": "Optimized Search: Linked Lists: O(n)"
                                     },
                                     "children": [],
@@ -982,7 +982,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 1,
                                         "text": "Insertion: Linked Lists: O(1)"
                                     },
                                     "children": [],
@@ -1004,7 +1004,7 @@
                             "mean_size": 10.6,
                             "max_size": 10.671936515335972
                         },
-                        "page": null,
+                        "page": 1,
                         "text": "Hash Table or Hash Map"
                     },
                     "children": [
@@ -1018,7 +1018,7 @@
                                     "mean_size": 8.5,
                                     "max_size": 8.537549212268743
                                 },
-                                "page": null,
+                                "page": 1,
                                 "text": "Definition:"
                             },
                             "children": [
@@ -1032,7 +1032,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 1,
                                         "text": "Stores data with key value pairs."
                                     },
                                     "children": [],
@@ -1048,7 +1048,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 1,
                                         "text": "Hash functions accept a key and return an output unique only to that specific key."
                                     },
                                     "children": [],
@@ -1064,7 +1064,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 1,
                                         "text": "This is known as hashing, which is the concept that an input and an output have a one-to-one correspondence"
                                     },
                                     "children": [],
@@ -1080,7 +1080,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 1,
                                         "text": "to map information."
                                     },
                                     "children": [],
@@ -1096,7 +1096,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 1,
                                         "text": "Hash functions return a unique address in memory for that data."
                                     },
                                     "children": [],
@@ -1115,7 +1115,7 @@
                                     "mean_size": 8.5,
                                     "max_size": 8.537549212268772
                                 },
-                                "page": null,
+                                "page": 1,
                                 "text": "What you need to know:"
                             },
                             "children": [
@@ -1129,7 +1129,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268772
                                         },
-                                        "page": null,
+                                        "page": 1,
                                         "text": "Designed to optimize searching, insertion, and deletion."
                                     },
                                     "children": [],
@@ -1145,7 +1145,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268772
                                         },
-                                        "page": null,
+                                        "page": 1,
                                         "text": "Hash collisions are when a hash function returns the same output for two distinct inputs."
                                     },
                                     "children": [],
@@ -1161,7 +1161,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268772
                                         },
-                                        "page": null,
+                                        "page": 1,
                                         "text": "All hash functions have this problem."
                                     },
                                     "children": [],
@@ -1177,7 +1177,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268772
                                         },
-                                        "page": null,
+                                        "page": 1,
                                         "text": "This is often accommodated for by having the hash tables be very large."
                                     },
                                     "children": [],
@@ -1193,7 +1193,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268772
                                         },
-                                        "page": null,
+                                        "page": 1,
                                         "text": "Hashes are important for associative arrays and database indexing."
                                     },
                                     "children": [],
@@ -1212,7 +1212,7 @@
                                     "mean_size": 8.5,
                                     "max_size": 8.537549212268772
                                 },
-                                "page": null,
+                                "page": 1,
                                 "text": "Time Complexity:"
                             },
                             "children": [
@@ -1226,7 +1226,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268772
                                         },
-                                        "page": null,
+                                        "page": 1,
                                         "text": "Indexing: Hash Tables: O(1)"
                                     },
                                     "children": [],
@@ -1242,7 +1242,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268772
                                         },
-                                        "page": null,
+                                        "page": 1,
                                         "text": "Search: Hash Tables: O(1)"
                                     },
                                     "children": [],
@@ -1258,7 +1258,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268772
                                         },
-                                        "page": null,
+                                        "page": 1,
                                         "text": "Insertion: Hash Tables: O(1)"
                                     },
                                     "children": [],
@@ -1280,7 +1280,7 @@
                             "mean_size": 10.6,
                             "max_size": 10.671936515335958
                         },
-                        "page": null,
+                        "page": 1,
                         "text": "Binary Tree"
                     },
                     "children": [
@@ -1294,7 +1294,7 @@
                                     "mean_size": 8.5,
                                     "max_size": 8.537549212268772
                                 },
-                                "page": null,
+                                "page": 1,
                                 "text": "Definition:"
                             },
                             "children": [
@@ -1308,7 +1308,7 @@
                                             "mean_size": 7.9,
                                             "max_size": 7.999999346666678
                                         },
-                                        "page": null,
+                                        "page": 1,
                                         "text": "https://gist.github.com/TSiege/cbb0507082bb18ff7e4b#\ufb01le-the-technical-interview-cheat-sheet-md"
                                     },
                                     "children": [],
@@ -1324,7 +1324,7 @@
                                             "mean_size": 7.9,
                                             "max_size": 7.999999346666678
                                         },
-                                        "page": null,
+                                        "page": 1,
                                         "text": "2/18"
                                     },
                                     "children": [],
@@ -1340,7 +1340,7 @@
                                             "mean_size": 7.9,
                                             "max_size": 7.999999346666641
                                         },
-                                        "page": null,
+                                        "page": 2,
                                         "text": "31/10/2019"
                                     },
                                     "children": [],
@@ -1356,7 +1356,7 @@
                                             "mean_size": 7.9,
                                             "max_size": 7.999999346666755
                                         },
-                                        "page": null,
+                                        "page": 2,
                                         "text": "This is my technical interview cheat sheet. Feel free to fork it or do whatever you want with it. PLEASE let me know if there are any errors or if a\u2026"
                                     },
                                     "children": [],
@@ -1372,7 +1372,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 2,
                                         "text": "Is a tree like data structure where every node has at most two children."
                                     },
                                     "children": [],
@@ -1388,7 +1388,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 2,
                                         "text": "There is one left and right child node."
                                     },
                                     "children": [],
@@ -1407,7 +1407,7 @@
                                     "mean_size": 8.5,
                                     "max_size": 8.5375492122688
                                 },
-                                "page": null,
+                                "page": 2,
                                 "text": "What you need to know:"
                             },
                             "children": [
@@ -1421,7 +1421,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 2,
                                         "text": "Designed to optimize searching and sorting."
                                     },
                                     "children": [],
@@ -1437,7 +1437,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 2,
                                         "text": "A degenerate tree is an unbalanced tree, which if entirely one-sided is a essentially a linked list."
                                     },
                                     "children": [],
@@ -1453,7 +1453,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 2,
                                         "text": "They are comparably simple to implement than other data structures."
                                     },
                                     "children": [],
@@ -1472,7 +1472,7 @@
                                     "mean_size": 8.5,
                                     "max_size": 8.5375492122688
                                 },
-                                "page": null,
+                                "page": 2,
                                 "text": "Used to make binary search trees."
                             },
                             "children": [
@@ -1486,7 +1486,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 2,
                                         "text": "A binary tree that uses comparable keys to assign which direction a child is."
                                     },
                                     "children": [],
@@ -1502,7 +1502,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 2,
                                         "text": "Left child has a key smaller than it's parent node."
                                     },
                                     "children": [],
@@ -1518,7 +1518,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 2,
                                         "text": "Right child has a key greater than it's parent node."
                                     },
                                     "children": [],
@@ -1534,7 +1534,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 2,
                                         "text": "There can be no duplicate node."
                                     },
                                     "children": [],
@@ -1550,7 +1550,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 2,
                                         "text": "Because of the above it is more likely to be used as a data structure than a binary tree."
                                     },
                                     "children": [],
@@ -1569,7 +1569,7 @@
                                     "mean_size": 8.5,
                                     "max_size": 8.5375492122688
                                 },
-                                "page": null,
+                                "page": 2,
                                 "text": "Time Complexity:"
                             },
                             "children": [
@@ -1583,7 +1583,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 2,
                                         "text": "Indexing: Binary Search Tree: O(log n)"
                                     },
                                     "children": [],
@@ -1599,7 +1599,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 2,
                                         "text": "Search: Binary Search Tree: O(log n)"
                                     },
                                     "children": [],
@@ -1615,7 +1615,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 2,
                                         "text": "Insertion: Binary Search Tree: O(log n)"
                                     },
                                     "children": [],
@@ -1640,7 +1640,7 @@
                     "mean_size": 12.8,
                     "max_size": 12.806323818403143
                 },
-                "page": null,
+                "page": 2,
                 "text": "Search Basics"
             },
             "children": [
@@ -1654,7 +1654,7 @@
                             "mean_size": 10.6,
                             "max_size": 10.671936515335972
                         },
-                        "page": null,
+                        "page": 2,
                         "text": "Breadth First Search"
                     },
                     "children": [
@@ -1668,7 +1668,7 @@
                                     "mean_size": 8.5,
                                     "max_size": 8.537549212268743
                                 },
-                                "page": null,
+                                "page": 2,
                                 "text": "Definition:"
                             },
                             "children": [
@@ -1682,7 +1682,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 2,
                                         "text": "An algorithm that searches a tree (or graph) by searching levels of the tree first, starting at the root."
                                     },
                                     "children": [],
@@ -1698,7 +1698,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 2,
                                         "text": "It finds every node on the same level, most often moving left to right."
                                     },
                                     "children": [],
@@ -1714,7 +1714,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 2,
                                         "text": "While doing this it tracks the children nodes of the nodes on the current level."
                                     },
                                     "children": [],
@@ -1730,7 +1730,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 2,
                                         "text": "When finished examining a level it moves to the left most node on the next level."
                                     },
                                     "children": [],
@@ -1746,7 +1746,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 2,
                                         "text": "The bottom-right most node is evaluated last (the node that is deepest and is farthest right of it's level)."
                                     },
                                     "children": [],
@@ -1765,7 +1765,7 @@
                                     "mean_size": 8.5,
                                     "max_size": 8.537549212268743
                                 },
-                                "page": null,
+                                "page": 2,
                                 "text": "What you need to know:"
                             },
                             "children": [
@@ -1779,7 +1779,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 2,
                                         "text": "Optimal for searching a tree that is wider than it is deep."
                                     },
                                     "children": [],
@@ -1795,7 +1795,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 2,
                                         "text": "Uses a queue to store information about the tree while it traverses a tree."
                                     },
                                     "children": [],
@@ -1811,7 +1811,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 2,
                                         "text": "Because it uses a queue it is more memory intensive than depth first search."
                                     },
                                     "children": [],
@@ -1827,7 +1827,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 2,
                                         "text": "The queue uses more memory because it needs to stores pointers"
                                     },
                                     "children": [],
@@ -1846,7 +1846,7 @@
                                     "mean_size": 8.5,
                                     "max_size": 8.537549212268743
                                 },
-                                "page": null,
+                                "page": 2,
                                 "text": "Time Complexity:"
                             },
                             "children": [
@@ -1860,7 +1860,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 2,
                                         "text": "Search: Breadth First Search: O(V + E)"
                                     },
                                     "children": [],
@@ -1876,7 +1876,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268772
                                         },
-                                        "page": null,
+                                        "page": 2,
                                         "text": "E is number of edges"
                                     },
                                     "children": [],
@@ -1892,7 +1892,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268772
                                         },
-                                        "page": null,
+                                        "page": 2,
                                         "text": "V is number of vertices"
                                     },
                                     "children": [],
@@ -1914,7 +1914,7 @@
                             "mean_size": 10.6,
                             "max_size": 10.671936515335972
                         },
-                        "page": null,
+                        "page": 2,
                         "text": "Depth First Search"
                     },
                     "children": [
@@ -1928,7 +1928,7 @@
                                     "mean_size": 8.5,
                                     "max_size": 8.537549212268772
                                 },
-                                "page": null,
+                                "page": 2,
                                 "text": "Definition:"
                             },
                             "children": [
@@ -1942,7 +1942,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268772
                                         },
-                                        "page": null,
+                                        "page": 2,
                                         "text": "An algorithm that searches a tree (or graph) by searching depth of the tree first, starting at the root."
                                     },
                                     "children": [],
@@ -1958,7 +1958,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268772
                                         },
-                                        "page": null,
+                                        "page": 2,
                                         "text": "It traverses left down a tree until it cannot go further."
                                     },
                                     "children": [],
@@ -1974,7 +1974,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268772
                                         },
-                                        "page": null,
+                                        "page": 2,
                                         "text": "Once it reaches the end of a branch it traverses back up trying the right child of nodes on that branch, and if\npossible left from the right children."
                                     },
                                     "children": [],
@@ -1990,7 +1990,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268772
                                         },
-                                        "page": null,
+                                        "page": 2,
                                         "text": "When finished examining a branch it moves to the node right of the root then tries to go left on all it's children\nuntil it reaches the bottom."
                                     },
                                     "children": [],
@@ -2006,7 +2006,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268772
                                         },
-                                        "page": null,
+                                        "page": 2,
                                         "text": "The right most node is evaluated last (the node that is right of all it's ancestors)."
                                     },
                                     "children": [],
@@ -2025,7 +2025,7 @@
                                     "mean_size": 8.5,
                                     "max_size": 8.537549212268772
                                 },
-                                "page": null,
+                                "page": 2,
                                 "text": "What you need to know:"
                             },
                             "children": [
@@ -2039,7 +2039,7 @@
                                             "mean_size": 7.9,
                                             "max_size": 7.999999346666678
                                         },
-                                        "page": null,
+                                        "page": 2,
                                         "text": "https://gist.github.com/TSiege/cbb0507082bb18ff7e4b#\ufb01le-the-technical-interview-cheat-sheet-md"
                                     },
                                     "children": [],
@@ -2055,7 +2055,7 @@
                                             "mean_size": 7.9,
                                             "max_size": 7.999999346666678
                                         },
-                                        "page": null,
+                                        "page": 2,
                                         "text": "3/18"
                                     },
                                     "children": [],
@@ -2071,7 +2071,7 @@
                                             "mean_size": 7.9,
                                             "max_size": 7.999999346666641
                                         },
-                                        "page": null,
+                                        "page": 3,
                                         "text": "31/10/2019"
                                     },
                                     "children": [],
@@ -2087,7 +2087,7 @@
                                             "mean_size": 7.9,
                                             "max_size": 7.999999346666755
                                         },
-                                        "page": null,
+                                        "page": 3,
                                         "text": "This is my technical interview cheat sheet. Feel free to fork it or do whatever you want with it. PLEASE let me know if there are any errors or if a\u2026"
                                     },
                                     "children": [],
@@ -2103,7 +2103,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 3,
                                         "text": "Optimal for searching a tree that is deeper than it is wide."
                                     },
                                     "children": [],
@@ -2119,7 +2119,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 3,
                                         "text": "Uses a stack to push nodes onto."
                                     },
                                     "children": [],
@@ -2135,7 +2135,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 3,
                                         "text": "Because a stack is LIFO it does not need to keep track of the nodes pointers and is therefore less memory\nintensive than breadth first search."
                                     },
                                     "children": [],
@@ -2151,7 +2151,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 3,
                                         "text": "Once it cannot go further left it begins evaluating the stack."
                                     },
                                     "children": [],
@@ -2170,7 +2170,7 @@
                                     "mean_size": 8.5,
                                     "max_size": 8.5375492122688
                                 },
-                                "page": null,
+                                "page": 3,
                                 "text": "Time Complexity:"
                             },
                             "children": [
@@ -2184,7 +2184,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 3,
                                         "text": "Search: Depth First Search: O(|E| + |V|)"
                                     },
                                     "children": [],
@@ -2200,7 +2200,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 3,
                                         "text": "E is number of edges"
                                     },
                                     "children": [],
@@ -2216,7 +2216,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 3,
                                         "text": "V is number of vertices"
                                     },
                                     "children": [],
@@ -2235,7 +2235,7 @@
                                     "mean_size": 8.5,
                                     "max_size": 8.5375492122688
                                 },
-                                "page": null,
+                                "page": 3,
                                 "text": "Breadth First Search Vs. Depth First Search"
                             },
                             "children": [
@@ -2249,7 +2249,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 3,
                                         "text": "The simple answer to this question is that it depends on the size and shape of the tree."
                                     },
                                     "children": [],
@@ -2265,7 +2265,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 3,
                                         "text": "For wide, shallow trees use Breadth First Search"
                                     },
                                     "children": [],
@@ -2281,7 +2281,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 3,
                                         "text": "For deep, narrow trees use Depth First Search"
                                     },
                                     "children": [],
@@ -2300,7 +2300,7 @@
                                     "mean_size": 8.5,
                                     "max_size": 8.5375492122688
                                 },
-                                "page": null,
+                                "page": 3,
                                 "text": "Nuances:"
                             },
                             "children": [
@@ -2314,7 +2314,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 3,
                                         "text": "Because BFS uses queues to store information about the nodes and its children, it could use more memory than is\navailable on your computer. (But you probably won't have to worry about this.)"
                                     },
                                     "children": [],
@@ -2330,7 +2330,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 3,
                                         "text": "If using a DFS on a tree that is very deep you might go unnecessarily deep in the search. See xkcd for more\ninformation."
                                     },
                                     "children": [],
@@ -2346,7 +2346,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 3,
                                         "text": "Breadth First Search tends to be a looping algorithm."
                                     },
                                     "children": [],
@@ -2362,7 +2362,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 3,
                                         "text": "Depth First Search tends to be a recursive algorithm."
                                     },
                                     "children": [],
@@ -2387,7 +2387,7 @@
                     "mean_size": 12.8,
                     "max_size": 12.806323818403143
                 },
-                "page": null,
+                "page": 3,
                 "text": "Efficient Sorting Basics"
             },
             "children": [
@@ -2401,7 +2401,7 @@
                             "mean_size": 10.6,
                             "max_size": 10.671936515335972
                         },
-                        "page": null,
+                        "page": 3,
                         "text": "Merge Sort"
                     },
                     "children": [
@@ -2415,7 +2415,7 @@
                                     "mean_size": 8.5,
                                     "max_size": 8.537549212268743
                                 },
-                                "page": null,
+                                "page": 3,
                                 "text": "Definition:"
                             },
                             "children": [
@@ -2429,7 +2429,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 3,
                                         "text": "A comparison based sorting algorithm"
                                     },
                                     "children": [],
@@ -2445,7 +2445,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 3,
                                         "text": "Divides entire dataset into groups of at most two."
                                     },
                                     "children": [],
@@ -2461,7 +2461,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 3,
                                         "text": "Compares each number one at a time, moving the smallest number to left of the pair."
                                     },
                                     "children": [],
@@ -2477,7 +2477,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 3,
                                         "text": "Once all pairs sorted it then compares left most elements of the two leftmost pairs creating a sorted group of"
                                     },
                                     "children": [],
@@ -2493,7 +2493,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 3,
                                         "text": "four with the smallest numbers on the left and the largest ones on the right."
                                     },
                                     "children": [],
@@ -2509,7 +2509,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 3,
                                         "text": "This process is repeated until there is only one set."
                                     },
                                     "children": [],
@@ -2528,7 +2528,7 @@
                                     "mean_size": 8.5,
                                     "max_size": 8.537549212268743
                                 },
-                                "page": null,
+                                "page": 3,
                                 "text": "What you need to know:"
                             },
                             "children": [
@@ -2542,7 +2542,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 3,
                                         "text": "This is one of the most basic sorting algorithms."
                                     },
                                     "children": [],
@@ -2558,7 +2558,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 3,
                                         "text": "Know that it divides all the data into as small possible sets then compares them."
                                     },
                                     "children": [],
@@ -2577,7 +2577,7 @@
                                     "mean_size": 8.5,
                                     "max_size": 8.537549212268772
                                 },
-                                "page": null,
+                                "page": 3,
                                 "text": "Time Complexity:"
                             },
                             "children": [
@@ -2591,7 +2591,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268772
                                         },
-                                        "page": null,
+                                        "page": 3,
                                         "text": "Best Case Sort: Merge Sort: O(n)"
                                     },
                                     "children": [],
@@ -2607,7 +2607,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268772
                                         },
-                                        "page": null,
+                                        "page": 3,
                                         "text": "Average Case Sort: Merge Sort: O(n log n)"
                                     },
                                     "children": [],
@@ -2623,7 +2623,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268772
                                         },
-                                        "page": null,
+                                        "page": 3,
                                         "text": "Worst Case Sort: Merge Sort: O(n log n)"
                                     },
                                     "children": [],
@@ -2645,7 +2645,7 @@
                             "mean_size": 10.6,
                             "max_size": 10.671936515335972
                         },
-                        "page": null,
+                        "page": 3,
                         "text": "Quicksort"
                     },
                     "children": [
@@ -2659,7 +2659,7 @@
                                     "mean_size": 8.5,
                                     "max_size": 8.537549212268772
                                 },
-                                "page": null,
+                                "page": 3,
                                 "text": "Definition:"
                             },
                             "children": [
@@ -2673,7 +2673,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268772
                                         },
-                                        "page": null,
+                                        "page": 3,
                                         "text": "A comparison based sorting algorithm"
                                     },
                                     "children": [],
@@ -2689,7 +2689,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268772
                                         },
-                                        "page": null,
+                                        "page": 3,
                                         "text": "Divides entire dataset in half by selecting the middle element and putting all smaller elements to the left of the\nelement and larger ones to the right."
                                     },
                                     "children": [],
@@ -2705,7 +2705,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268772
                                         },
-                                        "page": null,
+                                        "page": 3,
                                         "text": "It repeats this process on the left side until it is comparing only two elements at which point the left side is\nsorted."
                                     },
                                     "children": [],
@@ -2721,7 +2721,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268772
                                         },
-                                        "page": null,
+                                        "page": 3,
                                         "text": "When the left side is finished sorting it performs the same operation on the right side."
                                     },
                                     "children": [],
@@ -2737,7 +2737,7 @@
                                             "mean_size": 7.9,
                                             "max_size": 7.999999346666678
                                         },
-                                        "page": null,
+                                        "page": 3,
                                         "text": "https://gist.github.com/TSiege/cbb0507082bb18ff7e4b#\ufb01le-the-technical-interview-cheat-sheet-md"
                                     },
                                     "children": [],
@@ -2753,7 +2753,7 @@
                                             "mean_size": 7.9,
                                             "max_size": 7.999999346666678
                                         },
-                                        "page": null,
+                                        "page": 3,
                                         "text": "4/18"
                                     },
                                     "children": [],
@@ -2769,7 +2769,7 @@
                                             "mean_size": 7.9,
                                             "max_size": 7.999999346666641
                                         },
-                                        "page": null,
+                                        "page": 4,
                                         "text": "31/10/2019"
                                     },
                                     "children": [],
@@ -2785,7 +2785,7 @@
                                             "mean_size": 7.9,
                                             "max_size": 7.999999346666755
                                         },
-                                        "page": null,
+                                        "page": 4,
                                         "text": "This is my technical interview cheat sheet. Feel free to fork it or do whatever you want with it. PLEASE let me know if there are any errors or if a\u2026"
                                     },
                                     "children": [],
@@ -2801,7 +2801,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 4,
                                         "text": "Computer architecture favors the quicksort process."
                                     },
                                     "children": [],
@@ -2820,7 +2820,7 @@
                                     "mean_size": 8.5,
                                     "max_size": 8.5375492122688
                                 },
-                                "page": null,
+                                "page": 4,
                                 "text": "What you need to know:"
                             },
                             "children": [
@@ -2834,7 +2834,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 4,
                                         "text": "While it has the same Big O as (or worse in some cases) many other sorting algorithms it is often faster in practice\nthan many other sorting algorithms, such as merge sort."
                                     },
                                     "children": [],
@@ -2850,7 +2850,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 4,
                                         "text": "Know that it halves the data set by the average continuously until all the information is sorted."
                                     },
                                     "children": [],
@@ -2869,7 +2869,7 @@
                                     "mean_size": 8.5,
                                     "max_size": 8.5375492122688
                                 },
-                                "page": null,
+                                "page": 4,
                                 "text": "Time Complexity:"
                             },
                             "children": [
@@ -2883,7 +2883,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 4,
                                         "text": "Best Case Sort: Merge Sort: O(n)"
                                     },
                                     "children": [],
@@ -2899,7 +2899,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 4,
                                         "text": "Average Case Sort: Merge Sort: O(n log n)"
                                     },
                                     "children": [],
@@ -2915,7 +2915,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 4,
                                         "text": "Worst Case Sort: Merge Sort: O(n^2)"
                                     },
                                     "children": [],
@@ -2937,7 +2937,7 @@
                             "mean_size": 10.6,
                             "max_size": 10.671936515335915
                         },
-                        "page": null,
+                        "page": 4,
                         "text": "Bubble Sort"
                     },
                     "children": [
@@ -2951,7 +2951,7 @@
                                     "mean_size": 8.5,
                                     "max_size": 8.5375492122688
                                 },
-                                "page": null,
+                                "page": 4,
                                 "text": "Definition:"
                             },
                             "children": [
@@ -2965,7 +2965,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 4,
                                         "text": "A comparison based sorting algorithm"
                                     },
                                     "children": [],
@@ -2981,7 +2981,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 4,
                                         "text": "It iterates left to right comparing every couplet, moving the smaller element to the left."
                                     },
                                     "children": [],
@@ -2997,7 +2997,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 4,
                                         "text": "It repeats this process until it no longer moves an element to the left."
                                     },
                                     "children": [],
@@ -3016,7 +3016,7 @@
                                     "mean_size": 8.5,
                                     "max_size": 8.5375492122688
                                 },
-                                "page": null,
+                                "page": 4,
                                 "text": "What you need to know:"
                             },
                             "children": [
@@ -3030,7 +3030,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 4,
                                         "text": "While it is very simple to implement, it is the least efficient of these three sorting methods."
                                     },
                                     "children": [],
@@ -3046,7 +3046,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 4,
                                         "text": "Know that it moves one space to the right comparing two elements at a time and moving the smaller on to left."
                                     },
                                     "children": [],
@@ -3065,7 +3065,7 @@
                                     "mean_size": 8.5,
                                     "max_size": 8.537549212268743
                                 },
-                                "page": null,
+                                "page": 4,
                                 "text": "Time Complexity:"
                             },
                             "children": [
@@ -3079,7 +3079,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 4,
                                         "text": "Best Case Sort: Merge Sort: O(n)"
                                     },
                                     "children": [],
@@ -3095,7 +3095,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 4,
                                         "text": "Average Case Sort: Merge Sort: O(n^2)"
                                     },
                                     "children": [],
@@ -3111,7 +3111,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 4,
                                         "text": "Worst Case Sort: Merge Sort: O(n^2)"
                                     },
                                     "children": [],
@@ -3130,7 +3130,7 @@
                                     "mean_size": 8.5,
                                     "max_size": 8.537549212268743
                                 },
-                                "page": null,
+                                "page": 4,
                                 "text": "Merge Sort Vs. Quicksort"
                             },
                             "children": [
@@ -3144,7 +3144,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 4,
                                         "text": "Quicksort is likely faster in practice."
                                     },
                                     "children": [],
@@ -3160,7 +3160,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 4,
                                         "text": "Merge Sort divides the set into the smallest possible groups immediately then reconstructs the incrementally as it"
                                     },
                                     "children": [],
@@ -3176,7 +3176,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 4,
                                         "text": "sorts the groupings."
                                     },
                                     "children": [],
@@ -3192,7 +3192,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 4,
                                         "text": "Quicksort continually divides the set by the average, until the set is recursively sorted."
                                     },
                                     "children": [],
@@ -3217,7 +3217,7 @@
                     "mean_size": 12.8,
                     "max_size": 12.806323818403143
                 },
-                "page": null,
+                "page": 4,
                 "text": "Basic Types of Algorithms"
             },
             "children": [
@@ -3231,7 +3231,7 @@
                             "mean_size": 10.6,
                             "max_size": 10.671936515335972
                         },
-                        "page": null,
+                        "page": 4,
                         "text": "Recursive Algorithms"
                     },
                     "children": [
@@ -3245,7 +3245,7 @@
                                     "mean_size": 8.5,
                                     "max_size": 8.537549212268743
                                 },
-                                "page": null,
+                                "page": 4,
                                 "text": "Definition:"
                             },
                             "children": [
@@ -3259,7 +3259,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268772
                                         },
-                                        "page": null,
+                                        "page": 4,
                                         "text": "An algorithm that calls itself in its definition."
                                     },
                                     "children": [],
@@ -3275,7 +3275,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268772
                                         },
-                                        "page": null,
+                                        "page": 4,
                                         "text": "Recursive case a conditional statement that is used to trigger the recursion."
                                     },
                                     "children": [],
@@ -3291,7 +3291,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268772
                                         },
-                                        "page": null,
+                                        "page": 4,
                                         "text": "Base case a conditional statement that is used to break the recursion."
                                     },
                                     "children": [],
@@ -3310,7 +3310,7 @@
                                     "mean_size": 8.5,
                                     "max_size": 8.537549212268772
                                 },
-                                "page": null,
+                                "page": 4,
                                 "text": "What you need to know:"
                             },
                             "children": [],
@@ -3326,7 +3326,7 @@
                                     "mean_size": 8.5,
                                     "max_size": 8.537549212268772
                                 },
-                                "page": null,
+                                "page": 4,
                                 "text": "Stack level too deep and stack overflow."
                             },
                             "children": [
@@ -3340,7 +3340,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268772
                                         },
-                                        "page": null,
+                                        "page": 4,
                                         "text": "If you've seen either of these from a recursive algorithm, you messed up."
                                     },
                                     "children": [],
@@ -3356,7 +3356,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268772
                                         },
-                                        "page": null,
+                                        "page": 4,
                                         "text": "It means that your base case was never triggered because it was faulty or the problem was so massive you ran\nout of alloted memory."
                                     },
                                     "children": [],
@@ -3372,7 +3372,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268772
                                         },
-                                        "page": null,
+                                        "page": 4,
                                         "text": "Knowing whether or not you will reach a base case is integral to correctly using recursion."
                                     },
                                     "children": [],
@@ -3388,7 +3388,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268772
                                         },
-                                        "page": null,
+                                        "page": 4,
                                         "text": "Often used in Depth First Search"
                                     },
                                     "children": [],
@@ -3410,7 +3410,7 @@
                             "mean_size": 10.6,
                             "max_size": 10.671936515335958
                         },
-                        "page": null,
+                        "page": 4,
                         "text": "Iterative Algorithms"
                     },
                     "children": [
@@ -3424,7 +3424,7 @@
                                     "mean_size": 8.5,
                                     "max_size": 8.537549212268772
                                 },
-                                "page": null,
+                                "page": 4,
                                 "text": "Definition:"
                             },
                             "children": [
@@ -3438,7 +3438,7 @@
                                             "mean_size": 7.9,
                                             "max_size": 7.999999346666678
                                         },
-                                        "page": null,
+                                        "page": 4,
                                         "text": "https://gist.github.com/TSiege/cbb0507082bb18ff7e4b#\ufb01le-the-technical-interview-cheat-sheet-md"
                                     },
                                     "children": [],
@@ -3454,7 +3454,7 @@
                                             "mean_size": 7.9,
                                             "max_size": 7.999999346666678
                                         },
-                                        "page": null,
+                                        "page": 4,
                                         "text": "5/18"
                                     },
                                     "children": [],
@@ -3470,7 +3470,7 @@
                                             "mean_size": 7.9,
                                             "max_size": 7.999999346666641
                                         },
-                                        "page": null,
+                                        "page": 5,
                                         "text": "31/10/2019"
                                     },
                                     "children": [],
@@ -3486,7 +3486,7 @@
                                             "mean_size": 7.9,
                                             "max_size": 7.999999346666755
                                         },
-                                        "page": null,
+                                        "page": 5,
                                         "text": "This is my technical interview cheat sheet. Feel free to fork it or do whatever you want with it. PLEASE let me know if there are any errors or if a\u2026"
                                     },
                                     "children": [],
@@ -3502,7 +3502,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 5,
                                         "text": "An algorithm that is called repeatedly but for a finite number of times, each time being a single iteration."
                                     },
                                     "children": [],
@@ -3518,7 +3518,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 5,
                                         "text": "Often used to move incrementally through a data set."
                                     },
                                     "children": [],
@@ -3537,7 +3537,7 @@
                                     "mean_size": 8.5,
                                     "max_size": 8.5375492122688
                                 },
-                                "page": null,
+                                "page": 5,
                                 "text": "What you need to know:"
                             },
                             "children": [
@@ -3551,7 +3551,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 5,
                                         "text": "Generally you will see iteration as loops, for, while, and until statements."
                                     },
                                     "children": [],
@@ -3567,7 +3567,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 5,
                                         "text": "Think of iteration as moving one at a time through a set."
                                     },
                                     "children": [],
@@ -3583,7 +3583,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 5,
                                         "text": "Often used to move through an array."
                                     },
                                     "children": [],
@@ -3602,7 +3602,7 @@
                                     "mean_size": 8.5,
                                     "max_size": 8.5375492122688
                                 },
-                                "page": null,
+                                "page": 5,
                                 "text": "Recursion Vs. Iteration"
                             },
                             "children": [
@@ -3616,7 +3616,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 5,
                                         "text": "The differences between recursion and iteration can be confusing to distinguish since both can be used to implement\nthe other. But know that,"
                                     },
                                     "children": [],
@@ -3632,7 +3632,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 5,
                                         "text": "Recursion is, usually, more expressive and easier to implement."
                                     },
                                     "children": [],
@@ -3648,7 +3648,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 5,
                                         "text": "Iteration uses less memory."
                                     },
                                     "children": [],
@@ -3664,7 +3664,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 5,
                                         "text": "Functional languages tend to use recursion. (i.e. Haskell)"
                                     },
                                     "children": [],
@@ -3680,7 +3680,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 5,
                                         "text": "Imperative languages tend to use iteration. (i.e. Ruby)"
                                     },
                                     "children": [],
@@ -3696,7 +3696,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.5375492122688
                                         },
-                                        "page": null,
+                                        "page": 5,
                                         "text": "Check out this Stack Overflow post for more info."
                                     },
                                     "children": [],
@@ -3715,7 +3715,7 @@
                                     "mean_size": 8.5,
                                     "max_size": 8.5375492122688
                                 },
-                                "page": null,
+                                "page": 5,
                                 "text": "Pseudo Code of Moving Through an Array (this is why iteration is used for this)"
                             },
                             "children": [
@@ -3729,7 +3729,7 @@
                                             "mean_size": 7.2,
                                             "max_size": 7.25691704386719
                                         },
-                                        "page": null,
+                                        "page": 5,
                                         "text": "Recursion                         | Iteration \n----------------------------------|---------------------------------- \nrecursive method (array, n)       | iterative method (array) \n  if array[n] is not nil          |   for n from 0 to size of array \n    print array[n]                |     print(array[n]) \n    recursive method(array, n+1)  | \n  else                            | \n    exit loop                     |"
                                     },
                                     "children": [],
@@ -3751,7 +3751,7 @@
                             "mean_size": 10.6,
                             "max_size": 10.671936515335972
                         },
-                        "page": null,
+                        "page": 5,
                         "text": "Greedy Algorithm"
                     },
                     "children": [
@@ -3765,7 +3765,7 @@
                                     "mean_size": 8.5,
                                     "max_size": 8.537549212268743
                                 },
-                                "page": null,
+                                "page": 5,
                                 "text": "Definition:"
                             },
                             "children": [
@@ -3779,7 +3779,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 5,
                                         "text": "An algorithm that, while executing, selects only the information that meets a certain criteria."
                                     },
                                     "children": [],
@@ -3795,7 +3795,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 5,
                                         "text": "The general five components, taken from Wikipedia:"
                                     },
                                     "children": [],
@@ -3811,7 +3811,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 5,
                                         "text": "A candidate set, from which a solution is created."
                                     },
                                     "children": [],
@@ -3827,7 +3827,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 5,
                                         "text": "A selection function, which chooses the best candidate to be added to the solution."
                                     },
                                     "children": [],
@@ -3843,7 +3843,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 5,
                                         "text": "A feasibility function, that is used to determine if a candidate can be used to contribute to a solution."
                                     },
                                     "children": [],
@@ -3859,7 +3859,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 5,
                                         "text": "An objective function, which assigns a value to a solution, or a partial solution."
                                     },
                                     "children": [],
@@ -3875,7 +3875,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 5,
                                         "text": "A solution function, which will indicate when we have discovered a complete solution."
                                     },
                                     "children": [],
@@ -3894,7 +3894,7 @@
                                     "mean_size": 8.5,
                                     "max_size": 8.537549212268743
                                 },
-                                "page": null,
+                                "page": 5,
                                 "text": "What you need to know:"
                             },
                             "children": [
@@ -3908,7 +3908,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268743
                                         },
-                                        "page": null,
+                                        "page": 5,
                                         "text": "Used to find the expedient, though non-optimal, solution for a given problem."
                                     },
                                     "children": [],
@@ -3924,7 +3924,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268772
                                         },
-                                        "page": null,
+                                        "page": 5,
                                         "text": "Generally used on sets of data where only a small proportion of the information evaluated meets the desired result."
                                     },
                                     "children": [],
@@ -3940,7 +3940,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268772
                                         },
-                                        "page": null,
+                                        "page": 5,
                                         "text": "Often a greedy algorithm can help reduce the Big O of an algorithm."
                                     },
                                     "children": [],
@@ -3959,7 +3959,7 @@
                                     "mean_size": 8.5,
                                     "max_size": 8.537549212268772
                                 },
-                                "page": null,
+                                "page": 5,
                                 "text": "Pseudo Code of a Greedy Algorithm to Find Largest Difference of any Two Numbers in an Array."
                             },
                             "children": [
@@ -3973,7 +3973,7 @@
                                             "mean_size": 7.2,
                                             "max_size": 7.25691704386719
                                         },
-                                        "page": null,
+                                        "page": 5,
                                         "text": "greedy algorithm (array) \n  var largest difference = 0 \n  var new difference = find next difference (array[n], array[n+1]) \n  largest difference = new difference if new difference is > largest difference \n  repeat above two steps until all differences have been found \n  return largest difference"
                                     },
                                     "children": [],
@@ -3989,7 +3989,7 @@
                                             "mean_size": 8.5,
                                             "max_size": 8.537549212268772
                                         },
-                                        "page": null,
+                                        "page": 5,
                                         "text": "This algorithm never needed to compare all the differences to one another, saving it an entire iteration."
                                     },
                                     "children": [],
@@ -4005,7 +4005,7 @@
                                             "mean_size": 6.4,
                                             "max_size": 6.403161909201579
                                         },
-                                        "page": null,
+                                        "page": 5,
                                         "text": "Author"
                                     },
                                     "children": [],
@@ -4021,7 +4021,7 @@
                                             "mean_size": 6.4,
                                             "max_size": 6.403161909201579
                                         },
-                                        "page": null,
+                                        "page": 5,
                                         "text": "Owner"
                                     },
                                     "children": [],
@@ -4037,7 +4037,7 @@
                                             "mean_size": 7.4,
                                             "max_size": 7.470355560735172
                                         },
-                                        "page": null,
+                                        "page": 5,
                                         "text": "TSiege commented on 2 May 2014"
                                     },
                                     "children": [],
@@ -4053,7 +4053,7 @@
                                             "mean_size": 7.9,
                                             "max_size": 7.999999346666678
                                         },
-                                        "page": null,
+                                        "page": 5,
                                         "text": "https://gist.github.com/TSiege/cbb0507082bb18ff7e4b#\ufb01le-the-technical-interview-cheat-sheet-md"
                                     },
                                     "children": [],
@@ -4069,7 +4069,7 @@
                                             "mean_size": 7.9,
                                             "max_size": 7.999999346666678
                                         },
-                                        "page": null,
+                                        "page": 5,
                                         "text": "6/18"
                                     },
                                     "children": [],

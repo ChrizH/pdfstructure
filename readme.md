@@ -11,25 +11,18 @@ The document structure, or hierarchy, stores the relation between chapters, sect
 ## Document Model
 
 ```
-# Document Representation with all sections
-class StructuredPdfDocument:
-    metadata: dict
-    elements: List[Section]
+class StructuredDocument:
+  metadata: dict
+  sections: List[Section]
 
-# One Section
 class Section:
-    heading: TextElement
-    content: List[TextElement]
-    children: List[Section]
-    
-    # level denotes the nodes depth within tree structure 
-    level: int  
+  content:  TextElement
+  children: List[Section]
+  level:    int
 
-# Group of words
 class TextElement:
-    text: str
-    style: Style
-    page: int
+  text:     LTTextContainer # the extracted paragraph from pdfminer
+  style:    Style
 ```
 
 ## Load and parse PDF
@@ -120,44 +113,45 @@ To export the parsed structure, use a printer implementation.
         "filename": "interview_cheatsheet.pdf"
     },
     "elements": [
-       {
-            "heading": {
+     {
+            "content": {
                 "style": {
                     "bold": true,
                     "italic": false,
                     "font_name": ".SFNSDisplay-Semibold",
                     "mapped_font_size": "xlarge",
-                    "mean_size": 12.8
+                    "mean_size": 12.8,
+                    "max_size": 12.806323818403143
                 },
-                "page": 2,
-                "text": "Search Basics"
+                "page": 0,
+                "text": "Data Structure Basics"
             },
-            "content": [],
             "children": [
                 {
-                    "heading": {
+                    "content": {
                         "style": {
                             "bold": true,
                             "italic": false,
                             "font_name": ".SFNSDisplay-Semibold",
                             "mapped_font_size": "large",
-                            "mean_size": 10.6
+                            "mean_size": 10.6,
+                            "max_size": 10.671936515335972
                         },
-                        "page": 2,
-                        "text": "Breadth First Search"
+                        "page": 0,
+                        "text": "Array"
                     },
-                    "content": [],
                     "children": [
                         {
-                            "heading": {
+                            "content": {
                                 "style": {
                                     "bold": true,
                                     "italic": false,
                                     "font_name": ".SFNSText-Semibold",
                                     "mapped_font_size": "middle",
-                                    "mean_size": 8.5
+                                    "mean_size": 8.5,
+                                    "max_size": 8.537549212268772
                                 },
-                                "page": 2,
+                                "page": 0,
                                 "text": "Definition:"
                             },
          ....          
@@ -210,3 +204,4 @@ Two document traversal generators are available that yield each section `in-orde
     The provided layout analysis algorithm by pdfminer.six performs well on more straightforward documents with default settings. 
     However, more complicated layouts like scientific papers need custom `LAParams` settings to retrieve paragraphs in correct reading order.
 - [ ] High level diagram of algorithm workflow
+- [ ] Performance improvement in terms of speed

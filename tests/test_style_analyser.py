@@ -18,7 +18,7 @@ class TestSizeMapper(TestCase):
         distribution = StyleDistribution(Counter((1, 5, 6, 10, 10, 10, 10, 20, 100)))
         scaler = PivotLogMapper(distribution)
         # test borders
-        borders = (4.02, 8.01, 19.91, 39.89)
+        borders = (4.02, 8.01, 14.41, 23.28)
         [self.assertAlmostEqual(borders[i], b, 1) for i, b in enumerate(scaler.borders)]
         self.assertEqual(TextSize.xsmall, scaler.translate(TextSize, -10))
         self.assertEqual(TextSize.xsmall, scaler.translate(TextSize, 0))
@@ -27,19 +27,14 @@ class TestSizeMapper(TestCase):
         self.assertEqual(TextSize.small, scaler.translate(TextSize, 6))
         self.assertEqual(TextSize.small, scaler.translate(TextSize, 7))
         self.assertEqual(TextSize.small, scaler.translate(TextSize, 8))
-        self.assertEqual(TextSize.middle, scaler.translate(TextSize, 9))
         self.assertEqual(TextSize.middle, scaler.translate(TextSize, 10))
-        self.assertEqual(TextSize.middle, scaler.translate(TextSize, 15))
-        self.assertEqual(TextSize.middle, scaler.translate(TextSize, 17))
-        self.assertEqual(TextSize.middle, scaler.translate(TextSize, 18))
+        self.assertEqual(TextSize.middle, scaler.translate(TextSize, 12))
+        self.assertEqual(TextSize.large, scaler.translate(TextSize, 15))
+        self.assertEqual(TextSize.large, scaler.translate(TextSize, 16))
         self.assertEqual(TextSize.large, scaler.translate(TextSize, 20))
-        self.assertEqual(TextSize.large, scaler.translate(TextSize, 30))
-        self.assertEqual(TextSize.xlarge, scaler.translate(TextSize, 40))
-        self.assertEqual(TextSize.xlarge, scaler.translate(TextSize, 50))
-        self.assertEqual(TextSize.xlarge, scaler.translate(TextSize, 60))
-        self.assertEqual(TextSize.xlarge, scaler.translate(TextSize, 70))
-        self.assertEqual(TextSize.xlarge, scaler.translate(TextSize, 90))
-        self.assertEqual(TextSize.xlarge, scaler.translate(TextSize, 120))
+        self.assertEqual(TextSize.xlarge, scaler.translate(TextSize, 30))
+        self.assertEqual(TextSize.xlarge, scaler.translate(TextSize, 200))
+
     
     def test_linear_mapper(self):
         distribution = StyleDistribution(Counter((1, 5, 6, 10, 10, 10, 10, 20, 100)))

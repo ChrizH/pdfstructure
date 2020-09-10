@@ -39,6 +39,8 @@ class TestHierarchy(TestCase):
         pdf = self.parser.parse_pdf(source)
         self.assertEqual(9, len(pdf.elements))
         self.assertEqual("Data Structure Basics", pdf.elements[5].heading.text)
+        self.assertEqual("Basic Types of Algorithms", pdf.elements[8].heading.text)
+        self.assertEqual(4, pdf.elements[8].heading.page)
 
     def test_grouping(self):
         test_doc = self.nested_doc_bold_title

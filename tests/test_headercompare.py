@@ -10,7 +10,7 @@ from pdfstructure.model.style import Style, TextSize
 class TestSubHeaderConditions(TestCase):
     style_middle_bold = Style(bold=True, italic=True, font_name="test-font",
                               mapped_font_size=TextSize.middle,
-                              mean_size=10)
+                              mean_size=10, max_size=15)
 
     class TestFont:
         fontname = "Test"

@@ -78,6 +78,7 @@ class FileSource(Source):
         """
         line: LTTextLineHorizontal
         wrapper = LTTextBoxHorizontal()
+        wrapper.page = container.page
         stack = []
         for line in container:
             size = max([obj.size for obj in itertools.islice(line, 10) if isinstance(obj, LTChar)])
