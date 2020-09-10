@@ -1,3 +1,4 @@
+import itertools
 from typing import Generator, Any
 
 from pdfminer.high_level import extract_pages
@@ -70,6 +71,29 @@ class FileSource(Source):
 
                 line.add(letter)
 
+    def split_boxes_by_style(self, container: LTTextContainer) -> Generator[LTTextContainer, LTTextContainer, None]:
+        """
+        pdfminers paragraphs are sometimes too broad and contain lines that should be splitted into header and content
+        @param container: the extracted original paragraph
+        """
+        line: LTTextLineHorizontal
+        wrapper = LTTextBoxHorizontal()
+        stack = []
+        for line in container:
+            size = max([obj.size for obj in itertools.islice(line, 10) if isinstance(obj, LTChar)])
+            if not stack:
+                wrapper.add(line)
+                stack.append(size)
+            else:
+                prior = stack.pop()
+                stack.append(size)
+                if prior - size > 1:
+                    # break paragraph
+                    yield wrapper
+                    wrapper = LTTextBoxHorizontal()
+                wrapper.add(line)
+        yield wrapper
+
     def read(self) -> Generator[LTTextContainer, Any, None]:
         pNumber = 0
         # disable boxes_flow, style based hierarchy detection is based on purely flat list of paragraphs
@@ -84,7 +108,8 @@ class FileSource(Source):
             for element in page_layout:
                 element.page = pNumber
                 if isinstance(element, LTTextContainer):
-                    yield element
+                    yield from self.split_boxes_by_style(element)
+                    # yield element
                 elif isinstance(element, LTFigure):
                     yield from self.__handle_lt_figure(element)
             pNumber += 1

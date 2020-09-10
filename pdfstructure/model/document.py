@@ -75,8 +75,9 @@ class Section:
             return ""
 
     def __str__(self):
-        return "{}\n{}".format(self.heading.text,
-                               " ".join([str(child.heading.text) for child in self.children]))
+        return self.heading_text
+        # return "{}\n{}".format(self.heading.text,
+        #                       " ".join([str(child.heading.text) for child in self.children]))
 
 
 class DanglingTextSection(Section):

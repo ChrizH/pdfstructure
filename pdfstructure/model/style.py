@@ -31,12 +31,13 @@ class Style:
     Extracted paragraphs get annotated with found font-style information.
     """
 
-    def __init__(self, bold, italic, font_name, mapped_font_size: TextSize, mean_size: float):
+    def __init__(self, bold, italic, font_name, mapped_font_size: TextSize, mean_size: float, max_size: float):
         self.bold = bold
         self.italic = italic
         self.font_name = font_name
         self.mapped_font_size = mapped_font_size
         self.mean_size = mean_size
+        self.max_size = max_size
 
     @classmethod
     def from_json(cls, data: dict):

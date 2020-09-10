@@ -32,7 +32,7 @@ class PivotLogMapper(SizeMapper):
         left_span = pivot - style_info.min_found_size
 
         if right_span > pivot * 2:
-            right_span /= 2
+            right_span = pivot * 2
         if right_span == 0:
             right_span = 5
         if left_span == 0:

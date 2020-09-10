@@ -28,9 +28,10 @@
                             "italic": false,
                             "font_name": "Times-Roman",
                             "mapped_font_size": "small",
-                            "mean_size": 7.9
+                            "mean_size": 7.9,
+                            "max_size": 7.999999346666641
                         },
-                        "page": 0,
+                        "page": null,
                         "text": "31/10/2019"
                     },
                     "children": [],
@@ -43,9 +44,10 @@
                             "italic": false,
                             "font_name": "Times-Roman",
                             "mapped_font_size": "small",
-                            "mean_size": 7.9
+                            "mean_size": 7.9,
+                            "max_size": 7.999999346666755
                         },
-                        "page": 0,
+                        "page": null,
                         "text": "This is my technical interview cheat sheet. Feel free to fork it or do whatever you want with it. PLEASE let me know if there are any errors or if a\u2026"
                     },
                     "children": [],
@@ -61,9 +63,10 @@
                     "italic": false,
                     "font_name": ".SFNSText-Semibold",
                     "mapped_font_size": "large",
-                    "mean_size": 9.6
+                    "mean_size": 9.6,
+                    "max_size": 9.604742863802358
                 },
-                "page": 0,
+                "page": null,
                 "text": "TSiege / The Technical Interview Cheat Sheet.md"
             },
             "children": [
@@ -74,9 +77,10 @@
                             "italic": false,
                             "font_name": ".SFNSText",
                             "mapped_font_size": "xsmall",
-                            "mean_size": 6.4
+                            "mean_size": 6.4,
+                            "max_size": 6.403161909201572
                         },
-                        "page": 0,
+                        "page": null,
                         "text": "Last active 2 days ago \u2022 Report abuse"
                     },
                     "children": [],
@@ -89,9 +93,10 @@
                             "italic": false,
                             "font_name": ".SFNSText-Semibold",
                             "mapped_font_size": "xsmall",
-                            "mean_size": 6.4
+                            "mean_size": 6.4,
+                            "max_size": 6.403161909201572
                         },
-                        "page": 0,
+                        "page": null,
                         "text": "Embed"
                     },
                     "children": [],
@@ -104,9 +109,10 @@
                             "italic": false,
                             "font_name": ".SFNSText-Semibold",
                             "mapped_font_size": "xsmall",
-                            "mean_size": 6.4
+                            "mean_size": 6.4,
+                            "max_size": 6.403161909201572
                         },
-                        "page": 0,
+                        "page": null,
                         "text": "Download ZIP"
                     },
                     "children": [],
@@ -119,9 +125,10 @@
                             "italic": false,
                             "font_name": "Menlo-Regular",
                             "mapped_font_size": "xsmall",
-                            "mean_size": 6.4
+                            "mean_size": 6.4,
+                            "max_size": 6.403161909201572
                         },
-                        "page": 0,
+                        "page": null,
                         "text": "<script src=\"https://gis"
                     },
                     "children": [],
@@ -134,9 +141,10 @@
                             "italic": false,
                             "font_name": ".SFNSText",
                             "mapped_font_size": "small",
-                            "mean_size": 7.4
+                            "mean_size": 7.4,
+                            "max_size": 7.470355560735129
                         },
-                        "page": 0,
+                        "page": null,
                         "text": "This is my technical interview cheat sheet. Feel free to fork it or do whatever you want with it. PLEASE let me know if there are any errors or if anything"
                     },
                     "children": [],
@@ -149,9 +157,10 @@
                             "italic": false,
                             "font_name": ".SFNSText",
                             "mapped_font_size": "small",
-                            "mean_size": 7.4
+                            "mean_size": 7.4,
+                            "max_size": 7.470355560735129
                         },
-                        "page": 0,
+                        "page": null,
                         "text": "crucial is missing. I will add more links soon."
                     },
                     "children": [],
@@ -164,9 +173,10 @@
                             "italic": false,
                             "font_name": "Menlo-Bold",
                             "mapped_font_size": "xsmall",
-                            "mean_size": 6.4
+                            "mean_size": 6.4,
+                            "max_size": 6.403161909201572
                         },
-                        "page": 0,
+                        "page": null,
                         "text": "The Technical Interview Cheat Sheet.md"
                     },
                     "children": [],
@@ -182,9 +192,10 @@
                     "italic": false,
                     "font_name": ".SFNSDisplay-Semibold",
                     "mapped_font_size": "xlarge",
-                    "mean_size": 12.8
+                    "mean_size": 12.8,
+                    "max_size": 12.806323818403143
                 },
-                "page": 0,
+                "page": null,
                 "text": "ANNOUNCEMENT"
             },
             "children": [
@@ -195,9 +206,10 @@
                             "italic": false,
                             "font_name": ".SFNSText",
                             "mapped_font_size": "middle",
-                            "mean_size": 8.5
+                            "mean_size": 8.5,
+                            "max_size": 8.5375492122688
                         },
-                        "page": 0,
+                        "page": null,
                         "text": "I have moved this over to the Tech Interview Cheat Sheet Repo since a gist is too difficult to maintain as an open source\nendevaor and there is no way to version it. I have updated below, but I will not be able to keep this one up to date so\nplease checkout the repo instead. The below is just for some preservation for those who stumble across here."
                     },
                     "children": [],
@@ -210,9 +222,10 @@
                             "italic": false,
                             "font_name": ".SFNSText",
                             "mapped_font_size": "middle",
-                            "mean_size": 8.5
+                            "mean_size": 8.5,
+                            "max_size": 8.537549212268743
                         },
-                        "page": 0,
+                        "page": null,
                         "text": "\\"
                     },
                     "children": [],
@@ -228,9 +241,10 @@
                     "italic": false,
                     "font_name": ".SFNSDisplay-Semibold",
                     "mapped_font_size": "xlarge",
-                    "mean_size": 12.8
+                    "mean_size": 12.8,
+                    "max_size": 12.806323818403143
                 },
-                "page": 0,
+                "page": null,
                 "text": "Studying for a Tech Interview Sucks, so Here's a Cheat Sheet to Help"
             },
             "children": [
@@ -241,9 +255,10 @@
                             "italic": false,
                             "font_name": ".SFNSText",
                             "mapped_font_size": "middle",
-                            "mean_size": 8.5
+                            "mean_size": 8.5,
+                            "max_size": 8.537549212268743
                         },
-                        "page": 0,
+                        "page": null,
                         "text": "This list is meant to be both a quick guide and reference for further research into these topics. It's basically a summary of"
                     },
                     "children": [],
@@ -256,9 +271,10 @@
                             "italic": false,
                             "font_name": ".SFNSText",
                             "mapped_font_size": "middle",
-                            "mean_size": 8.5
+                            "mean_size": 8.5,
+                            "max_size": 8.537549212268743
                         },
-                        "page": 0,
+                        "page": null,
                         "text": "that comp sci course you never took or forgot about, so there's no way it can cover everything in depth."
                     },
                     "children": [],
@@ -274,9 +290,10 @@
                     "italic": false,
                     "font_name": ".SFNSDisplay-Semibold",
                     "mapped_font_size": "xlarge",
-                    "mean_size": 12.8
+                    "mean_size": 12.8,
+                    "max_size": 12.806323818403143
                 },
-                "page": 0,
+                "page": null,
                 "text": "Contributing"
             },
             "children": [
@@ -287,9 +304,10 @@
                             "italic": false,
                             "font_name": ".SFNSText",
                             "mapped_font_size": "middle",
-                            "mean_size": 8.5
+                            "mean_size": 8.5,
+                            "max_size": 8.537549212268743
                         },
-                        "page": 0,
+                        "page": null,
                         "text": "Please see the Tech Interview Cheat Sheet Repo"
                     },
                     "children": [],
@@ -305,9 +323,10 @@
                     "italic": false,
                     "font_name": ".SFNSDisplay-Semibold",
                     "mapped_font_size": "xlarge",
-                    "mean_size": 12.8
+                    "mean_size": 12.8,
+                    "max_size": 12.806323818403143
                 },
-                "page": 0,
+                "page": null,
                 "text": "Data Structure Basics"
             },
             "children": [
@@ -318,9 +337,10 @@
                             "italic": false,
                             "font_name": ".SFNSDisplay-Semibold",
                             "mapped_font_size": "large",
-                            "mean_size": 10.6
+                            "mean_size": 10.6,
+                            "max_size": 10.671936515335972
                         },
-                        "page": 0,
+                        "page": null,
                         "text": "Array"
                     },
                     "children": [
@@ -331,9 +351,10 @@
                                     "italic": false,
                                     "font_name": ".SFNSText-Semibold",
                                     "mapped_font_size": "middle",
-                                    "mean_size": 8.5
+                                    "mean_size": 8.5,
+                                    "max_size": 8.537549212268772
                                 },
-                                "page": 0,
+                                "page": null,
                                 "text": "Definition:"
                             },
                             "children": [
@@ -344,9 +365,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268772
                                         },
-                                        "page": 0,
+                                        "page": null,
                                         "text": "Stores data elements based on an sequential, most commonly 0 based, index."
                                     },
                                     "children": [],
@@ -359,9 +381,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268772
                                         },
-                                        "page": 0,
+                                        "page": null,
                                         "text": "Based on tuples from set theory."
                                     },
                                     "children": [],
@@ -374,9 +397,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268772
                                         },
-                                        "page": 0,
+                                        "page": null,
                                         "text": "They are one of the oldest, most commonly used data structures."
                                     },
                                     "children": [],
@@ -392,9 +416,10 @@
                                     "italic": false,
                                     "font_name": ".SFNSText-Semibold",
                                     "mapped_font_size": "middle",
-                                    "mean_size": 8.5
+                                    "mean_size": 8.5,
+                                    "max_size": 8.537549212268772
                                 },
-                                "page": 0,
+                                "page": null,
                                 "text": "What you need to know:"
                             },
                             "children": [
@@ -405,9 +430,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268772
                                         },
-                                        "page": 0,
+                                        "page": null,
                                         "text": "Optimal for indexing; bad at searching, inserting, and deleting (except at the end)."
                                     },
                                     "children": [],
@@ -420,9 +446,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268772
                                         },
-                                        "page": 0,
+                                        "page": null,
                                         "text": "Linear arrays, or one dimensional arrays, are the most basic."
                                     },
                                     "children": [],
@@ -435,9 +462,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268772
                                         },
-                                        "page": 0,
+                                        "page": null,
                                         "text": "Are static in size, meaning that they are declared with a fixed size."
                                     },
                                     "children": [],
@@ -450,9 +478,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268772
                                         },
-                                        "page": 0,
+                                        "page": null,
                                         "text": "Dynamic arrays are like one dimensional arrays, but have reserved space for additional elements."
                                     },
                                     "children": [],
@@ -465,9 +494,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268772
                                         },
-                                        "page": 0,
+                                        "page": null,
                                         "text": "If a dynamic array is full, it copies its contents to a larger array."
                                     },
                                     "children": [],
@@ -480,9 +510,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268772
                                         },
-                                        "page": 0,
+                                        "page": null,
                                         "text": "Multi dimensional arrays nested arrays that allow for multiple dimensions such as an array of arrays providing a 2\ndimensional spacial representation via x, y coordinates."
                                     },
                                     "children": [],
@@ -495,9 +526,10 @@
                                             "italic": false,
                                             "font_name": "Times-Roman",
                                             "mapped_font_size": "small",
-                                            "mean_size": 7.9
+                                            "mean_size": 7.9,
+                                            "max_size": 7.999999346666678
                                         },
-                                        "page": 0,
+                                        "page": null,
                                         "text": "https://gist.github.com/TSiege/cbb0507082bb18ff7e4b#\ufb01le-the-technical-interview-cheat-sheet-md"
                                     },
                                     "children": [],
@@ -510,9 +542,10 @@
                                             "italic": false,
                                             "font_name": "Times-Roman",
                                             "mapped_font_size": "small",
-                                            "mean_size": 7.9
+                                            "mean_size": 7.9,
+                                            "max_size": 7.999999346666678
                                         },
-                                        "page": 0,
+                                        "page": null,
                                         "text": "1/18"
                                     },
                                     "children": [],
@@ -525,9 +558,10 @@
                                             "italic": false,
                                             "font_name": "Times-Roman",
                                             "mapped_font_size": "small",
-                                            "mean_size": 7.9
+                                            "mean_size": 7.9,
+                                            "max_size": 7.999999346666641
                                         },
-                                        "page": 1,
+                                        "page": null,
                                         "text": "31/10/2019"
                                     },
                                     "children": [],
@@ -540,9 +574,10 @@
                                             "italic": false,
                                             "font_name": "Times-Roman",
                                             "mapped_font_size": "small",
-                                            "mean_size": 7.9
+                                            "mean_size": 7.9,
+                                            "max_size": 7.999999346666755
                                         },
-                                        "page": 1,
+                                        "page": null,
                                         "text": "This is my technical interview cheat sheet. Feel free to fork it or do whatever you want with it. PLEASE let me know if there are any errors or if a\u2026"
                                     },
                                     "children": [],
@@ -558,9 +593,10 @@
                                     "italic": false,
                                     "font_name": ".SFNSText-Semibold",
                                     "mapped_font_size": "middle",
-                                    "mean_size": 8.5
+                                    "mean_size": 8.5,
+                                    "max_size": 8.5375492122688
                                 },
-                                "page": 1,
+                                "page": null,
                                 "text": "Time Complexity:"
                             },
                             "children": [
@@ -571,9 +607,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 1,
+                                        "page": null,
                                         "text": "Indexing: Linear array: O(1), Dynamic array: O(1)"
                                     },
                                     "children": [],
@@ -586,9 +623,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 1,
+                                        "page": null,
                                         "text": "Search: Linear array: O(n), Dynamic array: O(n)"
                                     },
                                     "children": [],
@@ -601,9 +639,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 1,
+                                        "page": null,
                                         "text": "Optimized Search: Linear array: O(log n), Dynamic array: O(log n)"
                                     },
                                     "children": [],
@@ -616,9 +655,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 1,
+                                        "page": null,
                                         "text": "Insertion: Linear array: n/a Dynamic array: O(n)"
                                     },
                                     "children": [],
@@ -637,9 +677,10 @@
                             "italic": false,
                             "font_name": ".SFNSDisplay-Semibold",
                             "mapped_font_size": "large",
-                            "mean_size": 10.6
+                            "mean_size": 10.6,
+                            "max_size": 10.671936515335915
                         },
-                        "page": 1,
+                        "page": null,
                         "text": "Linked List"
                     },
                     "children": [
@@ -650,9 +691,10 @@
                                     "italic": false,
                                     "font_name": ".SFNSText-Semibold",
                                     "mapped_font_size": "middle",
-                                    "mean_size": 8.5
+                                    "mean_size": 8.5,
+                                    "max_size": 8.5375492122688
                                 },
-                                "page": 1,
+                                "page": null,
                                 "text": "Definition:"
                             },
                             "children": [
@@ -663,9 +705,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 1,
+                                        "page": null,
                                         "text": "Stores data with nodes that point to other nodes."
                                     },
                                     "children": [],
@@ -678,9 +721,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 1,
+                                        "page": null,
                                         "text": "Nodes, at its most basic it has one datum and one reference (another node)."
                                     },
                                     "children": [],
@@ -693,9 +737,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 1,
+                                        "page": null,
                                         "text": "A linked list chains nodes together by pointing one node's reference towards another node."
                                     },
                                     "children": [],
@@ -711,9 +756,10 @@
                                     "italic": false,
                                     "font_name": ".SFNSText-Semibold",
                                     "mapped_font_size": "middle",
-                                    "mean_size": 8.5
+                                    "mean_size": 8.5,
+                                    "max_size": 8.5375492122688
                                 },
-                                "page": 1,
+                                "page": null,
                                 "text": "What you need to know:"
                             },
                             "children": [
@@ -724,9 +770,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 1,
+                                        "page": null,
                                         "text": "Designed to optimize insertion and deletion, slow at indexing and searching."
                                     },
                                     "children": [],
@@ -739,9 +786,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 1,
+                                        "page": null,
                                         "text": "Doubly linked list has nodes that also reference the previous node."
                                     },
                                     "children": [],
@@ -754,9 +802,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 1,
+                                        "page": null,
                                         "text": "Circularly linked list is simple linked list whose tail, the last node, references the head, the first node."
                                     },
                                     "children": [],
@@ -769,9 +818,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 1,
+                                        "page": null,
                                         "text": "Stack, commonly implemented with linked lists but can be made from arrays too."
                                     },
                                     "children": [],
@@ -784,9 +834,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 1,
+                                        "page": null,
                                         "text": "Stacks are last in, first out (LIFO) data structures."
                                     },
                                     "children": [],
@@ -799,9 +850,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 1,
+                                        "page": null,
                                         "text": "Made with a linked list by having the head be the only place for insertion and removal."
                                     },
                                     "children": [],
@@ -814,9 +866,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 1,
+                                        "page": null,
                                         "text": "Queues, too can be implemented with a linked list or an array."
                                     },
                                     "children": [],
@@ -829,9 +882,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 1,
+                                        "page": null,
                                         "text": "Queues are a first in, first out (FIFO) data structure."
                                     },
                                     "children": [],
@@ -844,9 +898,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 1,
+                                        "page": null,
                                         "text": "Made with a doubly linked list that only removes from head and adds to tail."
                                     },
                                     "children": [],
@@ -862,9 +917,10 @@
                                     "italic": false,
                                     "font_name": ".SFNSText-Semibold",
                                     "mapped_font_size": "middle",
-                                    "mean_size": 8.5
+                                    "mean_size": 8.5,
+                                    "max_size": 8.537549212268743
                                 },
-                                "page": 1,
+                                "page": null,
                                 "text": "Time Complexity:"
                             },
                             "children": [
@@ -875,9 +931,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 1,
+                                        "page": null,
                                         "text": "Indexing: Linked Lists: O(n)"
                                     },
                                     "children": [],
@@ -890,9 +947,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 1,
+                                        "page": null,
                                         "text": "Search: Linked Lists: O(n)"
                                     },
                                     "children": [],
@@ -905,9 +963,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 1,
+                                        "page": null,
                                         "text": "Optimized Search: Linked Lists: O(n)"
                                     },
                                     "children": [],
@@ -920,9 +979,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 1,
+                                        "page": null,
                                         "text": "Insertion: Linked Lists: O(1)"
                                     },
                                     "children": [],
@@ -941,9 +1001,10 @@
                             "italic": false,
                             "font_name": ".SFNSDisplay-Semibold",
                             "mapped_font_size": "large",
-                            "mean_size": 10.6
+                            "mean_size": 10.6,
+                            "max_size": 10.671936515335972
                         },
-                        "page": 1,
+                        "page": null,
                         "text": "Hash Table or Hash Map"
                     },
                     "children": [
@@ -954,9 +1015,10 @@
                                     "italic": false,
                                     "font_name": ".SFNSText-Semibold",
                                     "mapped_font_size": "middle",
-                                    "mean_size": 8.5
+                                    "mean_size": 8.5,
+                                    "max_size": 8.537549212268743
                                 },
-                                "page": 1,
+                                "page": null,
                                 "text": "Definition:"
                             },
                             "children": [
@@ -967,9 +1029,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 1,
+                                        "page": null,
                                         "text": "Stores data with key value pairs."
                                     },
                                     "children": [],
@@ -982,9 +1045,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 1,
+                                        "page": null,
                                         "text": "Hash functions accept a key and return an output unique only to that specific key."
                                     },
                                     "children": [],
@@ -997,9 +1061,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 1,
+                                        "page": null,
                                         "text": "This is known as hashing, which is the concept that an input and an output have a one-to-one correspondence"
                                     },
                                     "children": [],
@@ -1012,9 +1077,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 1,
+                                        "page": null,
                                         "text": "to map information."
                                     },
                                     "children": [],
@@ -1027,9 +1093,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 1,
+                                        "page": null,
                                         "text": "Hash functions return a unique address in memory for that data."
                                     },
                                     "children": [],
@@ -1045,9 +1112,10 @@
                                     "italic": false,
                                     "font_name": ".SFNSText-Semibold",
                                     "mapped_font_size": "middle",
-                                    "mean_size": 8.5
+                                    "mean_size": 8.5,
+                                    "max_size": 8.537549212268772
                                 },
-                                "page": 1,
+                                "page": null,
                                 "text": "What you need to know:"
                             },
                             "children": [
@@ -1058,9 +1126,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268772
                                         },
-                                        "page": 1,
+                                        "page": null,
                                         "text": "Designed to optimize searching, insertion, and deletion."
                                     },
                                     "children": [],
@@ -1073,9 +1142,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268772
                                         },
-                                        "page": 1,
+                                        "page": null,
                                         "text": "Hash collisions are when a hash function returns the same output for two distinct inputs."
                                     },
                                     "children": [],
@@ -1088,9 +1158,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268772
                                         },
-                                        "page": 1,
+                                        "page": null,
                                         "text": "All hash functions have this problem."
                                     },
                                     "children": [],
@@ -1103,9 +1174,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268772
                                         },
-                                        "page": 1,
+                                        "page": null,
                                         "text": "This is often accommodated for by having the hash tables be very large."
                                     },
                                     "children": [],
@@ -1118,9 +1190,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268772
                                         },
-                                        "page": 1,
+                                        "page": null,
                                         "text": "Hashes are important for associative arrays and database indexing."
                                     },
                                     "children": [],
@@ -1136,9 +1209,10 @@
                                     "italic": false,
                                     "font_name": ".SFNSText-Semibold",
                                     "mapped_font_size": "middle",
-                                    "mean_size": 8.5
+                                    "mean_size": 8.5,
+                                    "max_size": 8.537549212268772
                                 },
-                                "page": 1,
+                                "page": null,
                                 "text": "Time Complexity:"
                             },
                             "children": [
@@ -1149,9 +1223,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268772
                                         },
-                                        "page": 1,
+                                        "page": null,
                                         "text": "Indexing: Hash Tables: O(1)"
                                     },
                                     "children": [],
@@ -1164,9 +1239,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268772
                                         },
-                                        "page": 1,
+                                        "page": null,
                                         "text": "Search: Hash Tables: O(1)"
                                     },
                                     "children": [],
@@ -1179,9 +1255,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268772
                                         },
-                                        "page": 1,
+                                        "page": null,
                                         "text": "Insertion: Hash Tables: O(1)"
                                     },
                                     "children": [],
@@ -1200,9 +1277,10 @@
                             "italic": false,
                             "font_name": ".SFNSDisplay-Semibold",
                             "mapped_font_size": "large",
-                            "mean_size": 10.6
+                            "mean_size": 10.6,
+                            "max_size": 10.671936515335958
                         },
-                        "page": 1,
+                        "page": null,
                         "text": "Binary Tree"
                     },
                     "children": [
@@ -1213,9 +1291,10 @@
                                     "italic": false,
                                     "font_name": ".SFNSText-Semibold",
                                     "mapped_font_size": "middle",
-                                    "mean_size": 8.5
+                                    "mean_size": 8.5,
+                                    "max_size": 8.537549212268772
                                 },
-                                "page": 1,
+                                "page": null,
                                 "text": "Definition:"
                             },
                             "children": [
@@ -1226,9 +1305,10 @@
                                             "italic": false,
                                             "font_name": "Times-Roman",
                                             "mapped_font_size": "small",
-                                            "mean_size": 7.9
+                                            "mean_size": 7.9,
+                                            "max_size": 7.999999346666678
                                         },
-                                        "page": 1,
+                                        "page": null,
                                         "text": "https://gist.github.com/TSiege/cbb0507082bb18ff7e4b#\ufb01le-the-technical-interview-cheat-sheet-md"
                                     },
                                     "children": [],
@@ -1241,9 +1321,10 @@
                                             "italic": false,
                                             "font_name": "Times-Roman",
                                             "mapped_font_size": "small",
-                                            "mean_size": 7.9
+                                            "mean_size": 7.9,
+                                            "max_size": 7.999999346666678
                                         },
-                                        "page": 1,
+                                        "page": null,
                                         "text": "2/18"
                                     },
                                     "children": [],
@@ -1256,9 +1337,10 @@
                                             "italic": false,
                                             "font_name": "Times-Roman",
                                             "mapped_font_size": "small",
-                                            "mean_size": 7.9
+                                            "mean_size": 7.9,
+                                            "max_size": 7.999999346666641
                                         },
-                                        "page": 2,
+                                        "page": null,
                                         "text": "31/10/2019"
                                     },
                                     "children": [],
@@ -1271,9 +1353,10 @@
                                             "italic": false,
                                             "font_name": "Times-Roman",
                                             "mapped_font_size": "small",
-                                            "mean_size": 7.9
+                                            "mean_size": 7.9,
+                                            "max_size": 7.999999346666755
                                         },
-                                        "page": 2,
+                                        "page": null,
                                         "text": "This is my technical interview cheat sheet. Feel free to fork it or do whatever you want with it. PLEASE let me know if there are any errors or if a\u2026"
                                     },
                                     "children": [],
@@ -1286,9 +1369,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 2,
+                                        "page": null,
                                         "text": "Is a tree like data structure where every node has at most two children."
                                     },
                                     "children": [],
@@ -1301,9 +1385,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 2,
+                                        "page": null,
                                         "text": "There is one left and right child node."
                                     },
                                     "children": [],
@@ -1319,9 +1404,10 @@
                                     "italic": false,
                                     "font_name": ".SFNSText-Semibold",
                                     "mapped_font_size": "middle",
-                                    "mean_size": 8.5
+                                    "mean_size": 8.5,
+                                    "max_size": 8.5375492122688
                                 },
-                                "page": 2,
+                                "page": null,
                                 "text": "What you need to know:"
                             },
                             "children": [
@@ -1332,9 +1418,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 2,
+                                        "page": null,
                                         "text": "Designed to optimize searching and sorting."
                                     },
                                     "children": [],
@@ -1347,9 +1434,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 2,
+                                        "page": null,
                                         "text": "A degenerate tree is an unbalanced tree, which if entirely one-sided is a essentially a linked list."
                                     },
                                     "children": [],
@@ -1362,9 +1450,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 2,
+                                        "page": null,
                                         "text": "They are comparably simple to implement than other data structures."
                                     },
                                     "children": [],
@@ -1380,9 +1469,10 @@
                                     "italic": false,
                                     "font_name": ".SFNSText-Semibold",
                                     "mapped_font_size": "middle",
-                                    "mean_size": 8.5
+                                    "mean_size": 8.5,
+                                    "max_size": 8.5375492122688
                                 },
-                                "page": 2,
+                                "page": null,
                                 "text": "Used to make binary search trees."
                             },
                             "children": [
@@ -1393,9 +1483,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 2,
+                                        "page": null,
                                         "text": "A binary tree that uses comparable keys to assign which direction a child is."
                                     },
                                     "children": [],
@@ -1408,9 +1499,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 2,
+                                        "page": null,
                                         "text": "Left child has a key smaller than it's parent node."
                                     },
                                     "children": [],
@@ -1423,9 +1515,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 2,
+                                        "page": null,
                                         "text": "Right child has a key greater than it's parent node."
                                     },
                                     "children": [],
@@ -1438,9 +1531,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 2,
+                                        "page": null,
                                         "text": "There can be no duplicate node."
                                     },
                                     "children": [],
@@ -1453,9 +1547,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 2,
+                                        "page": null,
                                         "text": "Because of the above it is more likely to be used as a data structure than a binary tree."
                                     },
                                     "children": [],
@@ -1471,9 +1566,10 @@
                                     "italic": false,
                                     "font_name": ".SFNSText-Semibold",
                                     "mapped_font_size": "middle",
-                                    "mean_size": 8.5
+                                    "mean_size": 8.5,
+                                    "max_size": 8.5375492122688
                                 },
-                                "page": 2,
+                                "page": null,
                                 "text": "Time Complexity:"
                             },
                             "children": [
@@ -1484,9 +1580,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 2,
+                                        "page": null,
                                         "text": "Indexing: Binary Search Tree: O(log n)"
                                     },
                                     "children": [],
@@ -1499,9 +1596,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 2,
+                                        "page": null,
                                         "text": "Search: Binary Search Tree: O(log n)"
                                     },
                                     "children": [],
@@ -1514,9 +1612,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 2,
+                                        "page": null,
                                         "text": "Insertion: Binary Search Tree: O(log n)"
                                     },
                                     "children": [],
@@ -1538,9 +1637,10 @@
                     "italic": false,
                     "font_name": ".SFNSDisplay-Semibold",
                     "mapped_font_size": "xlarge",
-                    "mean_size": 12.8
+                    "mean_size": 12.8,
+                    "max_size": 12.806323818403143
                 },
-                "page": 2,
+                "page": null,
                 "text": "Search Basics"
             },
             "children": [
@@ -1551,9 +1651,10 @@
                             "italic": false,
                             "font_name": ".SFNSDisplay-Semibold",
                             "mapped_font_size": "large",
-                            "mean_size": 10.6
+                            "mean_size": 10.6,
+                            "max_size": 10.671936515335972
                         },
-                        "page": 2,
+                        "page": null,
                         "text": "Breadth First Search"
                     },
                     "children": [
@@ -1564,9 +1665,10 @@
                                     "italic": false,
                                     "font_name": ".SFNSText-Semibold",
                                     "mapped_font_size": "middle",
-                                    "mean_size": 8.5
+                                    "mean_size": 8.5,
+                                    "max_size": 8.537549212268743
                                 },
-                                "page": 2,
+                                "page": null,
                                 "text": "Definition:"
                             },
                             "children": [
@@ -1577,9 +1679,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 2,
+                                        "page": null,
                                         "text": "An algorithm that searches a tree (or graph) by searching levels of the tree first, starting at the root."
                                     },
                                     "children": [],
@@ -1592,9 +1695,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 2,
+                                        "page": null,
                                         "text": "It finds every node on the same level, most often moving left to right."
                                     },
                                     "children": [],
@@ -1607,9 +1711,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 2,
+                                        "page": null,
                                         "text": "While doing this it tracks the children nodes of the nodes on the current level."
                                     },
                                     "children": [],
@@ -1622,9 +1727,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 2,
+                                        "page": null,
                                         "text": "When finished examining a level it moves to the left most node on the next level."
                                     },
                                     "children": [],
@@ -1637,9 +1743,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 2,
+                                        "page": null,
                                         "text": "The bottom-right most node is evaluated last (the node that is deepest and is farthest right of it's level)."
                                     },
                                     "children": [],
@@ -1655,9 +1762,10 @@
                                     "italic": false,
                                     "font_name": ".SFNSText-Semibold",
                                     "mapped_font_size": "middle",
-                                    "mean_size": 8.5
+                                    "mean_size": 8.5,
+                                    "max_size": 8.537549212268743
                                 },
-                                "page": 2,
+                                "page": null,
                                 "text": "What you need to know:"
                             },
                             "children": [
@@ -1668,9 +1776,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 2,
+                                        "page": null,
                                         "text": "Optimal for searching a tree that is wider than it is deep."
                                     },
                                     "children": [],
@@ -1683,9 +1792,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 2,
+                                        "page": null,
                                         "text": "Uses a queue to store information about the tree while it traverses a tree."
                                     },
                                     "children": [],
@@ -1698,9 +1808,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 2,
+                                        "page": null,
                                         "text": "Because it uses a queue it is more memory intensive than depth first search."
                                     },
                                     "children": [],
@@ -1713,9 +1824,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 2,
+                                        "page": null,
                                         "text": "The queue uses more memory because it needs to stores pointers"
                                     },
                                     "children": [],
@@ -1731,9 +1843,10 @@
                                     "italic": false,
                                     "font_name": ".SFNSText-Semibold",
                                     "mapped_font_size": "middle",
-                                    "mean_size": 8.5
+                                    "mean_size": 8.5,
+                                    "max_size": 8.537549212268743
                                 },
-                                "page": 2,
+                                "page": null,
                                 "text": "Time Complexity:"
                             },
                             "children": [
@@ -1744,9 +1857,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 2,
+                                        "page": null,
                                         "text": "Search: Breadth First Search: O(V + E)"
                                     },
                                     "children": [],
@@ -1759,9 +1873,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268772
                                         },
-                                        "page": 2,
+                                        "page": null,
                                         "text": "E is number of edges"
                                     },
                                     "children": [],
@@ -1774,9 +1889,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268772
                                         },
-                                        "page": 2,
+                                        "page": null,
                                         "text": "V is number of vertices"
                                     },
                                     "children": [],
@@ -1795,9 +1911,10 @@
                             "italic": false,
                             "font_name": ".SFNSDisplay-Semibold",
                             "mapped_font_size": "large",
-                            "mean_size": 10.6
+                            "mean_size": 10.6,
+                            "max_size": 10.671936515335972
                         },
-                        "page": 2,
+                        "page": null,
                         "text": "Depth First Search"
                     },
                     "children": [
@@ -1808,9 +1925,10 @@
                                     "italic": false,
                                     "font_name": ".SFNSText-Semibold",
                                     "mapped_font_size": "middle",
-                                    "mean_size": 8.5
+                                    "mean_size": 8.5,
+                                    "max_size": 8.537549212268772
                                 },
-                                "page": 2,
+                                "page": null,
                                 "text": "Definition:"
                             },
                             "children": [
@@ -1821,9 +1939,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268772
                                         },
-                                        "page": 2,
+                                        "page": null,
                                         "text": "An algorithm that searches a tree (or graph) by searching depth of the tree first, starting at the root."
                                     },
                                     "children": [],
@@ -1836,9 +1955,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268772
                                         },
-                                        "page": 2,
+                                        "page": null,
                                         "text": "It traverses left down a tree until it cannot go further."
                                     },
                                     "children": [],
@@ -1851,9 +1971,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268772
                                         },
-                                        "page": 2,
+                                        "page": null,
                                         "text": "Once it reaches the end of a branch it traverses back up trying the right child of nodes on that branch, and if\npossible left from the right children."
                                     },
                                     "children": [],
@@ -1866,9 +1987,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268772
                                         },
-                                        "page": 2,
+                                        "page": null,
                                         "text": "When finished examining a branch it moves to the node right of the root then tries to go left on all it's children\nuntil it reaches the bottom."
                                     },
                                     "children": [],
@@ -1881,9 +2003,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268772
                                         },
-                                        "page": 2,
+                                        "page": null,
                                         "text": "The right most node is evaluated last (the node that is right of all it's ancestors)."
                                     },
                                     "children": [],
@@ -1899,9 +2022,10 @@
                                     "italic": false,
                                     "font_name": ".SFNSText-Semibold",
                                     "mapped_font_size": "middle",
-                                    "mean_size": 8.5
+                                    "mean_size": 8.5,
+                                    "max_size": 8.537549212268772
                                 },
-                                "page": 2,
+                                "page": null,
                                 "text": "What you need to know:"
                             },
                             "children": [
@@ -1912,9 +2036,10 @@
                                             "italic": false,
                                             "font_name": "Times-Roman",
                                             "mapped_font_size": "small",
-                                            "mean_size": 7.9
+                                            "mean_size": 7.9,
+                                            "max_size": 7.999999346666678
                                         },
-                                        "page": 2,
+                                        "page": null,
                                         "text": "https://gist.github.com/TSiege/cbb0507082bb18ff7e4b#\ufb01le-the-technical-interview-cheat-sheet-md"
                                     },
                                     "children": [],
@@ -1927,9 +2052,10 @@
                                             "italic": false,
                                             "font_name": "Times-Roman",
                                             "mapped_font_size": "small",
-                                            "mean_size": 7.9
+                                            "mean_size": 7.9,
+                                            "max_size": 7.999999346666678
                                         },
-                                        "page": 2,
+                                        "page": null,
                                         "text": "3/18"
                                     },
                                     "children": [],
@@ -1942,9 +2068,10 @@
                                             "italic": false,
                                             "font_name": "Times-Roman",
                                             "mapped_font_size": "small",
-                                            "mean_size": 7.9
+                                            "mean_size": 7.9,
+                                            "max_size": 7.999999346666641
                                         },
-                                        "page": 3,
+                                        "page": null,
                                         "text": "31/10/2019"
                                     },
                                     "children": [],
@@ -1957,9 +2084,10 @@
                                             "italic": false,
                                             "font_name": "Times-Roman",
                                             "mapped_font_size": "small",
-                                            "mean_size": 7.9
+                                            "mean_size": 7.9,
+                                            "max_size": 7.999999346666755
                                         },
-                                        "page": 3,
+                                        "page": null,
                                         "text": "This is my technical interview cheat sheet. Feel free to fork it or do whatever you want with it. PLEASE let me know if there are any errors or if a\u2026"
                                     },
                                     "children": [],
@@ -1972,9 +2100,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 3,
+                                        "page": null,
                                         "text": "Optimal for searching a tree that is deeper than it is wide."
                                     },
                                     "children": [],
@@ -1987,9 +2116,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 3,
+                                        "page": null,
                                         "text": "Uses a stack to push nodes onto."
                                     },
                                     "children": [],
@@ -2002,9 +2132,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 3,
+                                        "page": null,
                                         "text": "Because a stack is LIFO it does not need to keep track of the nodes pointers and is therefore less memory\nintensive than breadth first search."
                                     },
                                     "children": [],
@@ -2017,9 +2148,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 3,
+                                        "page": null,
                                         "text": "Once it cannot go further left it begins evaluating the stack."
                                     },
                                     "children": [],
@@ -2035,9 +2167,10 @@
                                     "italic": false,
                                     "font_name": ".SFNSText-Semibold",
                                     "mapped_font_size": "middle",
-                                    "mean_size": 8.5
+                                    "mean_size": 8.5,
+                                    "max_size": 8.5375492122688
                                 },
-                                "page": 3,
+                                "page": null,
                                 "text": "Time Complexity:"
                             },
                             "children": [
@@ -2048,9 +2181,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 3,
+                                        "page": null,
                                         "text": "Search: Depth First Search: O(|E| + |V|)"
                                     },
                                     "children": [],
@@ -2063,9 +2197,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 3,
+                                        "page": null,
                                         "text": "E is number of edges"
                                     },
                                     "children": [],
@@ -2078,9 +2213,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 3,
+                                        "page": null,
                                         "text": "V is number of vertices"
                                     },
                                     "children": [],
@@ -2096,9 +2232,10 @@
                                     "italic": false,
                                     "font_name": ".SFNSText-Semibold",
                                     "mapped_font_size": "middle",
-                                    "mean_size": 8.5
+                                    "mean_size": 8.5,
+                                    "max_size": 8.5375492122688
                                 },
-                                "page": 3,
+                                "page": null,
                                 "text": "Breadth First Search Vs. Depth First Search"
                             },
                             "children": [
@@ -2109,9 +2246,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 3,
+                                        "page": null,
                                         "text": "The simple answer to this question is that it depends on the size and shape of the tree."
                                     },
                                     "children": [],
@@ -2124,9 +2262,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 3,
+                                        "page": null,
                                         "text": "For wide, shallow trees use Breadth First Search"
                                     },
                                     "children": [],
@@ -2139,9 +2278,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 3,
+                                        "page": null,
                                         "text": "For deep, narrow trees use Depth First Search"
                                     },
                                     "children": [],
@@ -2157,9 +2297,10 @@
                                     "italic": false,
                                     "font_name": ".SFNSText-Semibold",
                                     "mapped_font_size": "middle",
-                                    "mean_size": 8.5
+                                    "mean_size": 8.5,
+                                    "max_size": 8.5375492122688
                                 },
-                                "page": 3,
+                                "page": null,
                                 "text": "Nuances:"
                             },
                             "children": [
@@ -2170,9 +2311,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 3,
+                                        "page": null,
                                         "text": "Because BFS uses queues to store information about the nodes and its children, it could use more memory than is\navailable on your computer. (But you probably won't have to worry about this.)"
                                     },
                                     "children": [],
@@ -2185,9 +2327,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 3,
+                                        "page": null,
                                         "text": "If using a DFS on a tree that is very deep you might go unnecessarily deep in the search. See xkcd for more\ninformation."
                                     },
                                     "children": [],
@@ -2200,9 +2343,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 3,
+                                        "page": null,
                                         "text": "Breadth First Search tends to be a looping algorithm."
                                     },
                                     "children": [],
@@ -2215,9 +2359,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 3,
+                                        "page": null,
                                         "text": "Depth First Search tends to be a recursive algorithm."
                                     },
                                     "children": [],
@@ -2239,9 +2384,10 @@
                     "italic": false,
                     "font_name": ".SFNSDisplay-Semibold",
                     "mapped_font_size": "xlarge",
-                    "mean_size": 12.8
+                    "mean_size": 12.8,
+                    "max_size": 12.806323818403143
                 },
-                "page": 3,
+                "page": null,
                 "text": "Efficient Sorting Basics"
             },
             "children": [
@@ -2252,9 +2398,10 @@
                             "italic": false,
                             "font_name": ".SFNSDisplay-Semibold",
                             "mapped_font_size": "large",
-                            "mean_size": 10.6
+                            "mean_size": 10.6,
+                            "max_size": 10.671936515335972
                         },
-                        "page": 3,
+                        "page": null,
                         "text": "Merge Sort"
                     },
                     "children": [
@@ -2265,9 +2412,10 @@
                                     "italic": false,
                                     "font_name": ".SFNSText-Semibold",
                                     "mapped_font_size": "middle",
-                                    "mean_size": 8.5
+                                    "mean_size": 8.5,
+                                    "max_size": 8.537549212268743
                                 },
-                                "page": 3,
+                                "page": null,
                                 "text": "Definition:"
                             },
                             "children": [
@@ -2278,9 +2426,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 3,
+                                        "page": null,
                                         "text": "A comparison based sorting algorithm"
                                     },
                                     "children": [],
@@ -2293,9 +2442,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 3,
+                                        "page": null,
                                         "text": "Divides entire dataset into groups of at most two."
                                     },
                                     "children": [],
@@ -2308,9 +2458,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 3,
+                                        "page": null,
                                         "text": "Compares each number one at a time, moving the smallest number to left of the pair."
                                     },
                                     "children": [],
@@ -2323,9 +2474,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 3,
+                                        "page": null,
                                         "text": "Once all pairs sorted it then compares left most elements of the two leftmost pairs creating a sorted group of"
                                     },
                                     "children": [],
@@ -2338,9 +2490,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 3,
+                                        "page": null,
                                         "text": "four with the smallest numbers on the left and the largest ones on the right."
                                     },
                                     "children": [],
@@ -2353,9 +2506,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 3,
+                                        "page": null,
                                         "text": "This process is repeated until there is only one set."
                                     },
                                     "children": [],
@@ -2371,9 +2525,10 @@
                                     "italic": false,
                                     "font_name": ".SFNSText-Semibold",
                                     "mapped_font_size": "middle",
-                                    "mean_size": 8.5
+                                    "mean_size": 8.5,
+                                    "max_size": 8.537549212268743
                                 },
-                                "page": 3,
+                                "page": null,
                                 "text": "What you need to know:"
                             },
                             "children": [
@@ -2384,9 +2539,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 3,
+                                        "page": null,
                                         "text": "This is one of the most basic sorting algorithms."
                                     },
                                     "children": [],
@@ -2399,9 +2555,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 3,
+                                        "page": null,
                                         "text": "Know that it divides all the data into as small possible sets then compares them."
                                     },
                                     "children": [],
@@ -2417,9 +2574,10 @@
                                     "italic": false,
                                     "font_name": ".SFNSText-Semibold",
                                     "mapped_font_size": "middle",
-                                    "mean_size": 8.5
+                                    "mean_size": 8.5,
+                                    "max_size": 8.537549212268772
                                 },
-                                "page": 3,
+                                "page": null,
                                 "text": "Time Complexity:"
                             },
                             "children": [
@@ -2430,9 +2588,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268772
                                         },
-                                        "page": 3,
+                                        "page": null,
                                         "text": "Best Case Sort: Merge Sort: O(n)"
                                     },
                                     "children": [],
@@ -2445,9 +2604,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268772
                                         },
-                                        "page": 3,
+                                        "page": null,
                                         "text": "Average Case Sort: Merge Sort: O(n log n)"
                                     },
                                     "children": [],
@@ -2460,9 +2620,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268772
                                         },
-                                        "page": 3,
+                                        "page": null,
                                         "text": "Worst Case Sort: Merge Sort: O(n log n)"
                                     },
                                     "children": [],
@@ -2481,9 +2642,10 @@
                             "italic": false,
                             "font_name": ".SFNSDisplay-Semibold",
                             "mapped_font_size": "large",
-                            "mean_size": 10.6
+                            "mean_size": 10.6,
+                            "max_size": 10.671936515335972
                         },
-                        "page": 3,
+                        "page": null,
                         "text": "Quicksort"
                     },
                     "children": [
@@ -2494,9 +2656,10 @@
                                     "italic": false,
                                     "font_name": ".SFNSText-Semibold",
                                     "mapped_font_size": "middle",
-                                    "mean_size": 8.5
+                                    "mean_size": 8.5,
+                                    "max_size": 8.537549212268772
                                 },
-                                "page": 3,
+                                "page": null,
                                 "text": "Definition:"
                             },
                             "children": [
@@ -2507,9 +2670,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268772
                                         },
-                                        "page": 3,
+                                        "page": null,
                                         "text": "A comparison based sorting algorithm"
                                     },
                                     "children": [],
@@ -2522,9 +2686,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268772
                                         },
-                                        "page": 3,
+                                        "page": null,
                                         "text": "Divides entire dataset in half by selecting the middle element and putting all smaller elements to the left of the\nelement and larger ones to the right."
                                     },
                                     "children": [],
@@ -2537,9 +2702,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268772
                                         },
-                                        "page": 3,
+                                        "page": null,
                                         "text": "It repeats this process on the left side until it is comparing only two elements at which point the left side is\nsorted."
                                     },
                                     "children": [],
@@ -2552,9 +2718,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268772
                                         },
-                                        "page": 3,
+                                        "page": null,
                                         "text": "When the left side is finished sorting it performs the same operation on the right side."
                                     },
                                     "children": [],
@@ -2567,9 +2734,10 @@
                                             "italic": false,
                                             "font_name": "Times-Roman",
                                             "mapped_font_size": "small",
-                                            "mean_size": 7.9
+                                            "mean_size": 7.9,
+                                            "max_size": 7.999999346666678
                                         },
-                                        "page": 3,
+                                        "page": null,
                                         "text": "https://gist.github.com/TSiege/cbb0507082bb18ff7e4b#\ufb01le-the-technical-interview-cheat-sheet-md"
                                     },
                                     "children": [],
@@ -2582,9 +2750,10 @@
                                             "italic": false,
                                             "font_name": "Times-Roman",
                                             "mapped_font_size": "small",
-                                            "mean_size": 7.9
+                                            "mean_size": 7.9,
+                                            "max_size": 7.999999346666678
                                         },
-                                        "page": 3,
+                                        "page": null,
                                         "text": "4/18"
                                     },
                                     "children": [],
@@ -2597,9 +2766,10 @@
                                             "italic": false,
                                             "font_name": "Times-Roman",
                                             "mapped_font_size": "small",
-                                            "mean_size": 7.9
+                                            "mean_size": 7.9,
+                                            "max_size": 7.999999346666641
                                         },
-                                        "page": 4,
+                                        "page": null,
                                         "text": "31/10/2019"
                                     },
                                     "children": [],
@@ -2612,9 +2782,10 @@
                                             "italic": false,
                                             "font_name": "Times-Roman",
                                             "mapped_font_size": "small",
-                                            "mean_size": 7.9
+                                            "mean_size": 7.9,
+                                            "max_size": 7.999999346666755
                                         },
-                                        "page": 4,
+                                        "page": null,
                                         "text": "This is my technical interview cheat sheet. Feel free to fork it or do whatever you want with it. PLEASE let me know if there are any errors or if a\u2026"
                                     },
                                     "children": [],
@@ -2627,9 +2798,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 4,
+                                        "page": null,
                                         "text": "Computer architecture favors the quicksort process."
                                     },
                                     "children": [],
@@ -2645,9 +2817,10 @@
                                     "italic": false,
                                     "font_name": ".SFNSText-Semibold",
                                     "mapped_font_size": "middle",
-                                    "mean_size": 8.5
+                                    "mean_size": 8.5,
+                                    "max_size": 8.5375492122688
                                 },
-                                "page": 4,
+                                "page": null,
                                 "text": "What you need to know:"
                             },
                             "children": [
@@ -2658,9 +2831,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 4,
+                                        "page": null,
                                         "text": "While it has the same Big O as (or worse in some cases) many other sorting algorithms it is often faster in practice\nthan many other sorting algorithms, such as merge sort."
                                     },
                                     "children": [],
@@ -2673,9 +2847,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 4,
+                                        "page": null,
                                         "text": "Know that it halves the data set by the average continuously until all the information is sorted."
                                     },
                                     "children": [],
@@ -2691,9 +2866,10 @@
                                     "italic": false,
                                     "font_name": ".SFNSText-Semibold",
                                     "mapped_font_size": "middle",
-                                    "mean_size": 8.5
+                                    "mean_size": 8.5,
+                                    "max_size": 8.5375492122688
                                 },
-                                "page": 4,
+                                "page": null,
                                 "text": "Time Complexity:"
                             },
                             "children": [
@@ -2704,9 +2880,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 4,
+                                        "page": null,
                                         "text": "Best Case Sort: Merge Sort: O(n)"
                                     },
                                     "children": [],
@@ -2719,9 +2896,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 4,
+                                        "page": null,
                                         "text": "Average Case Sort: Merge Sort: O(n log n)"
                                     },
                                     "children": [],
@@ -2734,9 +2912,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 4,
+                                        "page": null,
                                         "text": "Worst Case Sort: Merge Sort: O(n^2)"
                                     },
                                     "children": [],
@@ -2755,9 +2934,10 @@
                             "italic": false,
                             "font_name": ".SFNSDisplay-Semibold",
                             "mapped_font_size": "large",
-                            "mean_size": 10.6
+                            "mean_size": 10.6,
+                            "max_size": 10.671936515335915
                         },
-                        "page": 4,
+                        "page": null,
                         "text": "Bubble Sort"
                     },
                     "children": [
@@ -2768,9 +2948,10 @@
                                     "italic": false,
                                     "font_name": ".SFNSText-Semibold",
                                     "mapped_font_size": "middle",
-                                    "mean_size": 8.5
+                                    "mean_size": 8.5,
+                                    "max_size": 8.5375492122688
                                 },
-                                "page": 4,
+                                "page": null,
                                 "text": "Definition:"
                             },
                             "children": [
@@ -2781,9 +2962,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 4,
+                                        "page": null,
                                         "text": "A comparison based sorting algorithm"
                                     },
                                     "children": [],
@@ -2796,9 +2978,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 4,
+                                        "page": null,
                                         "text": "It iterates left to right comparing every couplet, moving the smaller element to the left."
                                     },
                                     "children": [],
@@ -2811,9 +2994,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 4,
+                                        "page": null,
                                         "text": "It repeats this process until it no longer moves an element to the left."
                                     },
                                     "children": [],
@@ -2829,9 +3013,10 @@
                                     "italic": false,
                                     "font_name": ".SFNSText-Semibold",
                                     "mapped_font_size": "middle",
-                                    "mean_size": 8.5
+                                    "mean_size": 8.5,
+                                    "max_size": 8.5375492122688
                                 },
-                                "page": 4,
+                                "page": null,
                                 "text": "What you need to know:"
                             },
                             "children": [
@@ -2842,9 +3027,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 4,
+                                        "page": null,
                                         "text": "While it is very simple to implement, it is the least efficient of these three sorting methods."
                                     },
                                     "children": [],
@@ -2857,9 +3043,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 4,
+                                        "page": null,
                                         "text": "Know that it moves one space to the right comparing two elements at a time and moving the smaller on to left."
                                     },
                                     "children": [],
@@ -2875,9 +3062,10 @@
                                     "italic": false,
                                     "font_name": ".SFNSText-Semibold",
                                     "mapped_font_size": "middle",
-                                    "mean_size": 8.5
+                                    "mean_size": 8.5,
+                                    "max_size": 8.537549212268743
                                 },
-                                "page": 4,
+                                "page": null,
                                 "text": "Time Complexity:"
                             },
                             "children": [
@@ -2888,9 +3076,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 4,
+                                        "page": null,
                                         "text": "Best Case Sort: Merge Sort: O(n)"
                                     },
                                     "children": [],
@@ -2903,9 +3092,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 4,
+                                        "page": null,
                                         "text": "Average Case Sort: Merge Sort: O(n^2)"
                                     },
                                     "children": [],
@@ -2918,9 +3108,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 4,
+                                        "page": null,
                                         "text": "Worst Case Sort: Merge Sort: O(n^2)"
                                     },
                                     "children": [],
@@ -2936,9 +3127,10 @@
                                     "italic": false,
                                     "font_name": ".SFNSText-Semibold",
                                     "mapped_font_size": "middle",
-                                    "mean_size": 8.5
+                                    "mean_size": 8.5,
+                                    "max_size": 8.537549212268743
                                 },
-                                "page": 4,
+                                "page": null,
                                 "text": "Merge Sort Vs. Quicksort"
                             },
                             "children": [
@@ -2949,9 +3141,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 4,
+                                        "page": null,
                                         "text": "Quicksort is likely faster in practice."
                                     },
                                     "children": [],
@@ -2964,9 +3157,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 4,
+                                        "page": null,
                                         "text": "Merge Sort divides the set into the smallest possible groups immediately then reconstructs the incrementally as it"
                                     },
                                     "children": [],
@@ -2979,9 +3173,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 4,
+                                        "page": null,
                                         "text": "sorts the groupings."
                                     },
                                     "children": [],
@@ -2994,9 +3189,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 4,
+                                        "page": null,
                                         "text": "Quicksort continually divides the set by the average, until the set is recursively sorted."
                                     },
                                     "children": [],
@@ -3018,9 +3214,10 @@
                     "italic": false,
                     "font_name": ".SFNSDisplay-Semibold",
                     "mapped_font_size": "xlarge",
-                    "mean_size": 12.8
+                    "mean_size": 12.8,
+                    "max_size": 12.806323818403143
                 },
-                "page": 4,
+                "page": null,
                 "text": "Basic Types of Algorithms"
             },
             "children": [
@@ -3031,9 +3228,10 @@
                             "italic": false,
                             "font_name": ".SFNSDisplay-Semibold",
                             "mapped_font_size": "large",
-                            "mean_size": 10.6
+                            "mean_size": 10.6,
+                            "max_size": 10.671936515335972
                         },
-                        "page": 4,
+                        "page": null,
                         "text": "Recursive Algorithms"
                     },
                     "children": [
@@ -3044,9 +3242,10 @@
                                     "italic": false,
                                     "font_name": ".SFNSText-Semibold",
                                     "mapped_font_size": "middle",
-                                    "mean_size": 8.5
+                                    "mean_size": 8.5,
+                                    "max_size": 8.537549212268743
                                 },
-                                "page": 4,
+                                "page": null,
                                 "text": "Definition:"
                             },
                             "children": [
@@ -3057,9 +3256,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268772
                                         },
-                                        "page": 4,
+                                        "page": null,
                                         "text": "An algorithm that calls itself in its definition."
                                     },
                                     "children": [],
@@ -3072,9 +3272,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268772
                                         },
-                                        "page": 4,
+                                        "page": null,
                                         "text": "Recursive case a conditional statement that is used to trigger the recursion."
                                     },
                                     "children": [],
@@ -3087,9 +3288,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268772
                                         },
-                                        "page": 4,
+                                        "page": null,
                                         "text": "Base case a conditional statement that is used to break the recursion."
                                     },
                                     "children": [],
@@ -3105,9 +3307,10 @@
                                     "italic": false,
                                     "font_name": ".SFNSText-Semibold",
                                     "mapped_font_size": "middle",
-                                    "mean_size": 8.5
+                                    "mean_size": 8.5,
+                                    "max_size": 8.537549212268772
                                 },
-                                "page": 4,
+                                "page": null,
                                 "text": "What you need to know:"
                             },
                             "children": [],
@@ -3120,9 +3323,10 @@
                                     "italic": false,
                                     "font_name": ".SFNSText-Semibold",
                                     "mapped_font_size": "middle",
-                                    "mean_size": 8.5
+                                    "mean_size": 8.5,
+                                    "max_size": 8.537549212268772
                                 },
-                                "page": 4,
+                                "page": null,
                                 "text": "Stack level too deep and stack overflow."
                             },
                             "children": [
@@ -3133,9 +3337,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268772
                                         },
-                                        "page": 4,
+                                        "page": null,
                                         "text": "If you've seen either of these from a recursive algorithm, you messed up."
                                     },
                                     "children": [],
@@ -3148,9 +3353,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268772
                                         },
-                                        "page": 4,
+                                        "page": null,
                                         "text": "It means that your base case was never triggered because it was faulty or the problem was so massive you ran\nout of alloted memory."
                                     },
                                     "children": [],
@@ -3163,9 +3369,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268772
                                         },
-                                        "page": 4,
+                                        "page": null,
                                         "text": "Knowing whether or not you will reach a base case is integral to correctly using recursion."
                                     },
                                     "children": [],
@@ -3178,9 +3385,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268772
                                         },
-                                        "page": 4,
+                                        "page": null,
                                         "text": "Often used in Depth First Search"
                                     },
                                     "children": [],
@@ -3199,9 +3407,10 @@
                             "italic": false,
                             "font_name": ".SFNSDisplay-Semibold",
                             "mapped_font_size": "large",
-                            "mean_size": 10.6
+                            "mean_size": 10.6,
+                            "max_size": 10.671936515335958
                         },
-                        "page": 4,
+                        "page": null,
                         "text": "Iterative Algorithms"
                     },
                     "children": [
@@ -3212,9 +3421,10 @@
                                     "italic": false,
                                     "font_name": ".SFNSText-Semibold",
                                     "mapped_font_size": "middle",
-                                    "mean_size": 8.5
+                                    "mean_size": 8.5,
+                                    "max_size": 8.537549212268772
                                 },
-                                "page": 4,
+                                "page": null,
                                 "text": "Definition:"
                             },
                             "children": [
@@ -3225,9 +3435,10 @@
                                             "italic": false,
                                             "font_name": "Times-Roman",
                                             "mapped_font_size": "small",
-                                            "mean_size": 7.9
+                                            "mean_size": 7.9,
+                                            "max_size": 7.999999346666678
                                         },
-                                        "page": 4,
+                                        "page": null,
                                         "text": "https://gist.github.com/TSiege/cbb0507082bb18ff7e4b#\ufb01le-the-technical-interview-cheat-sheet-md"
                                     },
                                     "children": [],
@@ -3240,9 +3451,10 @@
                                             "italic": false,
                                             "font_name": "Times-Roman",
                                             "mapped_font_size": "small",
-                                            "mean_size": 7.9
+                                            "mean_size": 7.9,
+                                            "max_size": 7.999999346666678
                                         },
-                                        "page": 4,
+                                        "page": null,
                                         "text": "5/18"
                                     },
                                     "children": [],
@@ -3255,9 +3467,10 @@
                                             "italic": false,
                                             "font_name": "Times-Roman",
                                             "mapped_font_size": "small",
-                                            "mean_size": 7.9
+                                            "mean_size": 7.9,
+                                            "max_size": 7.999999346666641
                                         },
-                                        "page": 5,
+                                        "page": null,
                                         "text": "31/10/2019"
                                     },
                                     "children": [],
@@ -3270,9 +3483,10 @@
                                             "italic": false,
                                             "font_name": "Times-Roman",
                                             "mapped_font_size": "small",
-                                            "mean_size": 7.9
+                                            "mean_size": 7.9,
+                                            "max_size": 7.999999346666755
                                         },
-                                        "page": 5,
+                                        "page": null,
                                         "text": "This is my technical interview cheat sheet. Feel free to fork it or do whatever you want with it. PLEASE let me know if there are any errors or if a\u2026"
                                     },
                                     "children": [],
@@ -3285,9 +3499,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 5,
+                                        "page": null,
                                         "text": "An algorithm that is called repeatedly but for a finite number of times, each time being a single iteration."
                                     },
                                     "children": [],
@@ -3300,9 +3515,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 5,
+                                        "page": null,
                                         "text": "Often used to move incrementally through a data set."
                                     },
                                     "children": [],
@@ -3318,9 +3534,10 @@
                                     "italic": false,
                                     "font_name": ".SFNSText-Semibold",
                                     "mapped_font_size": "middle",
-                                    "mean_size": 8.5
+                                    "mean_size": 8.5,
+                                    "max_size": 8.5375492122688
                                 },
-                                "page": 5,
+                                "page": null,
                                 "text": "What you need to know:"
                             },
                             "children": [
@@ -3331,9 +3548,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 5,
+                                        "page": null,
                                         "text": "Generally you will see iteration as loops, for, while, and until statements."
                                     },
                                     "children": [],
@@ -3346,9 +3564,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 5,
+                                        "page": null,
                                         "text": "Think of iteration as moving one at a time through a set."
                                     },
                                     "children": [],
@@ -3361,9 +3580,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 5,
+                                        "page": null,
                                         "text": "Often used to move through an array."
                                     },
                                     "children": [],
@@ -3379,9 +3599,10 @@
                                     "italic": false,
                                     "font_name": ".SFNSText-Semibold",
                                     "mapped_font_size": "middle",
-                                    "mean_size": 8.5
+                                    "mean_size": 8.5,
+                                    "max_size": 8.5375492122688
                                 },
-                                "page": 5,
+                                "page": null,
                                 "text": "Recursion Vs. Iteration"
                             },
                             "children": [
@@ -3392,9 +3613,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 5,
+                                        "page": null,
                                         "text": "The differences between recursion and iteration can be confusing to distinguish since both can be used to implement\nthe other. But know that,"
                                     },
                                     "children": [],
@@ -3407,9 +3629,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 5,
+                                        "page": null,
                                         "text": "Recursion is, usually, more expressive and easier to implement."
                                     },
                                     "children": [],
@@ -3422,9 +3645,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 5,
+                                        "page": null,
                                         "text": "Iteration uses less memory."
                                     },
                                     "children": [],
@@ -3437,9 +3661,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 5,
+                                        "page": null,
                                         "text": "Functional languages tend to use recursion. (i.e. Haskell)"
                                     },
                                     "children": [],
@@ -3452,9 +3677,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 5,
+                                        "page": null,
                                         "text": "Imperative languages tend to use iteration. (i.e. Ruby)"
                                     },
                                     "children": [],
@@ -3467,9 +3693,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.5375492122688
                                         },
-                                        "page": 5,
+                                        "page": null,
                                         "text": "Check out this Stack Overflow post for more info."
                                     },
                                     "children": [],
@@ -3485,9 +3712,10 @@
                                     "italic": false,
                                     "font_name": ".SFNSText-Semibold",
                                     "mapped_font_size": "middle",
-                                    "mean_size": 8.5
+                                    "mean_size": 8.5,
+                                    "max_size": 8.5375492122688
                                 },
-                                "page": 5,
+                                "page": null,
                                 "text": "Pseudo Code of Moving Through an Array (this is why iteration is used for this)"
                             },
                             "children": [
@@ -3498,9 +3726,10 @@
                                             "italic": false,
                                             "font_name": "Menlo-Regular",
                                             "mapped_font_size": "small",
-                                            "mean_size": 7.2
+                                            "mean_size": 7.2,
+                                            "max_size": 7.25691704386719
                                         },
-                                        "page": 5,
+                                        "page": null,
                                         "text": "Recursion                         | Iteration \n----------------------------------|---------------------------------- \nrecursive method (array, n)       | iterative method (array) \n  if array[n] is not nil          |   for n from 0 to size of array \n    print array[n]                |     print(array[n]) \n    recursive method(array, n+1)  | \n  else                            | \n    exit loop                     |"
                                     },
                                     "children": [],
@@ -3519,9 +3748,10 @@
                             "italic": false,
                             "font_name": ".SFNSDisplay-Semibold",
                             "mapped_font_size": "large",
-                            "mean_size": 10.6
+                            "mean_size": 10.6,
+                            "max_size": 10.671936515335972
                         },
-                        "page": 5,
+                        "page": null,
                         "text": "Greedy Algorithm"
                     },
                     "children": [
@@ -3532,9 +3762,10 @@
                                     "italic": false,
                                     "font_name": ".SFNSText-Semibold",
                                     "mapped_font_size": "middle",
-                                    "mean_size": 8.5
+                                    "mean_size": 8.5,
+                                    "max_size": 8.537549212268743
                                 },
-                                "page": 5,
+                                "page": null,
                                 "text": "Definition:"
                             },
                             "children": [
@@ -3545,9 +3776,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 5,
+                                        "page": null,
                                         "text": "An algorithm that, while executing, selects only the information that meets a certain criteria."
                                     },
                                     "children": [],
@@ -3560,9 +3792,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 5,
+                                        "page": null,
                                         "text": "The general five components, taken from Wikipedia:"
                                     },
                                     "children": [],
@@ -3575,9 +3808,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 5,
+                                        "page": null,
                                         "text": "A candidate set, from which a solution is created."
                                     },
                                     "children": [],
@@ -3590,9 +3824,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 5,
+                                        "page": null,
                                         "text": "A selection function, which chooses the best candidate to be added to the solution."
                                     },
                                     "children": [],
@@ -3605,9 +3840,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 5,
+                                        "page": null,
                                         "text": "A feasibility function, that is used to determine if a candidate can be used to contribute to a solution."
                                     },
                                     "children": [],
@@ -3620,9 +3856,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 5,
+                                        "page": null,
                                         "text": "An objective function, which assigns a value to a solution, or a partial solution."
                                     },
                                     "children": [],
@@ -3635,9 +3872,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 5,
+                                        "page": null,
                                         "text": "A solution function, which will indicate when we have discovered a complete solution."
                                     },
                                     "children": [],
@@ -3653,9 +3891,10 @@
                                     "italic": false,
                                     "font_name": ".SFNSText-Semibold",
                                     "mapped_font_size": "middle",
-                                    "mean_size": 8.5
+                                    "mean_size": 8.5,
+                                    "max_size": 8.537549212268743
                                 },
-                                "page": 5,
+                                "page": null,
                                 "text": "What you need to know:"
                             },
                             "children": [
@@ -3666,9 +3905,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268743
                                         },
-                                        "page": 5,
+                                        "page": null,
                                         "text": "Used to find the expedient, though non-optimal, solution for a given problem."
                                     },
                                     "children": [],
@@ -3681,9 +3921,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268772
                                         },
-                                        "page": 5,
+                                        "page": null,
                                         "text": "Generally used on sets of data where only a small proportion of the information evaluated meets the desired result."
                                     },
                                     "children": [],
@@ -3696,9 +3937,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268772
                                         },
-                                        "page": 5,
+                                        "page": null,
                                         "text": "Often a greedy algorithm can help reduce the Big O of an algorithm."
                                     },
                                     "children": [],
@@ -3714,9 +3956,10 @@
                                     "italic": false,
                                     "font_name": ".SFNSText-Semibold",
                                     "mapped_font_size": "middle",
-                                    "mean_size": 8.5
+                                    "mean_size": 8.5,
+                                    "max_size": 8.537549212268772
                                 },
-                                "page": 5,
+                                "page": null,
                                 "text": "Pseudo Code of a Greedy Algorithm to Find Largest Difference of any Two Numbers in an Array."
                             },
                             "children": [
@@ -3727,9 +3970,10 @@
                                             "italic": false,
                                             "font_name": "Menlo-Regular",
                                             "mapped_font_size": "small",
-                                            "mean_size": 7.2
+                                            "mean_size": 7.2,
+                                            "max_size": 7.25691704386719
                                         },
-                                        "page": 5,
+                                        "page": null,
                                         "text": "greedy algorithm (array) \n  var largest difference = 0 \n  var new difference = find next difference (array[n], array[n+1]) \n  largest difference = new difference if new difference is > largest difference \n  repeat above two steps until all differences have been found \n  return largest difference"
                                     },
                                     "children": [],
@@ -3742,9 +3986,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "middle",
-                                            "mean_size": 8.5
+                                            "mean_size": 8.5,
+                                            "max_size": 8.537549212268772
                                         },
-                                        "page": 5,
+                                        "page": null,
                                         "text": "This algorithm never needed to compare all the differences to one another, saving it an entire iteration."
                                     },
                                     "children": [],
@@ -3757,9 +4002,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "xsmall",
-                                            "mean_size": 6.4
+                                            "mean_size": 6.4,
+                                            "max_size": 6.403161909201579
                                         },
-                                        "page": 5,
+                                        "page": null,
                                         "text": "Author"
                                     },
                                     "children": [],
@@ -3772,9 +4018,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText-Semibold",
                                             "mapped_font_size": "xsmall",
-                                            "mean_size": 6.4
+                                            "mean_size": 6.4,
+                                            "max_size": 6.403161909201579
                                         },
-                                        "page": 5,
+                                        "page": null,
                                         "text": "Owner"
                                     },
                                     "children": [],
@@ -3787,9 +4034,10 @@
                                             "italic": false,
                                             "font_name": ".SFNSText",
                                             "mapped_font_size": "small",
-                                            "mean_size": 7.4
+                                            "mean_size": 7.4,
+                                            "max_size": 7.470355560735172
                                         },
-                                        "page": 5,
+                                        "page": null,
                                         "text": "TSiege commented on 2 May 2014"
                                     },
                                     "children": [],
@@ -3802,9 +4050,10 @@
                                             "italic": false,
                                             "font_name": "Times-Roman",
                                             "mapped_font_size": "small",
-                                            "mean_size": 7.9
+                                            "mean_size": 7.9,
+                                            "max_size": 7.999999346666678
                                         },
-                                        "page": 5,
+                                        "page": null,
                                         "text": "https://gist.github.com/TSiege/cbb0507082bb18ff7e4b#\ufb01le-the-technical-interview-cheat-sheet-md"
                                     },
                                     "children": [],
@@ -3817,9 +4066,10 @@
                                             "italic": false,
                                             "font_name": "Times-Roman",
                                             "mapped_font_size": "small",
-                                            "mean_size": 7.9
+                                            "mean_size": 7.9,
+                                            "max_size": 7.999999346666678
                                         },
-                                        "page": 5,
+                                        "page": null,
                                         "text": "6/18"
                                     },
                                     "children": [],

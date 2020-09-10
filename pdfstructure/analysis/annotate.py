@@ -46,14 +46,15 @@ class StyleAnnotator:
 
                 font_name = fonts.most_common(1)[0][0]
                 mean_size = truncate(statistics.mean(sizes), 1)
+                max_size = max(sizes)
                 # todo currently empty boxes are forwarded.. with holding only \n
                 mapped_size = self._sizeMapper.translate(target_enum=TextSize,
-                                                         value=max(sizes))
+                                                         value=max_size)
                 s = Style(bold="bold" in str(font_name.lower()),
                           italic="italic" in font_name.lower(),
                           font_name=font_name,
                           mapped_font_size=mapped_size,
-                          mean_size=mean_size)
+                          mean_size=mean_size, max_size=max_size)
 
                 # todo, split lines within LTTextBoxHorizontal
                 #  split using style as differentiator

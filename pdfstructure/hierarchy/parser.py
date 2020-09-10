@@ -5,7 +5,7 @@ from pdfminer.layout import LTTextContainer
 
 from pdfstructure.analysis.annotate import StyleAnnotator
 from pdfstructure.analysis.sizemapper import PivotLogMapper
-from pdfstructure.analysis.styledistribution import count_sizes
+from pdfstructure.analysis.styledistribution import count_sizes, StyleDistribution
 from pdfstructure.hierarchy.detectheader import header_detector
 from pdfstructure.hierarchy.headercompare import get_default_sub_header_conditions
 from pdfstructure.model.document import TextElement, Section, StructuredPdfDocument, DanglingTextSection
@@ -33,14 +33,15 @@ class HierarchyParser:
         elements_with_style = style_annotator.process(source.read())
 
         # - create nested document structure on the fly
-        structured_elements = self.create_hierarchy(elements_with_style)
+        structured_elements = self.create_hierarchy(elements_with_style, distribution)
 
         # 3. create wrapped document and capture some metadata
         pdf_document = StructuredPdfDocument(elements=structured_elements, style_info=distribution)
         enrich_metadata(pdf_document, source)
         return pdf_document
 
-    def create_hierarchy(self, element_gen: Generator[TextElement, LTTextContainer, None]) -> List[Section]:
+    def create_hierarchy(self, element_gen: Generator[TextElement, LTTextContainer, None],
+                         style_distribution: StyleDistribution) -> List[Section]:
         """
         Takes incoming flat list of paragraphs and creates nested natural order hierarchy.
 
@@ -69,7 +70,7 @@ class HierarchyParser:
         for element in element_gen:
             # if line is header
             style = element.style
-            if header_detector(element):
+            if header_detector(element, style_distribution):
                 child = Section(element)
                 header_size = style.mapped_font_size
 

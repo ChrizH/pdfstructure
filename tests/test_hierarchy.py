@@ -1,10 +1,13 @@
 from pathlib import Path
 from unittest import TestCase
 
+import pdftotext
+from pdfminer.high_level import extract_text
+
 from pdfstructure.hierarchy.parser import HierarchyParser
 from pdfstructure.model.document import DanglingTextSection
+from pdfstructure.printer import PrettyStringPrinter
 from pdfstructure.source import FileSource
-from tests import helper
 
 
 class TestHierarchy(TestCase):
@@ -16,46 +19,82 @@ class TestHierarchy(TestCase):
     same_size_bold_header = str(Path("resources/SameSize_BoldTitle.pdf").absolute())
     same_size_enum_header = str(Path("resources/SameSize_EnumeratedTitle.pdf").absolute())
 
+    parser = HierarchyParser()
+
     def test_no_hierarchy_detected(self):
-        parser = HierarchyParser()
-        pdf = parser.parse_pdf(FileSource(self.same_style_doc))
+        pdf = self.parser.parse_pdf(FileSource(self.same_style_doc))
         self.assertEqual(4, len(pdf.elements[0].children))
 
         self.assertIsInstance(pdf.elements[0], DanglingTextSection)
 
     def test_hierarchy_bold_title(self):
-        parser = HierarchyParser()
-        pdf = parser.parse_pdf(FileSource(self.same_size_bold_header))
+        pdf = self.parser.parse_pdf(FileSource(self.same_size_bold_header))
         self.assertEqual(2, len(pdf.elements))
         self.assertEqual("Lorem Ipsum.", pdf.elements[0].heading.text)
         self.assertEqual("Appendix", pdf.elements[1].heading.text)
 
     def test_hierarchy_pdf_parser(self):
         path = self.straight_forward_doc
-        parser = HierarchyParser()
         source = FileSource(path)
-        pdf = parser.parse_pdf(source)
+        pdf = self.parser.parse_pdf(source)
         self.assertEqual(9, len(pdf.elements))
         self.assertEqual("Data Structure Basics", pdf.elements[5].heading.text)
 
     def test_grouping(self):
         test_doc = self.nested_doc_bold_title
-        parser = HierarchyParser()
-        lines_gen = helper.generate_annotated_lines(test_doc)
-        structured = parser.create_hierarchy(lines_gen)
-        self.assertEqual(1, structured.__len__())
-        self.assertEqual(12, structured[0].children.__len__())
-        self.assertEqual("Outdoorpädagogik", structured[0].heading.text)
-        self.assertEqual("„Fange den Stock“", structured[0].children[0].heading.text)
+        doc = self.parser.parse_pdf(FileSource(test_doc))
+        self.assertEqual(1, doc.elements.__len__())
+        self.assertEqual(13, doc.elements[0].children.__len__())
+        self.assertEqual("Outdoorpädagogik", doc.elements[0].heading.text)
+        self.assertEqual("„Fange den Stock“", doc.elements[0].children[0].heading.text)
 
     def test_grouping_bold_key_and_size(self):
-        parser = HierarchyParser()
-        elements_gen = helper.generate_annotated_lines(self.straight_forward_doc)
-        elements = parser.create_hierarchy(elements_gen)
-        self.assertEqual(len(elements), 9)
+        doc = self.parser.parse_pdf(FileSource(self.straight_forward_doc))
+        self.assertEqual(len(doc.elements), 9)
 
     def test_grouping_bold_columns(self):
+        doc = self.parser.parse_pdf(FileSource(self.doc_with_columns))
+        self.assertEqual("Xtrackers MSCI World Information Technology UCITS ETF 1C", doc.elements[1].heading.text)
+
+
+class TestComapreFrameworks(TestCase):
+    def skip_test_pdftotext(self):
+        path = TestHierarchy.straight_forward_doc
+
+        with open(path, "rb") as f:
+            pdf = pdftotext.PDF(f)
+
+        print("\n\n".join(pdf))
+
+    def skip_test_pdfminer_high_level(self):
+        text = extract_text(TestHierarchy.straight_forward_doc, laparams=None)
+        print(text)
+
+    def skip_test_pdfminer(self):
+        from io import StringIO
+
+        from pdfminer.converter import TextConverter
+        from pdfminer.layout import LAParams
+        from pdfminer.pdfdocument import PDFDocument
+        from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
+        from pdfminer.pdfpage import PDFPage
+        from pdfminer.pdfparser import PDFParser
+
+        output_string = StringIO()
+        with open(TestHierarchy.straight_forward_doc, 'rb') as in_file:
+            parser = PDFParser(in_file)
+            doc = PDFDocument(parser)
+            rsrcmgr = PDFResourceManager()
+            device = TextConverter(rsrcmgr, output_string, laparams=LAParams())
+            interpreter = PDFPageInterpreter(rsrcmgr, device)
+            for page in PDFPage.create_pages(doc):
+                interpreter.process_page(page)
+
+        print(output_string.getvalue())
+
+    def skip_test_pdfstructure(self):
+        path = TestHierarchy.straight_forward_doc
         parser = HierarchyParser()
-        elements_gen = helper.generate_annotated_lines(self.doc_with_columns)
-        elements = parser.create_hierarchy(elements_gen)
-        self.assertEqual("Xtrackers MSCI World Information Technology UCITS ETF 1C", elements[1].heading.text)
+        source = FileSource(path)
+        pdf = parser.parse_pdf(source)
+        print(PrettyStringPrinter().print(pdf))

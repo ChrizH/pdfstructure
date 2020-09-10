@@ -28,7 +28,7 @@ def get_default_sub_header_conditions():
     _isSubHeader.add_condition(condition_boldness)
     _isSubHeader.add_condition(condition_h1_enum_h2_not)
     _isSubHeader.add_condition(condition_h2_extends_h1)
-    # _isSubHeader.add_condition(condition_h1_slightly_bigger_h2)
+    _isSubHeader.add_condition(condition_h1_slightly_bigger_h2)
     return _isSubHeader
 
 
@@ -71,7 +71,7 @@ def condition_h1_enum_h2_not(h1: Section, h2: Section):
     """
     if h2.heading.style.bold and not h1.heading.style.bold:
         return False
-    #if h2.heading.style.font_name != h1.heading.style.font_name:
+    # if h2.heading.style.font_name != h1.heading.style.font_name:
     #    return False
 
     h1start = next(word_generator(h1.heading._data))
@@ -80,11 +80,12 @@ def condition_h1_enum_h2_not(h1: Section, h2: Section):
 
 
 def condition_h1_slightly_bigger_h2(h1: Section, h2: Section):
-    """
+    """s
     Style analysis maps found sizes to a predefined enum (xsmall, small, large, xlarge).
     but sometimes it makes sense to look deeper.
     @param h1:
     @param h2:
     @return:
     """
-    return h2.heading.style.mean_size < h1.heading.style.mean_size
+    return h1.heading.style.mapped_font_size == h2.heading.style.mapped_font_size \
+           and h1.heading.style.max_size - h2.heading.style.max_size > 1.0
