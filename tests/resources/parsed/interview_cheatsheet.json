@@ -13,7 +13,8 @@
             },
             "_body_size": 8.53,
             "_min_found_size": 6.4,
-            "_max_found_size": 12.8
+            "_max_found_size": 12.8,
+            "_line_margin": 0.5
         },
         "filename": "interview_cheatsheet.pdf"
     },

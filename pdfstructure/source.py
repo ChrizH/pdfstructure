@@ -24,7 +24,7 @@ class Source:
         """
         pass
 
-    def read(self) -> Generator[LTTextContainer, Any, None]:
+    def read(self, *args, **kwargs) -> Generator[LTTextContainer, Any, None]:
         """
         yields flat list of paragraphs within a document.
         @param args:
@@ -35,7 +35,8 @@ class Source:
 
 
 class FileSource(Source):
-    def __init__(self, file_path: str, page_numbers=None, la_params=LAParams(boxes_flow=None, detect_vertical=False)):
+    def __init__(self, file_path: str, page_numbers=None,
+                 la_params=LAParams(boxes_flow=None, detect_vertical=False, line_margin=0.3)):
         super().__init__(uri=file_path)
         self.page_numbers = page_numbers
         self.la_params = la_params
@@ -88,14 +89,15 @@ class FileSource(Source):
             else:
                 prior = stack.pop()
                 stack.append(size)
-                if prior - size > 1:
+                diff = abs(prior - size)
+                if diff != 0 and max(prior, size) / min(prior, size) > 1.15:
                     # break paragraph
                     yield wrapper
                     wrapper = LTTextBoxHorizontal()
                 wrapper.add(line)
         yield wrapper
 
-    def read(self) -> Generator[LTTextContainer, Any, None]:
+    def read(self, override_la_params=None, override_page_numbers=None) -> Generator[LTTextContainer, Any, None]:
         pNumber = 0
         # disable boxes_flow, style based hierarchy detection is based on purely flat list of paragraphs
         # params = LAParams(boxes_flow=None, detect_vertical=False)  # setting for easy doc
@@ -105,12 +107,14 @@ class FileSource(Source):
         #   do some sort of layout analyis, if there are many boxes vertically next to each other, use layout analysis
         #   - column type
         #   - straight forward document
-        for page_layout in extract_pages(self.uri, laparams=self.la_params, page_numbers=self.page_numbers):
+        for page_layout in extract_pages(self.uri,
+                                         laparams=self.la_params if not override_la_params else override_la_params,
+                                         page_numbers=self.page_numbers if not override_page_numbers else override_page_numbers):
             for element in page_layout:
                 element.page = pNumber
                 if isinstance(element, LTTextContainer):
                     yield from self.split_boxes_by_style(element)
-                    # yield element
+                    #yield element
                 elif isinstance(element, LTFigure):
                     yield from self.__handle_lt_figure(element)
             pNumber += 1

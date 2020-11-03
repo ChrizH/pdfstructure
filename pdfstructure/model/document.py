@@ -59,6 +59,29 @@ class Section:
     def append_children(self, section):
         self.children.append(section)
 
+    @property
+    def top_level_content(self):
+        """
+        Paragraphs that belong directly to section, nested children are skipped.
+        Example:
+            This is a Header
+                paragraph 1
+                paragraph 2
+                This is a subheader
+                    paragraph 3
+        Returns:
+            [paragraph 1, paragraph 2]
+
+        @return: List[Section]
+        """
+        child: Section
+        content = []
+        for child in self.children:
+            if child.children:
+                continue
+            content.append(child)
+        return content
+
     @classmethod
     def from_json(cls, data: dict):
         children = list(map(Section.from_json, data.get("children")))
