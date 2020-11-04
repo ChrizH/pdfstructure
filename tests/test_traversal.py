@@ -2,7 +2,8 @@ from pathlib import Path
 from unittest import TestCase
 
 from pdfstructure.hierarchy.parser import HierarchyParser
-from pdfstructure.hierarchy.traversal import traverse_in_order, traverse_level_order, get_document_depth
+from pdfstructure.hierarchy.traversal import traverse_in_order, traverse_level_order, get_document_depth, \
+    traverse_inorder_sections_with_content
 from pdfstructure.model.document import DanglingTextSection
 from pdfstructure.source import FileSource
 
@@ -75,3 +76,7 @@ class TestDocumentTraversal(TestCase):
         self.assertEqual(5, len(elements))
         self.assertIsInstance(elements[0], DanglingTextSection)
         self.assertEqual("Lorem Ipsum.", elements[1].heading_text)
+
+    def test_retrieve_sections_with_content(self):
+        elements = [element for element in traverse_inorder_sections_with_content(self.test_doc)]
+        print(elements)

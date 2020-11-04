@@ -12,6 +12,23 @@ def get_document_depth(document: StructuredPdfDocument):
     return max(set([section.level for section in traverse_in_order(document)])) + 1
 
 
+def traverse_inorder_sections_with_content(document: StructuredPdfDocument) -> Generator[
+    tuple, StructuredPdfDocument, None]:
+    """
+    Traverse section by section in order and group top children as combined content
+    @param document:
+    @return: yields level, title, content
+    """
+    for section in filter(lambda sec: len(sec.children) > 0, traverse_in_order(document)):
+        children: Section
+        content = []
+        for children in section.children:
+            if children.children:
+                continue
+            content.append(children.heading_text)
+        yield section.level, section.heading_text, "\n".join(content)
+
+
 def traverse_in_order(document: StructuredPdfDocument) \
         -> Generator[Section, StructuredPdfDocument, None]:
     """
