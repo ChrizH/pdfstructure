@@ -12,7 +12,7 @@ class StyleDistribution:
     Represents style information for one analysed element stream (typically one stream per document).
     """
 
-    def __init__(self, data=None):
+    def __init__(self, data=None, line_margin=0.5):
         """
         
         :type data: Counter
@@ -25,6 +25,11 @@ class StyleDistribution:
             if self._min_found_size == self._max_found_size:
                 self._min_found_size /= 2
                 self._max_found_size *= 2
+        self._line_margin = line_margin
+
+    @property
+    def line_margin(self):
+        return self._line_margin
 
     def norm_data_binned(self, bins=50):
         amount_items = self.amount_values
@@ -91,30 +96,76 @@ class StyleDistribution:
         return self._data.copy()
 
 
+class SizeAnalyser:
+    def __init__(self):
+        self.sizeDistribution = Counter()
+
+    def consume(self, node: LTTextContainer):
+        sizes = list(itertools.islice(
+            [c.size for c in node if isinstance(c, LTChar)], 10))
+        # get max size, check that it occurred at least twice
+        maxSize = max(sizes)
+        if sizes.count(maxSize) > 2:
+            self.sizeDistribution.update([truncate(maxSize, 2)])
+
+    def process_result(self):
+        pass
+
+
+class LineMarginAnalyer:
+    _previousNode: LTTextContainer
+
+    def __init__(self):
+        self._distanceCounter = defaultdict(int)
+        self._headingTrailingCounter = defaultdict(int)
+        self._previousNode = None
+        self._y = None
+        self._previousBoxHeight = None
+
+    def consume(self, node: LTTextContainer):
+        if self._previousNode:
+            diff = truncate(abs(self._previousNode.y0 - node.y1), 2)
+            if self._previousNode.height == node.height:
+                self._distanceCounter[(diff, node.height)] += 1
+            else:
+                self._headingTrailingCounter[(diff, self._previousNode.height, node.height)] += 1
+
+        self._previousNode = node
+
+    def process_result(self):
+        """
+        Find relative line margin threshold that will be used in pdfminers paragraphs algorithm.
+        lines that are vertically closer than margin * height are considered to belong to the same paragraph.
+        @return:
+        """
+        (abs_margin, line_height), count = max(self._distanceCounter.items(), key=lambda item: item[1])
+        body_line_margin = min(0.5, 1.75 * abs_margin / line_height)
+        # todo, find next largest value from title_trailing --> margin should be smaller than that
+        # sorted(self._headingTrailingCounter.keys(), key=lambda keys: keys[1])
+        # print("line margin: {}".format(line_margin))
+        return body_line_margin
+
+
 def count_sizes(element_gen) -> StyleDistribution:
     """
-    count all character sizes within observed element stream.
+    analyse used fonts, character sizes, paragraph margins etc.
     :param element_gen:
     :return:
     """
-    distribution = Counter()
-    # checkout each character within
-    for element in element_gen:
+    sizeAnalyser = SizeAnalyser()
+    lineMarginAnalyser = LineMarginAnalyer()
 
+    for element in element_gen:
         if isinstance(element, LTTextContainer):
             for node in element:
-                # grep first character and take size
                 if not isinstance(node, LTTextLine) or node.is_empty() \
                         or len(node._objs) == 0:
                     continue
 
-                sizes = list(itertools.islice(
-                    [c.size for c in node if isinstance(c, LTChar)], 10))
-                # get max size, check that it occurred at least twice
-                maxSize = max(sizes)
-                if sizes.count(maxSize) > 2:
-                    distribution.update([truncate(maxSize, 2)])
+                sizeAnalyser.consume(node)
+                lineMarginAnalyser.consume(node)
 
-    if not distribution:
+    if not sizeAnalyser.sizeDistribution:
         raise TypeError("document does not contain text")
-    return StyleDistribution(distribution)
+
+    return StyleDistribution(sizeAnalyser.sizeDistribution, line_margin=lineMarginAnalyser.process_result())
