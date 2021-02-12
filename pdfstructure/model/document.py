@@ -60,6 +60,25 @@ class Section:
         self.children.append(section)
 
     @property
+    def full_content(self):
+        """
+        Returns merged full content of all nested children.
+        @return:
+        """
+        contents = [self.heading_text] if self.heading_text else []
+
+        def __traverse__(section: Section):
+            child: Section
+            for child in section.children:
+                yield child
+                yield from __traverse__(child)
+
+        for child in __traverse__(self):
+            if child.heading_text:
+                contents.append(child.heading_text)
+        return "\n".join(contents)
+
+    @property
     def top_level_content(self):
         """
         Paragraphs that belong directly to section, nested children are skipped.
@@ -124,6 +143,10 @@ class StructuredPdfDocument:
 
     def update_metadata(self, key, value):
         self.metadata[key] = value
+
+    @property
+    def text(self):
+        return "\n".join([item.full_content for item in self.elements])
 
     @property
     def title(self):

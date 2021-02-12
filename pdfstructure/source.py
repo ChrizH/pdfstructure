@@ -37,7 +37,7 @@ class Source:
 class FileSource(Source):
     def __init__(self, file_path: str, page_numbers=None,
                  la_params=LAParams(boxes_flow=None, detect_vertical=False, line_margin=0.3)):
-        super().__init__(uri=file_path)
+        super().__init__(uri=str(file_path))
         self.page_numbers = page_numbers
         self.la_params = la_params
 
