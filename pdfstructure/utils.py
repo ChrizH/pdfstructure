@@ -32,7 +32,7 @@ def word_generator(text_container: LTTextContainer):
 
     for obj in char_generator(text_container):
         character = obj.get_text()
-        if character is not " ":
+        if character != " ":
             characters.append(character)
         else:
             word = "".join(characters).strip()

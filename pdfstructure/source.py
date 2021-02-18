@@ -2,7 +2,8 @@ import itertools
 from typing import Generator, Any
 
 from pdfminer.high_level import extract_pages
-from pdfminer.layout import LTTextContainer, LAParams, LTFigure, LTTextBoxHorizontal, LTTextLineHorizontal, LTChar
+from pdfminer.layout import LTTextContainer, LAParams, LTFigure, LTTextBoxHorizontal, LTTextLineHorizontal, LTChar, \
+    LTTextBoxVertical
 
 
 class Source:
@@ -36,7 +37,7 @@ class Source:
 
 class FileSource(Source):
     def __init__(self, file_path: str, page_numbers=None,
-                 la_params=LAParams(boxes_flow=None, detect_vertical=False, line_margin=0.3)):
+                 la_params=LAParams(boxes_flow=0.3, detect_vertical=True, line_margin=0.3)):
         super().__init__(uri=file_path)
         self.page_numbers = page_numbers
         self.la_params = la_params
@@ -77,6 +78,10 @@ class FileSource(Source):
         pdfminers paragraphs are sometimes too broad and contain lines that should be splitted into header and content
         @param container: the extracted original paragraph
         """
+        if isinstance(container, LTTextBoxVertical):
+            yield container
+            return
+
         line: LTTextLineHorizontal
         wrapper = LTTextBoxHorizontal()
         wrapper.page = container.page
@@ -102,13 +107,16 @@ class FileSource(Source):
         # disable boxes_flow, style based hierarchy detection is based on purely flat list of paragraphs
         # params = LAParams(boxes_flow=None, detect_vertical=False)  # setting for easy doc
         # params = LAParams(boxes_flow=0.5, detect_vertical=True) # setting for column doc
+        if override_la_params:
+            # use dynamic line_margin
+            self.la_params.line_margin = override_la_params.line_margin
         # todo, do pre-analysis in count_sizes --> are there many boxes within same line
         # todo, understand LAParams, for columns, NONE works better, for vertical only layout LAParams(boxes_flow=None, detect_vertical=False) works better!! :O
         #   do some sort of layout analyis, if there are many boxes vertically next to each other, use layout analysis
         #   - column type
         #   - straight forward document
         for page_layout in extract_pages(self.uri,
-                                         laparams=self.la_params if not override_la_params else override_la_params,
+                                         laparams=self.la_params,
                                          page_numbers=self.page_numbers if not override_page_numbers else override_page_numbers):
             for element in page_layout:
                 element.page = pNumber

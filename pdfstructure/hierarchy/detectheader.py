@@ -1,5 +1,7 @@
 from collections import Counter
 
+from pdfminer.layout import LTTextBoxVertical
+
 from pdfstructure.analysis.styledistribution import StyleDistribution
 from pdfstructure.model.document import TextElement
 from pdfstructure.model.style import TextSize
@@ -7,6 +9,8 @@ from pdfstructure.utils import word_generator
 
 
 def header_detector(element: TextElement, style_distribution: StyleDistribution):
+    if isinstance(element._data, LTTextBoxVertical):
+        return False
     stats = Counter()
     terms = element._data
     style = element.style

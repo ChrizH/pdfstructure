@@ -31,7 +31,7 @@ class HierarchyParser:
         # 2. iterate second time trough pdf
         # - annotate each paragraph with mapped Style
         elements_with_style = style_annotator.process(source.read(
-            override_la_params=LAParams(boxes_flow=None, detect_vertical=False, line_margin=distribution.line_margin)))
+            override_la_params=LAParams(line_margin=distribution.line_margin)))
 
         # - create nested document structure on the fly
         structured_elements = self.create_hierarchy(elements_with_style, distribution)
